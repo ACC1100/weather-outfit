@@ -1,20 +1,11 @@
+"""
+TEST FILE USED TO CONNECT FRONT AND BACK END
+
+"""
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
-
-@app.route('/hello', methods = ['POST'])
-def result():
-    req = request.json
-    print('req: ', req)
-    return {
-        'result': int(req['arg1']) + 1
-    }
-
-"""
-Main file that will contain all the python functions to be called by the front end
-
-"""
 import json, random
 
 def weather_calculator():
@@ -51,7 +42,7 @@ def outfit_selector(formality:str) -> list:
     # Loads list that contains dictionaries from stored clothing
     with open("test2.json") as json_file:
         data = json.load(json_file)
-    print(weather)
+    # print(weather)
 
     # List that contains all the clothes that match weather and formality. List of numbers
     selected_clothes = []
@@ -61,10 +52,10 @@ def outfit_selector(formality:str) -> list:
             selected_clothes.append(i)
 
 
-    print(selected_clothes)
+    # print(selected_clothes)
     separated_clothing = categorising_by_category(selected_clothes)
 
-    print(separated_clothing)
+    # print(separated_clothing)
     # output will have 5 numbers. Each number represents an article of clothing. Each index is a category of clothing.
     # if the number is -1, then there is no viable clothing option
     output = []
@@ -98,7 +89,8 @@ def outfit_selector(formality:str) -> list:
             output.append(-1)
     return output
 
-def categorising_by_category(selected_clothes):
+@app.route('/hello', methods = ['POST'])
+def categorising_by_category(selected_clothes = False):
     """
     Splits clothes based on their category
     :param selected_clothes: list in numbers that represents indexes of the clothes in the json
@@ -106,6 +98,10 @@ def categorising_by_category(selected_clothes):
     """
     with open("test2.json") as json_file:
         data = json.load(json_file)
+    if not selected_clothes:
+        selected_clothes = [y for y in range(len(data["clothes"]))]
+    # print(selected_clothes)
+
     headwear = []
     top = []
     middlewear = []
@@ -125,11 +121,8 @@ def categorising_by_category(selected_clothes):
             footwear.append(num)
         elif data["clothes"][num]["category"] == "headwear":
             headwear.append(num)
-    return [top, middlewear, outerwear, bottom, footwear, headwear]
+    return {
+        'result': [top, middlewear, outerwear, bottom, footwear, headwear]
+    }
 
-
-print(outfit_selector("casual"))
-
-@app.route('/hello', methods = ['POST'])
-def outfit_cats():
-    
+print(categorising_by_category())
