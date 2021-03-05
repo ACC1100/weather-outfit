@@ -1,73 +1,80 @@
-[{
-    "name": "Nike $3000",
-	"colour": "red",
-    "type": "shoe",
-    "condition": ["cold", "warm"],
-    "formality": ["casual", "smart-casual"]
-},
-
 {
-	"name": "some jacket",
+"clothes": [
+  {
     "colour": "blue",
     "type": "jacket",
-    "condition": "cold",
-    "formality": "casual"
-},
-
-{
-	"name": "Uniqlo pants",
+    "condition": ["cold"],
+    "formality": ["casual"]
+  },
+  {
     "colour": "grey",
     "type": "pants",
-    "condition": ["warm", "hot"],
-    "formality": ["casual", "smart-casual"]
-},
-
-{
-	"name": "a white shirt",
+    "condition": [
+      "warm",
+      "hot"
+    ],
+    "formality": [
+      "casual",
+      "smart-casual"
+    ]
+  },
+  {
     "colour": "white",
     "type": "shirt",
-    "condition": ["warm", "hot"],
-    "formality": "casual"
-},
-
-{
-	"name": "hood",
+    "condition": [
+      "warm",
+      "hot"
+    ],
+    "formality": ["casual"]
+  },
+  {
     "colour": "white",
     "type": "hoodie",
-    "condition": ["cold", "warm"],
-    "formality": "casual"
-},
-
-{
-	"name": "lv socks",
+    "condition": [
+      "cold",
+      "warm"
+    ],
+    "formality": ["casual"]
+  },
+  {
     "colour": "pink",
     "type": "socks",
-    "condition": ["cold", "warm", "hot"],
-    "formality": ["casual", "smart-casual"]
-},
-
-{
-	"name": "nike shirt",
+    "condition": [
+      "cold",
+      "warm",
+      "hot"
+    ],
+    "formality": [
+      "casual",
+      "smart-casual"
+    ]
+  },
+  {
     "colour": "black",
     "type": "shirt",
-    "condition": ["cold", "warm"],
-    "formality": ["casual", "smart-casual"]
-},
-
-{
-	"name": "puma shirt",
+    "condition": [
+      "cold",
+      "warm"
+    ],
+    "formality": [
+      "casual",
+      "smart-casual"
+    ]
+  },
+  {
     "colour": "red",
     "type": "shirt",
-    "condition": "hot",
-    "formality": "casual"
-},
-
-{
-	"name": "kiryus suit from yakuza 0",
+    "condition": ["hot"],
+    "formality": ["casual"]
+  },
+  {
     "colour": "white",
     "type": "suit",
-    "condition": ["cold", "warm"],
-    "formality": "formal"
-}]
-
-
+    "condition": [
+      "cold",
+      "warm"
+    ],
+    "formality": ["formal"]
+  }
+]
+}
