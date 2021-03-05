@@ -72,7 +72,6 @@
     "formality": ["formal"]
   },
   {
-<<<<<<< HEAD
     "colour": "grey",
     "type": "shorts",
     "condition": [
@@ -80,13 +79,12 @@
       "hot"
     ],
     "formality": ["casual"]
-=======
+  },
+  {
     "colour": "black",
     "type": "coat",
     "category": "outerwear",
-    "condition": [
-      "cold"
-    ],
+    "condition": [ "cold" ],
     "formality": ["formal", "smart-casual"]
   },
   {
@@ -94,6 +92,7 @@
     "type": "cap",
     "category": "headwear",
     "condition": [
+      "rain",  
       "cold",
       "warm"
     ],
@@ -112,21 +111,22 @@
     "colour": "red",
     "type": "runners",
     "category": "footwear",
-    "condition": [
-      "cold",
-      "warm"
-    ],
+    "condition": [ "cold", "warm" ],
     "formality": ["casual"]
   },
   {
     "colour": "black",
     "type": "boots",
     "category": "footwear",
-    "condition": [
-      "cold"
-    ],
+    "condition": [ "rain", "cold" ],
     "formality": ["smart-casual", "formal"]
->>>>>>> 3c1f19964efd924a2a706d10c3fa24dfb065a3f9
+  },
+  {
+    "colour": "olive",
+    "type": "raincoat",
+    "category": "outerwear",
+    "condition": [ "rain" ],
+    "formality": [ "casual", "smart-casual", "formal" ]
   }
 ]
 }
