@@ -1,0 +1,26 @@
+## REACT
+# dependencies
+react-files/node_modules
+react-files/.pnp
+react-files.pnp.js
+
+# testing
+react-files/coverage
+
+# production
+react-files/build
+
+# misc
+react-files/.DS_Store
+react-files/.env.local
+react-files/.env.development.local
+react-files/.env.test.local
+react-files/.env.production.local
+
+react-files/npm-debug.log*
+react-files/yarn-debug.log*
+react-files/yarn-error.log*
+
+
+## PYTHON
+flask-api/venv
