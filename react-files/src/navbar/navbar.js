@@ -13,6 +13,10 @@ function Navbar(props) {
         <HStack spacing="24px" padding="10px" bg="black">
             <Text fontSize="3xl">Test title</Text>
             <Box w="50%"/>
+            <Button onClick={() => {props.testf("")}}>
+                temp add
+            </Button>
+
             <Button isDisabled={props.page===''} onClick={() => {props.testf("")}}>
                 Generate outfits
             </Button>
