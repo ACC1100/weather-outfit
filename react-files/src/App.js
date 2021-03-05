@@ -27,18 +27,14 @@ function App() {
   //     })
   // }
 
-  const myClothesPage = () => {
-    setPage("myClothes");
-  }
 
   if (page === "") {
     return (
       <ChakraProvider theme={theme}>
-        {/* {navbar(myClothesPage)} */}
-        <Navbar testf={myClothesPage}/>
+        <Navbar testf={setPage}/>
       <div>
         {arg1}
-        <Button onClick={myClothesPage}>
+        <Button onClick={() => {setPage("my-clothes")}}>
           Test
         </Button>
         {/* <addClothes/> */}
@@ -46,7 +42,7 @@ function App() {
       </div>
       </ChakraProvider>
     )
-  } else if (page === "myClothes") {
+  } else if (page === "my-clothes") {
     return (
       <ChakraProvider theme={theme}>
         <VStack

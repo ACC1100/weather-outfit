@@ -16,7 +16,7 @@ function Navbar(props) {
             <Button>
             asd
             </Button>
-            <Button onClick={props.testf}>
+            <Button onClick={() => {props.testf("my-clothes")}}>
             My clothes
             </Button>
         </HStack>
