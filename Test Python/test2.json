@@ -1,0 +1,73 @@
+[{
+    "name": "Nike $3000",
+	"colour": "red",
+    "type": "shoe",
+    "condition": ["cold", "warm"],
+    "formality": ["casual", "smart-casual"]
+},
+
+{
+	"name": "some jacket",
+    "colour": "blue",
+    "type": "jacket",
+    "condition": "cold",
+    "formality": "casual"
+},
+
+{
+	"name": "Uniqlo pants",
+    "colour": "grey",
+    "type": "pants",
+    "condition": ["warm", "hot"],
+    "formality": ["casual", "smart-casual"]
+},
+
+{
+	"name": "a white shirt",
+    "colour": "white",
+    "type": "shirt",
+    "condition": ["warm", "hot"],
+    "formality": "casual"
+},
+
+{
+	"name": "hood",
+    "colour": "white",
+    "type": "hoodie",
+    "condition": ["cold", "warm"],
+    "formality": "casual"
+},
+
+{
+	"name": "lv socks",
+    "colour": "pink",
+    "type": "socks",
+    "condition": ["cold", "warm", "hot"],
+    "formality": ["casual", "smart-casual"]
+},
+
+{
+	"name": "nike shirt",
+    "colour": "black",
+    "type": "shirt",
+    "condition": ["cold", "warm"],
+    "formality": ["casual", "smart-casual"]
+},
+
+{
+	"name": "puma shirt",
+    "colour": "red",
+    "type": "shirt",
+    "condition": "hot",
+    "formality": "casual"
+},
+
+{
+	"name": "kiryus suit from yakuza 0",
+    "colour": "white",
+    "type": "suit",
+    "condition": ["cold", "warm"],
+    "formality": "formal"
+}]
+
+
