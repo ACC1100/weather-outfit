@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react'; ////
 
 function App() {
+  const [arg1, setArg1] = useState(5);
+  const onButtonSubmit = () => {
+    console.log('button clicked');
+    fetch('/hello', {
+      method: "POST",
+      headers: {
+        "content_type": "application/json",
+      },
+      body: JSON.stringify({
+        arg1: arg1
+      })
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data.result);
+        setArg1(data.result);
+      })
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {arg1}
+      <button onClick={onButtonSubmit}>
+        Test
+      </button>
     </div>
   );
 }
