@@ -12,26 +12,27 @@ with open("test2.json") as json_file:
 # Temp 27 or higher is hot
 
 
-def outfit_warmth_factor(temp):
+def warmth_factor(temp):
     if temp["PrecipProbability"] > 0.50:
-        return "cold"
+        return "rain"
+    if temp["Temperature"] < 12:
+        return "freezing"
     if temp["Temperature"] < 19:
         return "cold"
-    if 20 < temp["Temperature"] < 26:
-        return "warm"
     else:
-        return "hot"
+        return "warm"
+
+print(warmth_factor(weather))
+
+
+def pick():
+    choices = []
+    return choices
+
+print(pick())
 
 # Assumption that the user will input the formality
 
-for i in outfit["clothes"]:
-    print(i["condition"])
-
-for i in outfit["clothes"]:
-    if "cold" in i["condition"]:
-        print(i["type"])
-# def outfit_picking():
-    # if outfit_warmth_factor(weather) == "cold" and
 
 
 
