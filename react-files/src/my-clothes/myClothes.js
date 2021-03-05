@@ -18,6 +18,23 @@ function MyClothes() {
   const [index1, setIndex1] = useState(0);
   const [deleteShown, setDeleteShown] = useState(false);
 
+  const readCategories = () => {
+    fetch('/hello', {
+      method: "POST",
+      headers: {
+        "content_type": "application/json",
+      },
+      body: JSON.stringify({
+        arg1: arg1
+      })
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data.result);
+        setArg1(data.result);
+      })
+  }
+
   const updateIndex = () => {
     setIndex(index + 1);
     setIndex1(index1 + 1);
