@@ -75,6 +75,15 @@
       "warm"
     ],
     "formality": ["formal"]
+  },
+  {
+    "colour": "grey",
+    "type": "shorts",
+    "condition": [
+      "warm",
+      "hot"
+    ],
+    "formality": ["casual"]
   }
 ]
 }
