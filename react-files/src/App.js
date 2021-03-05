@@ -28,7 +28,7 @@ function App() {
   // }
 
   const myClothesPage = () => {
-    setPage("add-clothes");
+    setPage("myClothes");
   }
 
   if (page === "") {
@@ -45,7 +45,7 @@ function App() {
       </div>
       </ChakraProvider>
     )
-  } else if (page === "add-clothes") {
+  } else if (page === "myClothes") {
     return (
       <ChakraProvider theme={theme}>
         <div>
