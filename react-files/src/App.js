@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'; ////
+import addClothes from "./add-clothes/add-clothes";
 
 function App() {
   const [arg1, setArg1] = useState(5);
@@ -26,6 +27,8 @@ function App() {
       <button onClick={onButtonSubmit}>
         Test
       </button>
+      {/* <addClothes/> */}
+      {addClothes()}
     </div>
   );
 }
