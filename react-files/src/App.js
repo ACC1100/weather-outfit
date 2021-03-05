@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'; ////
 import {ChakraProvider, theme, Button, VStack, StackDivider, Box} from '@chakra-ui/react';
 
 import addClothes from "./add-clothes/add-clothes";
-import navbar from "./navbar/navbar";
+import Navbar from "./navbar/navbar";
 
 function App() {
   const [arg1, setArg1] = useState(5);
@@ -34,7 +34,8 @@ function App() {
   if (page === "") {
     return (
       <ChakraProvider theme={theme}>
-        {navbar()}
+        {/* {navbar(myClothesPage)} */}
+        <Navbar testf={myClothesPage}/>
       <div>
         {arg1}
         <Button onClick={myClothesPage}>

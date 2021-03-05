@@ -1,20 +1,26 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import {HStack, Button, Box, Text} from "@chakra-ui/react"
 
-function navbar() {
+import React, { useState, useEffect } from 'react'; ////
+
+// function getButton(location) {
+//   const [page, setPage] = useState('');
+
+// }
+
+function Navbar(props) {
     return (
         <HStack spacing="24px" padding="10px" bg="black">
-            <Text >Test</Text>
+            <Text fontSize="3xl">Test title</Text>
             <Box w="50%"/>
             <Button>
             asd
             </Button>
-            <Button>
-            asd
+            <Button onClick={props.testf}>
+            My clothes
             </Button>
         </HStack>
     )
 }
 
-export default navbar;
+export default Navbar;
