@@ -1,6 +1,12 @@
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/hello')
-def say_hello_world():
-    return {'result': "Hello World"}
+@app.route('/hello', methods = ['POST'])
+def result():
+    req = request.json
+    print('req: ', req)
+    return {
+        'result': int(req['arg1']) + 1
+    }
