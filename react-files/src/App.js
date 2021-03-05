@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'; ////
 import addClothes from "./add-clothes/add-clothes";
-import {ChakraProvider, theme,} from '@chakra-ui/react';
+import {ChakraProvider, theme, Button} from '@chakra-ui/react';
 
 function App() {
   const [arg1, setArg1] = useState(5);
@@ -26,9 +26,9 @@ function App() {
     <ChakraProvider theme={theme}>
       <div>
         {arg1}
-        <button onClick={onButtonSubmit}>
+        <Button  onClick={onButtonSubmit}>
           Test
-        </button>
+        </Button>
         {/* <addClothes/> */}
         {addClothes()}
       </div>
