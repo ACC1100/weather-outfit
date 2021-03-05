@@ -31,20 +31,35 @@ function AddClothes() {
   const [formData, setFormData] = useState({});
 
   const handleChange = (e) => {
-    console.log(e)
+    console.log(e);
     // console.log(e.target.value)
     // console.log(e.target.id)
     var field;
     var value;
 
-    if (typeof(e) === typeof([])) {
+    console.log(Array.isArray(e));
+    // console.log(typeof(e) == 'array');
+
+    if (Array.isArray(e)) {
       // idk this array checkbox thing doesnt have an ID
       field = "formality";
       value = e;
     } else {
       field = e.target.id;
       value = e.target.value;
-    }    
+    }
+
+    // console.log('----');
+    // console.log(field);
+    // console.log(value);
+    // console.log('----');
+
+    /////
+    // TODO: HANDLE CHANGE FOR EACH INPUT FIELD, ARRAY ONE IS WORKING FINE
+    // ALSO, SET FORM DATA APPEARS TO BE OVERWRITING THE ENTIRE THING, DONT DO THIS
+    // WE WANT TO ADD NEW VALUES, NOT REPLACE OLD ONES WITH NOTHING
+    // OK BYE
+    /////
 
     setFormData({
       [field]: value,
