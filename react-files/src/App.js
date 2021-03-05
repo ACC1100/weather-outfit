@@ -32,20 +32,24 @@ function App() {
   if (page === "") {
     return (
       <ChakraProvider theme={theme}>
-        <Navbar testf={setPage}/>
-      <div>
-        {arg1}
-        <Button onClick={() => {setPage("my-clothes")}}>
-          Test
-        </Button>
-        {/* <addClothes/> */}
-        {addClothes()}
-      </div>
+        <Navbar page={page} testf={setPage}/>
+
+          
+          <div>
+            {arg1}
+            <Button onClick={() => {setPage("my-clothes")}}>
+              Test
+            </Button>
+            {/* <addClothes/> */}
+            {addClothes()}
+          </div>
+
       </ChakraProvider>
     )
   } else if (page === "my-clothes") {
     return (
       <ChakraProvider theme={theme}>
+        <Navbar page={page} testf={setPage}/>
         <MyClothes/>
       </ChakraProvider>
         
