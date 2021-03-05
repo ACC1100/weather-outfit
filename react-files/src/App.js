@@ -4,36 +4,49 @@ import {ChakraProvider, theme, Button} from '@chakra-ui/react';
 
 function App() {
   const [arg1, setArg1] = useState(5);
-  const onButtonSubmit = () => {
-    console.log('button clicked');
-    fetch('/hello', {
-      method: "POST",
-      headers: {
-        "content_type": "application/json",
-      },
-      body: JSON.stringify({
-        arg1: arg1
-      })
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data.result);
-        setArg1(data.result);
-      })
+  const [page, setPage] = useState('');
+
+  // const onButtonSubmit = () => {
+  //   console.log('button clicked');
+  //   fetch('/hello', {
+  //     method: "POST",
+  //     headers: {
+  //       "content_type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       arg1: arg1
+  //     })
+  //   })
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       console.log(data.result);
+  //       setArg1(data.result);
+  //     })
+  // }
+
+  const myClothesPage = () => {
+    setPage("add-clothes");
   }
 
-  return (
-    <ChakraProvider theme={theme}>
+  if (page === "") {
+    return (
+      <ChakraProvider theme={theme}>
       <div>
         {arg1}
-        <Button  onClick={onButtonSubmit}>
+        <Button onClick={myClothesPage}>
           Test
         </Button>
         {/* <addClothes/> */}
         {addClothes()}
       </div>
-    </ChakraProvider>
-  );
+      </ChakraProvider>
+    )
+  } else if (page === "add-clothes") {
+    return (
+        addClothes()
+    )
+  }
+
 }
 
 export default App;
