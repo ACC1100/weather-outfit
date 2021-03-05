@@ -86,7 +86,7 @@ def outfit_selector(formality:str) -> list:
     return output
 
 
-def categorising_by_category(selected_clothes):
+def categorising_by_category(selected_clothes = False):
     """
     Splits clothes based on their category
     :param selected_clothes: list in numbers that represents indexes of the clothes in the json
@@ -94,6 +94,10 @@ def categorising_by_category(selected_clothes):
     """
     with open("test2.json") as json_file:
         data = json.load(json_file)
+    if not selected_clothes:
+        selected_clothes = [y for y in range(len(data["clothes"]))]
+    print(selected_clothes)
+
     headwear = []
     top = []
     middlewear = []

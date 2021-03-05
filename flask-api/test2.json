@@ -73,6 +73,7 @@
   {
     "colour": "grey",
     "type": "shorts",
+    "category": "bottom",
     "condition": [
       "warm",
       "hot"
