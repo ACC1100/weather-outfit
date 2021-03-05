@@ -3,12 +3,14 @@
   {
     "colour": "blue",
     "type": "jacket",
+    "category": "middlewear",
     "condition": ["cold"],
     "formality": ["casual"]
   },
   {
     "colour": "grey",
     "type": "pants",
+    "category": "bottom",
     "condition": [
       "warm",
       "hot"
@@ -25,6 +27,7 @@
       "warm",
       "hot"
     ],
+    "category": "top",
     "formality": ["casual"]
   },
   {
@@ -34,21 +37,10 @@
       "cold",
       "warm"
     ],
+    "category": "middlewear",
     "formality": ["casual"]
   },
-  {
-    "colour": "pink",
-    "type": "socks",
-    "condition": [
-      "cold",
-      "warm",
-      "hot"
-    ],
-    "formality": [
-      "casual",
-      "smart-casual"
-    ]
-  },
+
   {
     "colour": "black",
     "type": "shirt",
@@ -56,6 +48,7 @@
       "cold",
       "warm"
     ],
+    "category": "top",
     "formality": [
       "casual",
       "smart-casual"
@@ -65,16 +58,65 @@
     "colour": "red",
     "type": "shirt",
     "condition": ["hot"],
+    "category": "top",
     "formality": ["casual"]
   },
   {
     "colour": "white",
-    "type": "suit",
+    "type": "suit jacket",
+    "category": "middlewear",
     "condition": [
       "cold",
       "warm"
     ],
     "formality": ["formal"]
+  },
+  {
+    "colour": "black",
+    "type": "coat",
+    "category": "outerwear",
+    "condition": [
+      "cold"
+    ],
+    "formality": ["formal", "smart-casual"]
+  },
+  {
+    "colour": "black",
+    "type": "cap",
+    "category": "headwear",
+    "condition": [
+      "cold",
+      "warm"
+    ],
+    "formality": ["casual"]
+  },
+  {
+    "colour": "blue",
+    "type": "beanie",
+    "category": "headwear",
+    "condition": [
+      "cold"
+    ],
+    "formality": ["casual"]
+  },
+  {
+    "colour": "red",
+    "type": "runners",
+    "category": "footwear",
+    "condition": [
+      "cold",
+      "warm"
+    ],
+    "formality": ["casual"]
+  },
+  {
+    "colour": "black",
+    "type": "boots",
+    "category": "footwear",
+    "condition": [
+      "cold"
+    ],
+    "formality": ["smart-casual", "formal"]
   }
 ]
 }
