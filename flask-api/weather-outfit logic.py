@@ -2,6 +2,7 @@ import json
 
 with open("weathertest.json") as json_file:
     weather = json.load(json_file)
+    print(weather)
 
 with open("test2.json") as json_file:
     outfit = json.load(json_file)
