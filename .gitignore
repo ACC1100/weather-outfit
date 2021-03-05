@@ -2,7 +2,7 @@
 # dependencies
 react-files/node_modules
 react-files/.pnp
-react-files.pnp.js
+react-files/pnp.js
 
 # testing
 react-files/coverage
