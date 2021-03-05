@@ -24,3 +24,4 @@ react-files/yarn-error.log*
 
 ## PYTHON
 flask-api/venv
+flask-api/.idea
