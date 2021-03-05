@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Text} from '@chakra-ui/react';
 
 function clothesText(text) {
-    return <Text fontSize="md">text</Text> 
+    return <Text fontSize="md">{text}</Text>
 }
 
 function addClothes() {

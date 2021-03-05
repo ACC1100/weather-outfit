@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'; ////
-import addClothes from "./add-clothes/add-clothes";
+
 import {ChakraProvider, theme, Button} from '@chakra-ui/react';
+
+import addClothes from "./add-clothes/add-clothes";
+import navbar from "./navbar/navbar";
 
 function App() {
   const [arg1, setArg1] = useState(5);
