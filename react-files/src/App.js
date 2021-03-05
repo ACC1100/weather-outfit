@@ -34,6 +34,7 @@ function App() {
   if (page === "") {
     return (
       <ChakraProvider theme={theme}>
+        {navbar()}
       <div>
         {arg1}
         <Button onClick={myClothesPage}>
