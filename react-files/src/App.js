@@ -47,7 +47,14 @@ function App() {
     )
   } else if (page === "add-clothes") {
     return (
-        addClothes()
+      <ChakraProvider theme={theme}>
+        <div>
+          {navbar()}
+          {addClothes()}
+
+        </div>
+      </ChakraProvider>
+        
     )
   }
 
