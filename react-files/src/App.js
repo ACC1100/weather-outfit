@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'; ////
 
-import {ChakraProvider, theme, Button} from '@chakra-ui/react';
+import {ChakraProvider, theme, Button, VStack, StackDivider, Box} from '@chakra-ui/react';
 
 import addClothes from "./add-clothes/add-clothes";
 import navbar from "./navbar/navbar";
