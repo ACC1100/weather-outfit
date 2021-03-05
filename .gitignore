@@ -2,7 +2,7 @@
 # dependencies
 react-files/node_modules
 react-files/.pnp
-react-files.pnp.js
+react-files/pnp.js
 
 # testing
 react-files/coverage
@@ -26,3 +26,36 @@ react-files/yarn-error.log*
 flask-api/venv
 flask-api/.idea
 .idea
+
+flask-api/venv*/
+flask-api/__pycache__/
+flask-api/.cache*
+
+#### Aaron: Stuff that came with the template thingo
+flask-api/*.com
+flask-api/*.class
+flask-api/*.dll
+flask-api/*.exe
+flask-api/*.o
+flask-api/*.so
+
+flask-api/*.7z
+flask-api/*.dmg
+flask-api/*.gz
+flask-api/*.iso
+flask-api/*.jar
+flask-api/*.rar
+flask-api/*.tar
+flask-api/*.zip
+
+flask-api/*.log
+flask-api/*.sql
+flask-api/*.sqlite
+
+flask-api/.DS_Store
+flask-api/.DS_Store?
+flask-api/._*
+flask-api/.Spotlight-V100
+flask-api/.Trashes
+flask-api/ehthumbs.db
+flask-api/Thumbs.db
