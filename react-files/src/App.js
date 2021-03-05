@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'; ////
 
-import {ChakraProvider, theme, Button, VStack, StackDivider, Box} from '@chakra-ui/react';
+import {ChakraProvider, theme, Button, VStack, StackDivider, Box, Grid} from '@chakra-ui/react';
 
 import addClothes from "./add-clothes/add-clothes";
 import Navbar from "./navbar/navbar";
@@ -46,18 +46,38 @@ function App() {
     return (
       <ChakraProvider theme={theme}>
         <VStack
-          divider={<StackDivider borderColor="gray.200" />}
-          spacing={4}
+          spacing={10}
           align="stretch"
         >
           <Box h="40px" bg="yellow.200">
-            1
+            Category 1
+            <Grid templateColumns="repeat(5, 1fr)" gap={6}>
+              <Box w="100%" h="10" bg="blue.500" />
+              <Box w="100%" h="10" bg="blue.500" />
+              <Box w="100%" h="10" bg="blue.500" />
+              <Box w="100%" h="10" bg="blue.500" />
+              <Box w="100%" h="10" bg="blue.500" />
+            </Grid>
           </Box>
           <Box h="40px" bg="tomato">
-            2
+            Category 2
+            <Grid templateColumns="repeat(5, 1fr)" gap={6}>
+              <Box w="100%" h="10" bg="blue.500" />
+              <Box w="100%" h="10" bg="blue.500" />
+              <Box w="100%" h="10" bg="blue.500" />
+              <Box w="100%" h="10" bg="blue.500" />
+              <Box w="100%" h="10" bg="blue.500" />
+            </Grid>
           </Box>
           <Box h="40px" bg="pink.100">
-            3
+            Category 3
+            <Grid templateColumns="repeat(5, 1fr)" gap={6}>
+              <Box w="100%" h="10" bg="blue.500" />
+              <Box w="100%" h="10" bg="blue.500" />
+              <Box w="100%" h="10" bg="blue.500" />
+              <Box w="100%" h="10" bg="blue.500" />
+              <Box w="100%" h="10" bg="blue.500" />
+            </Grid>
           </Box>
         </VStack>
       </ChakraProvider>
