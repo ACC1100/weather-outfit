@@ -197,7 +197,7 @@ test2 = {
   }
 ]
 }
-test3 = {"colour": "light blue", "type": "jacket", "category": "middlewear", "condition": ["cold"], "formality": ["casual"]}
+test3 = {"colour": "light bluessss", "type": "jacket", "category": "middlewear", "condition": ["cold"], "formality": ["casual"]}
 
 # ZJ USE "a" to open the file (to amend) rather than "w" to write. This will stop the file overwriting it every time
 
@@ -211,12 +211,12 @@ def create_file(data, filename='sample.json'):
 create_file(test2)
 
 
-def JSON_CALL(input):
-    def write_json(data, filename='sample.json'):
+def JSON_CALL(input, filename='sample.json'):
+    def write_json(data):
         with open(filename, 'w') as f:
             json.dump(data, f, indent=4)
 
-    with open('sample.json') as json_file:
+    with open(filename) as json_file:
         data = json.load(json_file)
         temp = data['clothes']
         temp.append(input)
