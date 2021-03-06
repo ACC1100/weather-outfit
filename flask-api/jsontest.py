@@ -1,9 +1,6 @@
 import json
 
-# ZJ USE "a" to open the file (to amend) rather than "w" to write. This will stop the file overwriting it every time
-
-# Example data to write
-test = {
+test2 = {
 "clothes": [
   {
     "colour": "light blue",
@@ -14,11 +11,11 @@ test = {
   },
   {
     "colour": "grey",
-    "type": "pants",
+    "type": "shorts",
     "category": "bottom",
     "condition": [
       "warm",
-      "hot"
+      "cold"
     ],
     "formality": [
       "casual",
@@ -200,20 +197,31 @@ test = {
   }
 ]
 }
+test3 = {"colour": "light blue", "type": "jacket", "category": "middlewear", "condition": ["cold"], "formality": ["casual"]}
 
+# ZJ USE "a" to open the file (to amend) rather than "w" to write. This will stop the file overwriting it every time
 
-def create_file(data):
-    with open("sample.json", "w") as file:
+# Example data to write
+
+def create_file(data, filename='sample.json'):
+    with open(filename, "w") as file:
         json.dump(data, file)
 
-create_file(test)
+
+create_file(test2)
 
 
-# def update_file(add):
-#     with open("sample.json", "a+") as file:
-#         data = json.load(file)
-#         data.update(add)
-#         file.seek(0)
-#         json.dump(data, file)
-#
-# update_file(test2)
+def write_json(data, filename='sample.json'):
+    with open(filename, 'w') as f:
+        json.dump(data, f, indent=4)
+
+
+with open('sample.json') as json_file:
+    data = json.load(json_file)
+    temp = data['clothes']
+    # python object to be appended
+    y = test3
+    # appending data to emp_details
+    temp.append(y)
+
+write_json(data)
