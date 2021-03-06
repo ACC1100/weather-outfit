@@ -126,6 +126,13 @@ def categorising_by_category(selected_clothes = False):
     }
 
 # print(categorising_by_category())
+@app.route('/add', methods = ['POST'])
+def add_clothing():
+    req = request.json
+    print('req: ', req)
+    return {
+        'result': 'hi'
+    }
 
 if __name__ == '__main__':
     app.run(debug = True)
