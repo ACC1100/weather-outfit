@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'; ////
 import ReactDOM from 'react-dom';
-import {Text, ChakraProvider, theme, StackDivider, Box, Grid} from '@chakra-ui/react';
+import {Text, ChakraProvider, theme, StackDivider, Box, Grid, Center} from '@chakra-ui/react';
 import {HStack} from '@chakra-ui/react';
 import {VStack, Input, FormLabel, Checkbox, CheckboxGroup} from "@chakra-ui/react"
 
@@ -95,9 +95,11 @@ function AddClothes() {
 
   return (
     <>
-      <Button onClick={() => onOpen()} m={4}>
-        Add clothing
-      </Button>
+      <Center>
+        <Button onClick={() => onOpen()} m={4} w="80%">
+          Add clothing
+        </Button>
+      </Center>
 
       <Drawer placement="right" onClose={onClose} isOpen={isOpen} size={"md"}>
         <DrawerOverlay>

@@ -9,12 +9,15 @@ import Navbar from "./navbar/navbar";
 
 function getContent(page) {
   if (page === "") {
-    return (
-      <AddClothes/>
-    )
+    // return (
+    //   <AddClothes/>
+    // )
   } else if (page === "my-clothes") {
     return (
-      <MyClothes/>
+      <>
+        <AddClothes/>
+        <MyClothes/>
+      </> 
     )
   } else if (page === "gallery") {
     return (
