@@ -2,7 +2,7 @@ import React from 'react';
 import ClothingElement from './clothingElement';
 import { Text, Grid } from '@chakra-ui/react';
 
-const CategoryList = ({ categories }) => {
+const CategoryList = ({ categories, clothingInfo }) => {
   let counter = 0;
   let output = []
   let categoryName = ['Top', 'Middlewear', 'Outerwear', 'Bottom', 'Footwear', 'Headwear']
@@ -14,6 +14,7 @@ const CategoryList = ({ categories }) => {
           <ClothingElement
             key={categories[i][j]}
             id={categories[i][j]}
+            clothingInfo={clothingInfo}
             index_i={i}
             index_j={j}
           />
@@ -21,14 +22,14 @@ const CategoryList = ({ categories }) => {
         counter++
       }
       output.push(
-        <div>
+        <div key={i}>
           <Text fontSize="3xl">{categoryName[i]}</Text>
-          <Grid key={category.length} templateColumns="repeat(auto-fill, 200px)" mx='300px' justifyContent='center'>
+          <Grid key={i} templateColumns="repeat(auto-fill, 200px)" mx='300px' justifyContent='center'>
             {category}
           </Grid>
         </div>
       )
-      console.log('output: ', output)
+      // console.log('output: ', output)
     // }
   }
   return (

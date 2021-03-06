@@ -80,7 +80,7 @@ def outfit_selector_colour(address:str, formality:str):
                         separated_clothing[i].remove(num)
             # don't pick outerwear if not freezing and no rain
             if weather[0] != "freezing" and len(weather) == 1:
-                viable_clothes.append(-2)
+                viable_clothes.append([-2])
                 continue
 
         # If raining, pick rain appropriate footwear
@@ -139,7 +139,6 @@ def outfit_selector_colour(address:str, formality:str):
                     possible_main_clothing.append(
                         (viable_clothes[1][i], data["clothes"][viable_clothes[1][i]]["colour"], "top", 0))
 
-    print(possible_main_clothing)
     all_outfits = []
     for j in range(len(possible_main_clothing)):
         main_clothing = possible_main_clothing[j]
@@ -155,8 +154,8 @@ def outfit_selector_colour(address:str, formality:str):
         elif main_clothing[2] == "middlewear":
             main_outfit_index = 2
 
+        print(colour_matching_viable)
         for i in range(len(colour_matching_viable)):
-            print(colour_matching_viable)
             if i == main_outfit_index:
                 colour_matching_viable[i] = [main_clothing[0]]
                 continue
@@ -168,7 +167,7 @@ def outfit_selector_colour(address:str, formality:str):
         if len(colour_matching_viable[0]) > 0:
             index = random.randrange(0, len(colour_matching_viable[0]))
             headwear = {
-                "clothing": colour_matching_viable[0][index],
+                "clothes": colour_matching_viable[0][index],
                 "warning": 0
             }
         else:
@@ -176,20 +175,20 @@ def outfit_selector_colour(address:str, formality:str):
             if len(viable_clothes[0]) > 0:
                 index = random.randrange(0, len(viable_clothes[0]))
                 headwear = {
-                    "clothing": viable_clothes[0][index],
+                    "clothes": viable_clothes[0][index],
                     "warning": 5
                 }
             # If no viable clothes, pick a random one
             elif len(all_clothes[0]) > 0:
                 index = random.randrange(0, len(all_clothes[0]))
                 headwear = {
-                    "clothing": all_clothes[0][index],
+                    "clothes": all_clothes[0][index],
                     "warning": 1
                 }
             # If no clothing for this category
             else:
                 headwear = {
-                    "clothing": -1,
+                    "clothes": -1,
                     "warning": 2
                 }
 
@@ -197,7 +196,7 @@ def outfit_selector_colour(address:str, formality:str):
         if len(colour_matching_viable[1]) > 0:
             index = random.randrange(0, len(colour_matching_viable[1]))
             top = {
-                "clothing": colour_matching_viable[1][index],
+                "clothes": colour_matching_viable[1][index],
                 "warning": 0
             }
         else:
@@ -205,20 +204,20 @@ def outfit_selector_colour(address:str, formality:str):
             if len(viable_clothes[1]) > 0:
                 index = random.randrange(0, len(viable_clothes[1]))
                 top = {
-                    "clothing": viable_clothes[1][index],
+                    "clothes": viable_clothes[1][index],
                     "warning": 5
                 }
             # If no viable clothes, pick a random one
             elif len(all_clothes[1]) > 0:
                 index = random.randrange(0, len(all_clothes[1]))
                 top = {
-                    "clothing": all_clothes[1][index],
+                    "clothes": all_clothes[1][index],
                     "warning": 1
                 }
             # If no clothing for this category
             else:
                 top = {
-                    "clothing": -1,
+                    "clothes": -1,
                     "warning": 2
                 }
 
@@ -226,7 +225,7 @@ def outfit_selector_colour(address:str, formality:str):
         if len(colour_matching_viable[2]) > 0:
             index = random.randrange(0, len(colour_matching_viable[2]))
             middlewear = {
-                "clothing": colour_matching_viable[2][index],
+                "clothes": colour_matching_viable[2][index],
                 "warning": 0
             }
         else:
@@ -234,20 +233,20 @@ def outfit_selector_colour(address:str, formality:str):
             if len(viable_clothes[2]) > 0:
                 index = random.randrange(0, len(viable_clothes[2]))
                 middlewear = {
-                    "clothing": viable_clothes[2][index],
+                    "clothes": viable_clothes[2][index],
                     "warning": 5
                 }
             # If no viable clothes, pick a random one
             elif len(all_clothes[2]) > 0:
                 index = random.randrange(0, len(all_clothes[2]))
                 middlewear = {
-                    "clothing": all_clothes[2][index],
+                    "clothes": all_clothes[2][index],
                     "warning": 1
                 }
             # If no clothing for this category
             else:
                 middlewear = {
-                    "clothing": -1,
+                    "clothes": -1,
                     "warning": 2
                 }
 
@@ -255,7 +254,7 @@ def outfit_selector_colour(address:str, formality:str):
         if len(colour_matching_viable[3]) > 0:
             index = random.randrange(0, len(colour_matching_viable[3]))
             outerwear = {
-                "clothing": colour_matching_viable[3][index],
+                "clothes": colour_matching_viable[3][index],
                 "warning": 0
             }
         else:
@@ -263,20 +262,20 @@ def outfit_selector_colour(address:str, formality:str):
             if len(viable_clothes[3]) > 0:
                 index = random.randrange(0, len(viable_clothes[3]))
                 outerwear = {
-                    "clothing": viable_clothes[3][index],
+                    "clothes": viable_clothes[3][index],
                     "warning": 5
                 }
             # If no viable clothes, pick a random one
             elif len(all_clothes[3]) > 0:
                 index = random.randrange(0, len(all_clothes[3]))
                 outerwear = {
-                    "clothing": all_clothes[3][index],
+                    "clothes": all_clothes[3][index],
                     "warning": 1
                 }
             # If no clothing for this category
             else:
                 outerwear = {
-                    "clothing": -1,
+                    "clothes": -1,
                     "warning": 2
                 }
 
@@ -284,7 +283,7 @@ def outfit_selector_colour(address:str, formality:str):
         if len(colour_matching_viable[4]) > 0:
             index = random.randrange(0, len(colour_matching_viable[4]))
             bottom = {
-                "clothing": colour_matching_viable[4][index],
+                "clothes": colour_matching_viable[4][index],
                 "warning": 0
             }
         else:
@@ -292,20 +291,20 @@ def outfit_selector_colour(address:str, formality:str):
             if len(viable_clothes[4]) > 0:
                 index = random.randrange(0, len(viable_clothes[4]))
                 bottom = {
-                    "clothing": viable_clothes[4][index],
+                    "clothes": viable_clothes[4][index],
                     "warning": 5
                 }
             # If no viable clothes, pick a random one
             elif len(all_clothes[4]) > 0:
                 index = random.randrange(0, len(all_clothes[4]))
                 bottom = {
-                    "clothing": all_clothes[4][index],
+                    "clothes": all_clothes[4][index],
                     "warning": 1
                 }
             # If no clothing for this category
             else:
                 bottom = {
-                    "clothing": -1,
+                    "clothes": -1,
                     "warning": 2
                 }
 
@@ -313,7 +312,7 @@ def outfit_selector_colour(address:str, formality:str):
         if len(colour_matching_viable[5]) > 0:
             index = random.randrange(0, len(colour_matching_viable[5]))
             footwear = {
-                "clothing": colour_matching_viable[5][index],
+                "clothes": colour_matching_viable[5][index],
                 "warning": 0
             }
         else:
@@ -321,20 +320,20 @@ def outfit_selector_colour(address:str, formality:str):
             if len(viable_clothes[5]) > 0:
                 index = random.randrange(0, len(viable_clothes[5]))
                 footwear = {
-                    "clothing": viable_clothes[5][index],
+                    "clothes": viable_clothes[5][index],
                     "warning": 5
                 }
             # If no viable clothes, pick a random one
             elif len(all_clothes[5]) > 0:
                 index = random.randrange(0, len(all_clothes[5]))
                 footwear = {
-                    "clothing": all_clothes[5][index],
+                    "clothes": all_clothes[5][index],
                     "warning": 1
                 }
             # If no clothing for this category
             else:
                 footwear = {
-                    "clothing": -1,
+                    "clothes": -1,
                     "warning": 2
                 }
 
@@ -395,20 +394,20 @@ def colour_matching(colour: str):
     For a given colour, it returns a list of colours that complement that input colour
     """
     if colour == "pink":
-        return ["light blue", "dark blue", "grey", "white", "black"]
+        return ["lightblue", "darkblue", "grey", "white", "black"]
     if colour == "red":
-        return ["light blue", "dark blue", "grey", "white", "black"]
+        return ["lightblue", "darkblue", "grey", "white", "black"]
     if colour == "orange":
-        return ["green", "light blue", "dark blue", "white", "black"]
+        return ["green", "lightblue", "darkblue", "white", "black"]
     if colour == "beige":
-        return ["brown", "purple", "dark blue", "white", "black"]
+        return ["brown", "purple", "darkblue", "white", "black"]
     if colour == "yellow":
-        return ["green", "dark blue", "white", "black"]
+        return ["green", "darkblue", "white", "black"]
     if colour == "green":
         return ["orange", "purple", "white", "black"]
-    if colour == "light blue":
+    if colour == "lightblue":
         return ["pink", "red", "orange", "white", "black"]
-    if colour == "dark blue":
+    if colour == "darkblue":
         return ["pink", "red", "yellow", "grey", "white", "black"]
     if colour == "purple":
         return ["green", "grey", "orange", "white", "black"]
@@ -417,10 +416,10 @@ def colour_matching(colour: str):
     if colour == "grey":
         return ["pink", "red", "dark blue", "purple"]
     if colour == "black":
-        return ["black", "grey", "white", "pink", "red", "orange", "beige", "yellow", "green", "light blue", "dark blue", "purple", "brown"]
+        return ["black", "grey", "white", "pink", "red", "orange", "beige", "yellow", "green", "lightblue", "darkblue", "purple", "brown"]
     if colour == "white":
-        return ["black", "grey", "white", "pink", "red", "orange", "beige", "yellow", "green", "light blue", "dark blue", "purple", "brown"]
+        return ["black", "grey", "white", "pink", "red", "orange", "beige", "yellow", "green", "lightblue", "darkblue", "purple", "brown"]
 
 # warm, smart-casual
-#
+
 outfit_selector_colour("***REMOVED***, Victoria", "smart-casual")
