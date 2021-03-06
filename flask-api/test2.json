@@ -104,13 +104,6 @@
     "formality": [ "casual", "smart" ]
   },
   {
-    "colour": "black",
-    "type": "skirt",
-    "category": "bottom",
-    "condition": [ "warm", "hot" ],
-    "formality": [ "casual", "smart" ]
-  },
-  {
     "colour": "white",
     "type": "sneaker",
     "category": "footwear",
