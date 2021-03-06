@@ -455,5 +455,13 @@ def read_clothing():
         'result': data
     }
 
+@app.route('/masterlist', methods = ['POST'])
+def read_clothing():
+    with open("masterlist.json") as json_file:
+        data = json.load(json_file)
+    return {
+        'result': data
+    }
+
 if __name__ == '__main__':
     app.run(debug = True)
