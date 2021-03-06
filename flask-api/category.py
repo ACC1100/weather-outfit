@@ -456,7 +456,7 @@ def read_clothing():
     }
 
 @app.route('/masterlist', methods = ['POST'])
-def read_clothing():
+def read_master_list():
     with open("masterlist.json") as json_file:
         data = json.load(json_file)
     return {
