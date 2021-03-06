@@ -15,12 +15,16 @@ function getContent(page) {
     return (
         <MyClothes/>
     )
+  } else if (page === "gallery") {
+    // return (
+        // <MyClothes/>
+  // )
   }
 }
 
 function App() {
   const [arg1, setArg1] = useState(5);
-  const [page, setPage] = useState('');
+  const [page, setPage] = useState('my-clothes');
 
   // const onButtonSubmit = () => {
   //   console.log('button clicked');

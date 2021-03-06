@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Button} from '@chakra-ui/react';
-import shirt from './shirt.png';
 import CategoryList from './categoryList';
 
 function MyClothes() {
@@ -9,8 +7,6 @@ function MyClothes() {
   useEffect(() => {
     fetchClothing();
     console.log('never run again');
-    // let output2 = createClothingElement(output1);
-    // let output3 = generateClothing(output2);
   }, []);
 
   function fetchClothing() {
@@ -32,8 +28,6 @@ function MyClothes() {
     console.log('cats: ', categories);
     return categories;
   }
-
-
 
   return !categories.length ?
       <h1>Loading!!</h1> :

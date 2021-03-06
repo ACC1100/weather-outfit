@@ -3,6 +3,7 @@ Main file that will contain all the python functions to be called by the front e
 
 """
 import json, random
+from .jsontest import JSON_CALL
 
 def weather_calculator():
     """
@@ -23,7 +24,8 @@ def weather_calculator():
     return output
 
 
-def outfit_selector_colour(formality:str) -> list:
+# arguments: formality. location (suburb, victoria)
+def outfit_selector_colour(formality:str):
     """
     Randomly picks outfits that match the weather and formality. THIS ONE PICKS CLOTHES BASED ON COLOURS
 
@@ -31,12 +33,13 @@ def outfit_selector_colour(formality:str) -> list:
         formality = string that says formality type (e.g. casual, smart-casual)
         rain = boolean to tell if going to rain or not
     :return: list of numbers that refer to specific clothes in the json file. Each index in the list refers to a
-            category of clothing in order: headwear, top, middlewear, outerwear, bottom, footwear
+            category of clothing in order: headwear, top, middlewear, outerwear, bottom, footwear.
+            THIS IS OUTPUT AS A JSON FILE
     """
 
     # weather = list of strings. First string is weather, second string (or null) will say rain if it is raining
     weather = weather_calculator()
-    # Loads list that contains dictionaries from stored clothing
+    # Loads list that contains dictionaries from stored clothing (the wardrobe)
     with open("test2.json") as json_file:
         data = json.load(json_file)
 
@@ -340,13 +343,15 @@ def outfit_selector_colour(formality:str) -> list:
     for i in range(len(outfit_rankings)):
         res.append(outfit_rankings[i][1])
 
-    return res
+    JSON_CALL(res, "outfit_selector_colour")
+    print(res)
 
 def categorising_by_category(selected_clothes = False):
     """
     Splits clothes based on their category
     :param selected_clothes: list in numbers that represents indexes of the clothes in the json
-    :return: list that contains a list for each category of clothes
+    :return: list that contains a list for each outfit. Order of each outfit is based on which outfit is the best.
+    Each outfit has multiple dictionaries which has a dictionary for each category of clothing and their warning number.
     """
     with open("test2.json") as json_file:
         data = json.load(json_file)
@@ -407,4 +412,4 @@ def colour_matching(colour: str):
 
 # warm, smart-casual
 #
-print(outfit_selector_colour("smart-casual"))
+outfit_selector_colour("smart-casual")
