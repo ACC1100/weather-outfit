@@ -342,7 +342,6 @@ def outfit_selector_colour(formality:str) -> list:
         for clothing_num in colour_matching_viable[i]:
             if data["clothes"][clothing_num]["colour"] not in matching_colours:
                 colour_matching_viable[i].remove(clothing_num)
-        print(colour_matching_viable)
 
     # If viable clothing
     if len(colour_matching_viable[0]) > 0:
@@ -521,6 +520,7 @@ def outfit_selector_colour(formality:str) -> list:
     res = [headwear, top, middlewear, outerwear, bottom, footwear]
     with open("sampleoutfit.json", "w") as file:
         json.dump(res, file)
+    print(res)
 
 
 def outfit_selector_colour2(formality:str) -> list:
@@ -625,8 +625,9 @@ def outfit_selector_colour2(formality:str) -> list:
                     possible_main_clothing.append(
                         (viable_clothes[1][i], data["clothes"][viable_clothes[1][i]]["colour"], "top", 0))
 
+    print(possible_main_clothing)
     all_outfits = []
-    for j in range(possible_main_clothing):
+    for j in range(len(possible_main_clothing)):
         main_clothing = possible_main_clothing[j]
         main_colour = main_clothing[1]
 
@@ -634,20 +635,20 @@ def outfit_selector_colour2(formality:str) -> list:
         colour_matching_viable = viable_clothes.copy()
         matching_colours = colour_matching(main_colour)
 
-
+        main_outfit_index = 'abcd'
         if main_clothing[2] == "top":
             main_outfit_index = 1
         elif main_clothing[2] == "middlewear":
             main_outfit_index = 2
 
         for i in range(len(colour_matching_viable)):
+            print(colour_matching_viable)
             if i == main_outfit_index:
                 colour_matching_viable[i] = [main_clothing[0]]
                 continue
             for clothing_num in colour_matching_viable[i]:
                 if data["clothes"][clothing_num]["colour"] not in matching_colours:
                     colour_matching_viable[i].remove(clothing_num)
-            print(colour_matching_viable)
 
         # If viable clothing
         if len(colour_matching_viable[0]) > 0:
@@ -826,6 +827,19 @@ def outfit_selector_colour2(formality:str) -> list:
         outfit = [headwear, top, middlewear, outerwear, bottom, footwear]
         all_outfits.append(outfit)
 
+    outfit_rankings = []
+    for outfit in all_outfits:
+        x = 0
+        for clothing in outfit:
+            x += clothing["warning"]
+        outfit_rankings.append((x, outfit))
+
+    outfit_rankings = sorted(outfit_rankings, key=lambda x: x[0])
+
+    res = []
+    for i in range(len(outfit_rankings)):
+        res.append(outfit_rankings[i][1])
+
     return res
 
 def categorising_by_category(selected_clothes = False):
@@ -886,7 +900,11 @@ def colour_matching(colour: str):
         return ["beige", "white", "black"]
     if colour == "grey":
         return ["pink", "red", "dark blue", "purple"]
+    if colour == "black":
+        return ["black", "grey", "white", "pink", "red", "orange", "beige", "yellow", "green", "light blue", "dark blue", "purple", "brown"]
+    if colour == "white":
+        return ["black", "grey", "white", "pink", "red", "orange", "beige", "yellow", "green", "light blue", "dark blue", "purple", "brown"]
 
 # warm, smart-casual
 #
-print(outfit_selector_colour("casual"))
+print(outfit_selector_colour2("smart-casual"))
