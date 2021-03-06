@@ -51,7 +51,7 @@ function AddClothes() {
     console.log(formData);
 
     var newData = formData;
-    newData['colour'] = colours[newData['colour']];
+    newData['colour'] = ogColours[newData['colour']];
     newData['type'] = types[newData['type']];
 
     fetch('/add', {
@@ -67,6 +67,7 @@ function AddClothes() {
     })
   }
 
+  var ogColours = ["black","white","grey","pink","red","orange","beige","yellow","green","light blue","dark blue","purple","brown"]
   var colours = ["black","white","gray.400","pink.200","red.500","orange.500","orange.100","yellow.300","green.500","blue.200","blue.600","purple.500","orange.800"];
   const getColourButtons = () => {
     var buttons = [];
