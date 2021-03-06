@@ -17,7 +17,7 @@ function Navbar(props) {
                 temp add
             </Button>
 
-            <Button isDisabled={props.page===''} onClick={() => {props.testf("")}}>
+            <Button isDisabled={props.page==='gallery'} onClick={() => {props.testf("gallery")}}>
                 Generate outfits
             </Button>
             <Button isDisabled={props.page==='my-clothes'} onClick={() => {props.testf("my-clothes")}}>
