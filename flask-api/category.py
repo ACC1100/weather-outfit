@@ -131,7 +131,7 @@ def add_clothing():
     req = request.json
     print('req: ', req)
     return {
-        'result': 'hi'
+        'result': 'success'
     }
 
 if __name__ == '__main__':

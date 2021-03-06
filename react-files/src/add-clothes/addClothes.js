@@ -83,7 +83,7 @@ function AddClothes() {
               <VStack spacing="24px">
                 <Box w="100%"> 
                   <FormLabel htmlFor="type">Type</FormLabel>
-                  <Select id="type" onChange={handleChange}>
+                  <Select id="type" onChange={handleChange} placeholder="Select option">
                     <option value="tshirt">T-shirt</option>
                     <option value="shirt">Shirt</option>
                     <option value="Test">Test</option>
