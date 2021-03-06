@@ -17,7 +17,7 @@
     ],
     "formality": [
       "casual",
-      "smart-casual"
+      "smart"
     ]
   },
   {
@@ -50,7 +50,7 @@
     "category": "top",
     "formality": [
       "casual",
-      "smart-casual"
+      "smart"
     ]
   },
   {
@@ -85,7 +85,7 @@
     "type": "coat",
     "category": "outerwear",
     "condition": [ "cold" ],
-    "formality": ["formal", "smart-casual"]
+    "formality": ["formal", "smart"]
   },
   {
     "colour": "black",
@@ -119,14 +119,14 @@
     "type": "boots",
     "category": "footwear",
     "condition": [ "rain", "cold" ],
-    "formality": ["smart-casual", "formal"]
+    "formality": ["smart", "formal"]
   },
   {
     "colour": "black",
     "type": "raincoat",
     "category": "outerwear",
     "condition": [ "rain" ],
-    "formality": [ "casual", "smart-casual", "formal" ]
+    "formality": [ "casual", "smart", "formal" ]
   },
 
   {
@@ -134,28 +134,28 @@
     "type": "long sleeve shirt",
     "category": "top",
     "condition": [ "hot", "warm", "cold", "freezing" ],
-    "formality": [ "smart-casual", "formal" ]
+    "formality": [ "smart", "formal" ]
   },
   {
     "colour": "lightblue",
     "type": "sweater",
     "category": "middlewear",
     "condition": [ "warm", "cold", "freezing" ],
-    "formality": [ "casual", "smart-casual" ]
+    "formality": [ "casual", "smart" ]
   },
   {
     "colour": "black",
     "type": "skirt",
     "category": "bottom",
     "condition": [ "warm", "hot" ],
-    "formality": [ "casual", "smart-casual" ]
+    "formality": [ "casual", "smart" ]
   },
   {
     "colour": "white",
     "type": "sneakers",
     "category": "footwear",
     "condition": [ "hot", "warm", "cold", "freezing" ],
-    "formality": [ "casual", "smart-casual" ]
+    "formality": [ "casual", "smart" ]
   },
 
   {
@@ -163,28 +163,28 @@
     "type": "short sleeve t-shirt",
     "category": "top",
     "condition": [ "hot", "warm", "cold", "freezing" ],
-    "formality": [ "smart-casual", "casual" ]
+    "formality": [ "smart", "casual" ]
   },
   {
     "colour": "lightblue",
     "type": "jacket",
     "category": "outerwear",
     "condition": [ "cold", "freezing" ],
-    "formality": [ "smart-casual", "casual" ]
+    "formality": [ "smart", "casual" ]
   },
   {
     "colour": "grey",
     "type": "shorts",
     "category": "top",
     "condition": [ "hot", "warm"],
-    "formality": [ "smart-casual", "casual" ]
+    "formality": [ "smart", "casual" ]
   },
   {
     "colour": "white",
     "type": "runners",
     "category": "footwear",
     "condition": [ "hot", "warm", "cold", "freezing" ],
-    "formality": [ "smart-casual", "casual" ]
+    "formality": [ "smart", "casual" ]
   },
   {
     "colour": "orange",

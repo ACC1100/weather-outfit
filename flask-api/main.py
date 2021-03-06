@@ -29,7 +29,7 @@ def outfit_selector_colour(address:str, formality:str):
     Randomly picks outfits that match the weather and formality. THIS ONE PICKS CLOTHES BASED ON COLOURS
 
     :input:
-        formality = string that says formality type (e.g. casual, smart-casual)
+        formality = string that says formality type (e.g. casual, smart)
         rain = boolean to tell if going to rain or not
     :return: list of numbers that refer to specific clothes in the json file. Each index in the list refers to a
             category of clothing in order: headwear, top, middlewear, outerwear, bottom, footwear.
@@ -420,6 +420,6 @@ def colour_matching(colour: str):
     if colour == "white":
         return ["black", "grey", "white", "pink", "red", "orange", "beige", "yellow", "green", "lightblue", "darkblue", "purple", "brown"]
 
-# warm, smart-casual
+# warm, smart
 
-outfit_selector_colour("***REMOVED***, Victoria", "smart-casual")
+outfit_selector_colour("***REMOVED***, Victoria", "smart")
