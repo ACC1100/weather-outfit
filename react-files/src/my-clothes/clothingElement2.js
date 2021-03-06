@@ -71,6 +71,12 @@ const ClothingElement2 = (props) => {
     colour = props.clothingJSON.colour;
   }
 
+  var colourText = colour;
+
+  if (colour == "black") {
+    colour = "#141414"
+  }
+
   return (
       <Box key={type} borderWidth='1px' height='auto' m='20px' textAlign='center'>
         <Center>
@@ -81,7 +87,7 @@ const ClothingElement2 = (props) => {
         </Center>
         <br/>
         <Text>{type}</Text>
-        <Text>{colour}</Text>
+        <Text>{colourText}</Text>
         <br/>
       </Box>
     )
