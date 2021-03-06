@@ -394,20 +394,20 @@ def colour_matching(colour: str):
     For a given colour, it returns a list of colours that complement that input colour
     """
     if colour == "pink":
-        return ["light blue", "dark blue", "grey", "white", "black"]
+        return ["lightblue", "darkblue", "grey", "white", "black"]
     if colour == "red":
-        return ["light blue", "dark blue", "grey", "white", "black"]
+        return ["lightblue", "darkblue", "grey", "white", "black"]
     if colour == "orange":
-        return ["green", "light blue", "dark blue", "white", "black"]
+        return ["green", "lightblue", "darkblue", "white", "black"]
     if colour == "beige":
-        return ["brown", "purple", "dark blue", "white", "black"]
+        return ["brown", "purple", "darkblue", "white", "black"]
     if colour == "yellow":
-        return ["green", "dark blue", "white", "black"]
+        return ["green", "darkblue", "white", "black"]
     if colour == "green":
         return ["orange", "purple", "white", "black"]
-    if colour == "light blue":
+    if colour == "lightblue":
         return ["pink", "red", "orange", "white", "black"]
-    if colour == "dark blue":
+    if colour == "darkblue":
         return ["pink", "red", "yellow", "grey", "white", "black"]
     if colour == "purple":
         return ["green", "grey", "orange", "white", "black"]
@@ -416,9 +416,9 @@ def colour_matching(colour: str):
     if colour == "grey":
         return ["pink", "red", "dark blue", "purple"]
     if colour == "black":
-        return ["black", "grey", "white", "pink", "red", "orange", "beige", "yellow", "green", "light blue", "dark blue", "purple", "brown"]
+        return ["black", "grey", "white", "pink", "red", "orange", "beige", "yellow", "green", "lightblue", "darkblue", "purple", "brown"]
     if colour == "white":
-        return ["black", "grey", "white", "pink", "red", "orange", "beige", "yellow", "green", "light blue", "dark blue", "purple", "brown"]
+        return ["black", "grey", "white", "pink", "red", "orange", "beige", "yellow", "green", "lightblue", "darkblue", "purple", "brown"]
 
 # warm, smart-casual
 
