@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Text, ChakraProvider, theme, Button, VStack, Flex, Box, Grid, Image, Center} from '@chakra-ui/react';
+import { Text, ChakraProvider, theme, Button, VStack, Flex, Box, Grid, Image, Center, useUpdateEffect} from '@chakra-ui/react';
 import shirt from './shirt.png';
 import CategoryList from './categoryList';
 
@@ -24,7 +24,8 @@ function MyClothes() {
       .then(data => {
         console.log('data: ', data.result);
         setCategories(data.result);
-        setCategories([[2, 4, 5, 4, 5, 4, 5, 5, 4, 5], [0, 3, 6], [8, 13], [1, 7], [11, 12], [9, 10]])
+        // return data.result
+        setCategories([[2, 4, 5, 14, 15, 24, 25, 35, 34, 45], [0, 3, 6], [8, 13], [1, 7], [11, 12], [9, 10]])
       })
   }
 
@@ -77,18 +78,36 @@ function MyClothes() {
   // const returnedClothes = 
 
   function showdata() {
+    console.log(fetchClothing());
     console.log('cats: ', categories);
   }
 
-  return (
+  function deleteElement(id) {
+    console.log('old cat', categories)
+    console.log('id ', id)
+    
+    let deletedValue = categories[id[0]].splice(id[1], 1)
+    console.log('dv', deletedValue)
+    // categories[id[0]] = sublist;
+    // console.log('sublist', sublist);
+    console.log('new cat', categories);
+    setCategories(categories);
+  }
+
+
+  return !categories.length ?
+      <h1>Loading!!</h1> :
+    (
     <div>
-      <Button onClick={() => { showdata() }}>
+      <Button onClick={() => {
+        showdata();
+      }}>
         Click Me
       </Button>
       Test
-      <CategoryList categories={categories} />
+      <CategoryList categories={categories} deleteid={deleteElement}/>
     </div>
-  )
+  ) 
 }
 
 export default MyClothes;
