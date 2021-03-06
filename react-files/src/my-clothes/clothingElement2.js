@@ -86,8 +86,8 @@ const ClothingElement2 = (props) => {
             objectFit='contain' src={images[type]} alt='' bg={colour} />
         </Center>
         <br/>
-        <Text>{type}</Text>
-        <Text>{colourText}</Text>
+        <Text color="white">{type}</Text>
+        <Text color="white">{colourText}</Text>
         <br/>
       </Box>
     )
