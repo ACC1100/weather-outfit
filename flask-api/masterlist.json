@@ -56,7 +56,7 @@
     },
     {
       "name": "hoodie",
-    "category": "middlewear",
+    "category": "outerwear",
     "condition": ["cold", "freezing", "rain"]
     },
     {
