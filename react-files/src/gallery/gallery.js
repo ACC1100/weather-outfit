@@ -1,34 +1,62 @@
 import { Box, VStack, Button, Input, Center, FormLabel, RadioGroup, HStack, Radio } from '@chakra-ui/react';
-import React, { useState, useEffect } from 'react'; ////
+import React, { useState, useEffect } from 'react';
+import ClothingElement2 from '../my-clothes/clothingElement2';
 
 import Slider from "react-slick";
 import "./slick/slick.css"; 
 import "./slick/slick-theme.css";
 
-function getGalleryItems() {
-  // var output = [];
-  // const submitForm = () => {
-  //   var newData = formData;
-  //   newData['colour'] = ogColours[newData['colour']];
-  //   newData['type'] = types[newData['type']];
-
-  //   fetch('/add', {
-  //   method: "POST",
-  //   headers: {
-  //       "content_type": "application/json",
-  //   },
-  //   body: JSON.stringify(newData)
-  //   })
-  //   .then(response => response.json())
-  //   .then(data => {
-  //   console.log(data.result);
-  //   })
-  // }
-}
-
 function Gallery() {
   const [location, setLocation] = useState('');
   const [formalityInput, setFormalityInput] = useState('');
+  const [outfits, setOutfits] = useState('');
+
+  ///////
+  const [masterList, setMasterList] = useState(null);
+  function getMasterList () {
+    fetch('/masterlist', {
+      method: "POST",
+      headers: {
+        "content_type": "application/json",
+      }
+    }).then(response => response.json())
+      .then(data => {
+        console.log('read data: ', data.result);
+        setMasterList(data.result);
+        // console.log(formData);
+      })
+  }
+  useEffect(() => {
+    getMasterList();
+    console.log('got master list')
+  }, []);
+  ///////
+
+  function galleryOutfit({ outfitList, masterList, clothingJSON }) {
+    // outfitList, masterList, clothingJSON
+    let output = [];
+    // for each outfit
+    for (var i = 0; i < outfitList.length; i++) {
+      let temp_outfit = []
+      // for each clothing 
+      for (var j = 0; j < outfitList[i].length; j++) {
+        if (outfitList[i][j].clothes > 0) {
+          temp_outfit.push(
+            <div>
+              {/* <ClothingElement2 masterList={masterList} clothingJSON={clothingJSON}></ClothingElement2> */}
+              Hi
+            </div>
+          )
+        }
+      }
+      output.push(
+        <div>
+          {temp_outfit}
+        </div>
+      )
+    }
+    return output
+  }
 
   const settings = {
     dots: true,
@@ -53,9 +81,9 @@ function Gallery() {
         if (data.result === "invalid location") {
           console.log('no outfits');
         } else {
-          console.log('outfits: ', data.result[0]);
+          console.log('outfits: ', data.result);
+          setOutfits(data.result)
         }
-        // set state for gallery items
       })
   }
 

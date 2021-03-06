@@ -135,7 +135,7 @@ function AddClothes() {
   const getPreview = (clothingJSON, masterList) => {
     if (clothingJSON.type != undefined && clothingJSON.colour != undefined) {
       // console.log('returned');
-      return <ClothingElement2 masterList={masterList} clothingJSON={clothingJSON}></ClothingElement2>
+      return <ClothingElement2 masterList={masterList} clothingJSON={clothingJSON} inputType="index"></ClothingElement2>
     }
   }
 
