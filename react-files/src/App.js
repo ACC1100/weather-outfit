@@ -7,7 +7,8 @@ import MyClothes from "./my-clothes/myClothes";
 import Gallery from "./gallery/gallery";
 import Navbar from "./navbar/navbar";
 
-import theme2 from "./theme";
+import {theme} from '@chakra-ui/react';
+// import theme2 from "./theme";
 
 function getContent(page) {
   if (page === "") {
@@ -51,9 +52,12 @@ function App() {
   // }
 
   return (
-    <ChakraProvider theme={theme2}>
+    // <ChakraProvider theme={theme2}>
+    <ChakraProvider theme={theme}>
       <Navbar page={page} testf={setPage}/>
-      {getContent(page)}
+      {/* <Box bgGradient="linear(to-l, #7928CA, #FF0080)"> */}
+        {getContent(page)}
+      {/* </Box> */}
     </ChakraProvider>
   )
 }
