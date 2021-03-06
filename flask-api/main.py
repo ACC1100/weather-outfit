@@ -343,7 +343,7 @@ def outfit_selector_colour(formality:str):
     for i in range(len(outfit_rankings)):
         res.append(outfit_rankings[i][1])
 
-    JSON_CALL(res, "outfit_selector_colour")
+    JSON_CALL(res, "outfit_selector_colour.json")
     print(res)
 
 def categorising_by_category(selected_clothes = False):
