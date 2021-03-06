@@ -1,4 +1,4 @@
-import { Box, VStack, Button, Input, Center, FormLabel, RadioGroup, HStack, Radio } from '@chakra-ui/react';
+import { Box, VStack, Button, Input, Center, FormLabel, RadioGroup, HStack, Radio, useRadio } from '@chakra-ui/react';
 import React, { useState, useEffect } from 'react';
 import ClothingElement2 from '../my-clothes/clothingElement2';
 
@@ -32,8 +32,10 @@ function Gallery() {
   }, []);
   ///////
 
-  function galleryOutfit({ outfitList, masterList, clothingJSON }) {
+  function galleryOutfit({ outfitList, masterList }) {
+    //output: [box, box]
     // outfitList, masterList, clothingJSON
+    console.log('outfitlist', outfitList);
     let output = [];
     // for each outfit
     for (var i = 0; i < outfitList.length; i++) {
@@ -43,16 +45,16 @@ function Gallery() {
         if (outfitList[i][j].clothes > 0) {
           temp_outfit.push(
             <div>
-              {/* <ClothingElement2 masterList={masterList} clothingJSON={clothingJSON}></ClothingElement2> */}
-              Hi
+              {/* <ClothingElement2 masterList={masterList} clothingJSON={{type: 'shirt', colour: 'black'}} /> */}
+              bye
             </div>
           )
         }
       }
       output.push(
-        <div>
+        <Box>
           {temp_outfit}
-        </div>
+        </Box>
       )
     }
     return output
@@ -123,24 +125,31 @@ function Gallery() {
     )
   }
 
-  return (
-    <>
-      <Box p="2%">
-        {getMenu()}
-      </Box>
-
+  return (!masterList) ?
+    <h1>Loading!!</h1> :
+    (
       <>
-        <Center>
-          <Box w="60%" borderRadius="20px">
-            <Slider {...settings}>
-              <Box w="20%" h="500px" bg="black" borderRadius="20px">asd</Box>
-              <Box w="20%" h="500px" bg="black" borderRadius="20px">123</Box>
-            </Slider>
-          </Box>
-        </Center>
+        <Box p="2%">
+          {getMenu()}
+        </Box>
+        {
+          (outfits) ? <>
+            <Center>
+              <Box w="60%" borderRadius="20px">
+                <Slider {...settings}>
+                  {/* <Box w="20%" h="500px" borderRadius="20px">asd</Box>
+                  <Box w="20%" h="500px" borderRadius="20px">123</Box> */}
+                  {
+                    galleryOutfit(outfits, masterList)
+                  }
+                </Slider>
+              </Box>
+            </Center>
+          </> :
+            <h1>Hi</h1>
+        }
       </>
-    </>
-  )
+    )
 }
 
 export default Gallery;
