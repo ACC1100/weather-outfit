@@ -7,7 +7,7 @@ import {VStack, Input, FormLabel, Checkbox, CheckboxGroup} from "@chakra-ui/reac
 import {InputGroup, InputLeftAddon, InputRightAddon, Select, Textarea} from "@chakra-ui/react"
 import { Button, ButtonGroup } from "@chakra-ui/react"
 
-// import 
+import ClothingElement2 from "../my-clothes/clothingElement2"
 
 import {
     Drawer,
@@ -22,10 +22,40 @@ import {
 import { useDisclosure } from "@chakra-ui/react"
 
 
+function useForceUpdate(){
+  const [value, setValue] = useState(0); // integer state
+  return () => setValue(value => value + 1); // update the state to force render
+}
+
+
 function AddClothes() {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
+  const forceUpdate = useForceUpdate();
+
   const [formData, setFormData] = useState({});
+
+  ///////
+  const [masterList, setMasterList] = useState(null);
+  function getMasterList () {
+    fetch('/masterlist', {
+      method: "POST",
+      headers: {
+        "content_type": "application/json",
+      }
+    }).then(response => response.json())
+      .then(data => {
+        console.log('read data: ');
+        setMasterList(data.result);
+        // console.log(formData);
+      })
+  }
+  useEffect(() => {
+    getMasterList();
+    console.log('got master list')
+  }, []);
+  ///////
+
 
   const handleChange = (e) => {
     var field;
@@ -46,6 +76,8 @@ function AddClothes() {
     var newData = formData
     newData[field] = value
     setFormData(newData);
+
+    forceUpdate();
   }
 
   const submitForm = () => {
@@ -53,8 +85,8 @@ function AddClothes() {
     console.log(formData);
 
     var newData = formData;
-    newData['colour'] = ogColours[newData['colour']];
-    newData['type'] = types[newData['type']];
+    newData['colour'] = masterList.colours[newData['colour']];
+    newData['type'] = masterList.types[newData['type']];
 
     fetch('/add', {
       method: "POST",
@@ -69,33 +101,48 @@ function AddClothes() {
     })
   }
 
-  var ogColours = ["black","white","grey","pink","red","orange","beige","yellow","green","light blue","dark blue","purple","brown"]
-  var colours = ["black","white","gray.400","pink.200","red.500","orange.500","orange.100","yellow.300","green.500","blue.200","blue.600","purple.500","orange.800"];
+  
+
+
+
+
+  // var ogColours = ["black","white","grey","pink","red","orange","beige","yellow","green","light blue","dark blue","purple","brown"]
+  // var colours = ["black","white","gray.400","pink.200","red.500","orange.500","orange.100","yellow.300","green.500","blue.200","blue.600","purple.500","orange.800"];
   const getColourButtons = () => {
     var buttons = [];
 
-    for (var i = 0; i < colours.length; i++) {
+    for (var i = 0; i < masterList.colours.length; i++) {
       buttons.push(
-        <Button key={i} value={i} bg={colours[i]} size="lg" ratio={1} onClick={handleChange}/>
+        <Button key={i} value={i} bg={masterList.colours[i]} size="lg" ratio={1} onClick={handleChange}/>
       )
     }
 
     return buttons
   }
 
-  var types = ["Short Sleeve T-Shirt", "Long Sleeve T-Shirt", "Short Sleeve Shirt", "Long Sleeve Shirt", "Sweater", "Jacket", "Coat", "Raincoat", "Hoodie", "Jeans", "Chino", "Pants", "Tights/Leggings", "Shorts", "Sneakers", "Runners", "Boots", "Heels", "Raincoat", "Skirt", "Dress", "Blouse", "Crop Top", "Cap", "Sun Hat", "Beanie", "Other Hat",]
+  // var types = ["Short Sleeve T-Shirt", "Long Sleeve T-Shirt", "Short Sleeve Shirt", "Long Sleeve Shirt", "Sweater", "Jacket", "Coat", "Raincoat", "Hoodie", "Jeans", "Chino", "Pants", "Tights/Leggings", "Shorts", "Sneakers", "Runners", "Boots", "Heels", "Raincoat", "Skirt", "Dress", "Blouse", "Crop Top", "Cap", "Sun Hat", "Beanie", "Other Hat",]
   const getClothingOptions = () => {
     var options = [];
-    for (var i = 0; i < types.length; i++) {
+    for (var i = 0; i < masterList.types.length; i++) {
       options.push(
-        <option key={i} value={i}>{types[i]}</option>
+        <option key={i} value={i}>{masterList.types[i].name}</option>
       )
     }
     return options
   }
-  var rainTypes = ["Jacket", "Coat", "Hoodie", "Sneakers", "Sneakers", "Runners", "Boots"]
+  // var rainTypes = ["Jacket", "Coat", "Hoodie", "Sneakers", "Sneakers", "Runners", "Boots"]
 
-  return (
+  const getPreview = (clothingJSON, masterList) => {
+    if (clothingJSON.type != undefined && clothingJSON.colour != undefined) {
+      // console.log('returned');
+      return <ClothingElement2 masterList={masterList} clothingJSON={clothingJSON}></ClothingElement2>
+    }
+  }
+
+  return  (!masterList) ?
+  <h1>Loading!!</h1> :
+  
+  (
     <>
       <Center>
         <Button onClick={() => onOpen()} m={4} w="80%">
@@ -135,6 +182,9 @@ function AddClothes() {
                     </HStack>
                   </CheckboxGroup>
                 </Box>
+
+                {getPreview(formData, masterList)}
+
               </VStack>
             </DrawerBody>
 
