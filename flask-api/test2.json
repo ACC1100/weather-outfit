@@ -122,11 +122,76 @@
     "formality": ["smart-casual", "formal"]
   },
   {
-    "colour": "olive",
+    "colour": "black",
     "type": "raincoat",
     "category": "outerwear",
     "condition": [ "rain" ],
     "formality": [ "casual", "smart-casual", "formal" ]
-  }
+  },
+
+  {
+    "colour": "white",
+    "type": "Long Sleeve Shirt", 
+    "category": "top",
+    "condition": [ "hot", "warm", "cold", "freezing" ],
+    "formality": [ "smart-casual", "formal" ]
+  },
+  {
+    "colour": "light blue",
+    "type": "Sweater",
+    "category": "middlewear",
+    "condition": [ "warm", "cold", "freezing" ],
+    "formality": [ "casual", "smart-casual" ]
+  },
+  {
+    "colour": "black",
+    "type": "Skirt",
+    "category": "bottom",
+    "condition": [ "warm", "hot" ],
+    "formality" [ "casual", "smart-casual" ]:
+  },
+  {
+    "colour": "white",
+    "type": "Sneakers",
+    "category": "footwear",
+    "condition": { "hot", "warm", "cold", "freezing" ],
+    "formality": { "casual", "smart-casual" ]
+  },
+
+  {
+    "colour": "black",
+    "type": "Short Sleeve T-Shirt", 
+    "category": "top",
+    "condition": [ "hot", "warm", "cold", "freezing" ],
+    "formality": [ "smart-casual", "casual" ]
+  },
+  {
+    "colour": "blue",
+    "type": "Jacket", 
+    "category": "outerwear",
+    "condition": [ "cold", "freezing" ],
+    "formality": [ "smart-casual", "casual" ]
+  },
+  {
+    "colour": "grey",
+    "type": "Shorts", 
+    "category": "top",
+    "condition": [ "hot", "warm", ],
+    "formality": [ "smart-casual", "casual" ]
+  },
+  {
+    "colour": "white",
+    "type": "Runners", 
+    "category": "footwear",
+    "condition": [ "hot", "warm", "cold", "freezing" ],
+    "formality": [ "smart-casual", "casual" ]
+  },
+  {
+    "colour": "orange",
+    "type": "Beanie", 
+    "category": "headwear",
+    "condition": [ "freezing", "cold", ],
+    "formality": [ "casual" ]
+  },
 ]
 }
