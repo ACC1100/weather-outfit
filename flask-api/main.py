@@ -2,30 +2,29 @@
 Main file that will contain all the python functions to be called by the front end
 
 """
-import json, random
+import json, random, time
 from jsontest import JSON_CALL
+from get_weather import GetWeather
 
-def weather_calculator():
+def weather_calculator(data):
     """
-    Determines weather from weather data as well as if it rains
-    :returns: ["weather" [, bool(rain)]]. Weather is first index and bool if rain in the second index if it will rain. Otherwise no 2nd string
+    Determines data from data data as well as if it rains
+    :returns: ["data" [, bool(rain)]]. Weather is first index and bool if rain in the second index if it will rain. Otherwise no 2nd string
     """
-    with open("weathertest.json") as json_file:
-        weather = json.load(json_file)
     output = []
-    if weather["Temperature"] < 12:
+    if data["Temperature"] < 12:
         output.append("freezing")
-    elif weather["Temperature"] < 19:
+    elif data["Temperature"] < 19:
         output.append("cold")
     else:
         output.append("warm")
-    if weather["PrecipProbability"] > 0.50:
+    if data["PrecipProbability"] > 0.50:
         output.append(True)
     return output
 
 
 # arguments: formality. location (suburb, state)
-def outfit_selector_colour(formality:str):
+def outfit_selector_colour(address:str, formality:str):
     """
     Randomly picks outfits that match the weather and formality. THIS ONE PICKS CLOTHES BASED ON COLOURS
 
@@ -36,9 +35,21 @@ def outfit_selector_colour(formality:str):
             category of clothing in order: headwear, top, middlewear, outerwear, bottom, footwear.
             THIS IS OUTPUT AS A JSON FILE
     """
+    time_tomorrow = round(time.time()) + 24 * 60 * 60 # Current time in seconds + seconds in a day
+    weather_api_data = {
+         "Summary":           None,
+         "Temperature":       None,
+         "UVIndex":           None,
+         "PrecipIntensity":   None,
+         "PrecipProbability": None,
+         "PrecipType":        None,
+         "WindSpeed":         None
+    }
+    GetWeather(address, time_tomorrow, weather_api_data)
+    # @Incomplete(isuru): Check that the dict was actually poopulated!!
 
     # weather = list of strings. First string is weather, second string (or null) will say rain if it is raining
-    weather = weather_calculator()
+    weather = weather_calculator(weather_api_data)
     # Loads list that contains dictionaries from stored clothing (the wardrobe)
     with open("test2.json") as json_file:
         data = json.load(json_file)
@@ -412,4 +423,4 @@ def colour_matching(colour: str):
 
 # warm, smart-casual
 #
-outfit_selector_colour("smart-casual")
+outfit_selector_colour("***REMOVED***, Victoria", "smart-casual")
