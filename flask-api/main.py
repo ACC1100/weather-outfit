@@ -346,7 +346,8 @@ def categorising_by_category(selected_clothes = False):
     """
     Splits clothes based on their category
     :param selected_clothes: list in numbers that represents indexes of the clothes in the json
-    :return: list that contains a list for each category of clothes
+    :return: list that contains a list for each outfit. Order of each outfit is based on which outfit is the best.
+    Each outfit has multiple dictionaries which has a dictionary for each category of clothing and their warning number.
     """
     with open("test2.json") as json_file:
         data = json.load(json_file)
