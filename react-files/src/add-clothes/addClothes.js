@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'; ////
 import ReactDOM from 'react-dom';
-import {Text, ChakraProvider, theme, Button, StackDivider, Box, Grid} from '@chakra-ui/react';
+import {Text, ChakraProvider, theme, StackDivider, Box, Grid} from '@chakra-ui/react';
 import {HStack} from '@chakra-ui/react';
 import {VStack, Input, FormLabel, Checkbox, CheckboxGroup} from "@chakra-ui/react"
 
 import {InputGroup, InputLeftAddon, InputRightAddon, Select, Textarea} from "@chakra-ui/react"
+import { Button, ButtonGroup } from "@chakra-ui/react"
 
 import {
     Drawer,
@@ -24,10 +25,6 @@ function AddClothes() {
 
   const firstField = React.useRef() // automatically selects first field
 
-  const handleClick = () => {
-    onOpen()
-  }
-
   const [formData, setFormData] = useState({});
 
   const handleChange = (e) => {
@@ -35,9 +32,12 @@ function AddClothes() {
     var value;
 
     if (Array.isArray(e)) {
-      // idk this array checkbox thing doesnt have an ID
       field = "formality";
       value = e;
+    } else if (e.target.type == "button") {
+      field = "colour";
+      value = e.target.value;
+      value = colours[value];
     } else {
       field = e.target.id;
       value = e.target.value;
@@ -65,7 +65,18 @@ function AddClothes() {
     })
   }
 
-  // const sizes = ["xs", "sm", "md", "lg", "xl", "full"]
+  var colours = ["black","white","gray.400","pink.200","red.500","orange.500","orange.100","yellow.300","green.500","blue.200","blue.600","purple.500","orange.800"];
+  const getColourButtons = () => {
+    var buttons = [];
+
+    for (var i = 0; i < colours.length; i++) {
+      buttons.push(
+        <Button key={i} value={i} bg={colours[i]} size="lg" ratio={1} onClick={handleChange}/>
+      )
+    }
+
+    return buttons
+  }
 
   return (
     <>
@@ -92,12 +103,9 @@ function AddClothes() {
 
                 <Box w="100%">
                   <FormLabel htmlFor="colour">Colour</FormLabel>
-                  <Input
-                    ref={firstField}
-                    id="colour"
-                    placeholder="Please enter user name"
-                    onChange={handleChange}
-                  />
+                  <Grid templateColumns="repeat(6, 1fr)" gap={6} id="colour">
+                    {getColourButtons()}
+                  </Grid>
                 </Box>
 
                 <Box w="100%">
