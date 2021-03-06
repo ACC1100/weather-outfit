@@ -21,7 +21,24 @@ function getMenu() {
 function getGalleryItems() {
     var output = [];
 
-    
+    // const submitForm = () => {
+    //     var newData = formData;
+    //     newData['colour'] = ogColours[newData['colour']];
+    //     newData['type'] = types[newData['type']];
+
+    //     fetch('/add', {
+    //     method: "POST",
+    //     headers: {
+    //         "content_type": "application/json",
+    //     },
+    //     body: JSON.stringify(newData)
+    //     })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //     console.log(data.result);
+    //     })
+    // }
+
 
 }
 
