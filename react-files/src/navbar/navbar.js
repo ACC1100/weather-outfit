@@ -1,7 +1,10 @@
 import ReactDOM from 'react-dom';
-import {HStack, Button, Box, Text, Heading} from "@chakra-ui/react"
+import {HStack, Button, Box, Text, Heading, useButtonGroup, ButtonGroup} from "@chakra-ui/react"
 
 import React, { useState, useEffect } from 'react'; ////
+
+import AddClothes from "../add-clothes/addClothes";
+
 
 // function getButton(location) {
 //   const [page, setPage] = useState('');
@@ -49,15 +52,33 @@ function Navbar(props) {
             >
                 Generate outfits
             </Button>
-            <Button isDisabled={props.page==='my-clothes'} onClick={() => {props.testf("my-clothes")}}
-            bg="white"
-            color="black"
-            borderWidth="1px"
-            borderColor="gray.500"
-            borderRadius="5px"
-            >
-                My clothes
-            </Button>
+
+            <ButtonGroup isAttached >
+                <Button isDisabled={props.page==='my-clothes'} onClick={() => {props.testf("my-clothes")}}
+                bg="white"
+                color="black"
+                borderWidth="1px"
+                borderColor="gray.500"
+                borderRadius="5px"
+                >
+                    My clothes
+                </Button>
+
+                {/* <Button onClick={() => onOpen()} */}
+                {/* <Button 
+                bg="white"
+                color="black"
+                borderWidth="1px"
+                borderColor="gray.500"
+                borderRadius="5px"
+                >
+                Add clothing
+                </Button> */}
+
+                <AddClothes></AddClothes>
+
+            </ButtonGroup>
+
         </HStack>
     )
 }

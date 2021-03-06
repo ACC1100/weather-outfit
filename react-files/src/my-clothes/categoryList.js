@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ClothingElement from './clothingElement';
 import ClothingElement2 from './clothingElement2';
 
-import { Text, Grid } from '@chakra-ui/react';
+import { Text, Grid, Box, Heading} from '@chakra-ui/react';
 
 // const CategoryList = ({ categories, clothingInfo }) => {
 function CategoryList ({clothingInfo}) {
@@ -52,14 +52,33 @@ function CategoryList ({clothingInfo}) {
           }
           // counter++
         }
+
+        var boxBG = (i % 2 == 0) ? "white" : "gray.200";
+        var topBG = ["red.200", "orange.200", "yellow.200", "green.200", "blue.200", "purple.200"]
+        var topColour = ["red.900", "orange.900", "yellow.900", "green.900", "blue.900", "purple.900"]
+
+
         output.push(
-          <div key={i}>
+          <Box key={i} bg={boxBG} m="20px" borderRadius="5px">
             {/* <Text fontSize="3xl">{categoryName[i]}</Text> */}
-            <Text fontSize="3xl">{masterList.categories[i]}</Text>
+            
+
+            <Box pl="100px" w="100%" bg={topBG[i]} borderRadius="3px">
+              {/* <Text fontSize="3xl">{masterList.categories[i]}</Text> */}
+              <Text fontSize="3xl" p="2px"
+              // bgColor="black"
+              bgColor={topColour[i]}
+              bgClip="text" 
+              // fontFamily="Verdana"
+              >
+                {masterList.categories[i]}</Text>
+            </Box>
+
             <Grid key={i} templateColumns="repeat(auto-fill, 200px)" mx='300px' justifyContent='center'>
               {category}
             </Grid>
-          </div>
+
+          </Box>
         )
         // console.log('output: ', output)
       // }

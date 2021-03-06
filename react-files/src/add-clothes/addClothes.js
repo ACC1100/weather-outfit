@@ -9,6 +9,8 @@ import { Button, ButtonGroup } from "@chakra-ui/react"
 
 import ClothingElement2 from "../my-clothes/clothingElement2"
 
+// import { AddIcon } from "../node_modules/react-icons/md"
+
 import {
     Drawer,
     DrawerBody,
@@ -147,11 +149,17 @@ function AddClothes() {
   
   (
     <>
-      <Center>
-        <Button onClick={() => onOpen()} m={4} w="80%">
+      {/* <Center> */}
+        <Button onClick={() => onOpen()}
+          bg="white"
+          color="black"
+          borderWidth="1px"
+          borderColor="gray.500"
+          borderRadius="5px"
+        >
           Add clothing
         </Button>
-      </Center>
+      {/* </Center> */}
 
       <Drawer placement="right" onClose={onClose} isOpen={isOpen} size={"md"}>
         <DrawerOverlay>

@@ -18,7 +18,7 @@ function getContent(page) {
   } else if (page === "my-clothes") {
     return (
       <>
-        <AddClothes/>
+        {/* <AddClothes/> */}
         <MyClothes/>
       </> 
     )

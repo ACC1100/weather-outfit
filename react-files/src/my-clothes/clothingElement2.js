@@ -78,7 +78,7 @@ const ClothingElement2 = (props) => {
   }
 
   return (
-      <Box key={type} borderWidth='1px' height='auto' m='20px' textAlign='center'>
+      <Box key={type} borderWidth='5px' bg="blue.900" borderRadius="5px" height='auto' m='20px' textAlign='center'>
         <Center>
           <Image className='imagex'
             // objectFit='contain' src={"../pictures/" + props.clothingJSON.type} alt='' bg={props.clothingJSON.colour} />
