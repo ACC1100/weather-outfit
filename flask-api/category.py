@@ -29,11 +29,9 @@ def weather_calculator(data):
 
 @app.route('/getoutfit', methods = ['POST'])
 def outfit_selector_colour():
-    req = request.json
-    address = req['address']
-    formality = req['formality']
-    print('Address', address)
-    print('Formality', formality)
+    address_formality = request.json
+    address = address_formality["address"]
+    formality = address_formality["formality"]
     """
     Randomly picks outfits that match the weather and formality. THIS ONE PICKS CLOTHES BASED ON COLOURS
 
@@ -407,6 +405,70 @@ def categorising_by_category(selected_clothes = False):
     return {
         'result': [top, middlewear, outerwear, bottom, footwear, headwear]
     }
+
+def categorising_by_category(selected_clothes = False):
+    """
+    Splits clothes based on their category
+    :param selected_clothes: list in numbers that represents indexes of the clothes in the json
+    :return: list that contains a list for each outfit. Order of each outfit is based on which outfit is the best.
+    Each outfit has multiple dictionaries which has a dictionary for each category of clothing and their warning number.
+    """
+    with open("test2.json") as json_file:
+        data = json.load(json_file)
+    if not selected_clothes:
+        selected_clothes = [y for y in range(len(data["clothes"]))]
+
+    headwear = []
+    top = []
+    middlewear = []
+    outerwear = []
+    bottom = []
+    footwear = []
+    for num in selected_clothes:
+        if data["clothes"][num]["category"] == "top":
+            top.append(num)
+        elif data["clothes"][num]["category"] == "middlewear":
+            middlewear.append(num)
+        elif data["clothes"][num]["category"] == "outerwear":
+            outerwear.append(num)
+        elif data["clothes"][num]["category"] == "bottom":
+            bottom.append(num)
+        elif data["clothes"][num]["category"] == "footwear":
+            footwear.append(num)
+        elif data["clothes"][num]["category"] == "headwear":
+            headwear.append(num)
+    return [top, middlewear, outerwear, bottom, footwear, headwear]
+
+def colour_matching(colour: str):
+    """
+    For a given colour, it returns a list of colours that complement that input colour
+    """
+    if colour == "pink":
+        return ["lightblue", "darkblue", "grey", "white", "black"]
+    if colour == "red":
+        return ["lightblue", "darkblue", "grey", "white", "black"]
+    if colour == "orange":
+        return ["green", "lightblue", "darkblue", "white", "black"]
+    if colour == "beige":
+        return ["brown", "purple", "darkblue", "white", "black"]
+    if colour == "yellow":
+        return ["green", "darkblue", "white", "black"]
+    if colour == "green":
+        return ["orange", "purple", "white", "black"]
+    if colour == "lightblue":
+        return ["pink", "red", "orange", "white", "black"]
+    if colour == "darkblue":
+        return ["pink", "red", "yellow", "grey", "white", "black"]
+    if colour == "purple":
+        return ["green", "grey", "orange", "white", "black"]
+    if colour == "brown":
+        return ["beige", "white", "black"]
+    if colour == "grey":
+        return ["pink", "red", "dark blue", "purple"]
+    if colour == "black":
+        return ["black", "grey", "white", "pink", "red", "orange", "beige", "yellow", "green", "lightblue", "darkblue", "purple", "brown"]
+    if colour == "white":
+        return ["black", "grey", "white", "pink", "red", "orange", "beige", "yellow", "green", "lightblue", "darkblue", "purple", "brown"]
 
 # print(categorising_by_category())
 @app.route('/add', methods = ['POST'])
