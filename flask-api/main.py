@@ -305,10 +305,10 @@ def outfit_selector_colour(address:str, formality:str):
     res = []
     max_output = 0
     for i in range(len(outfit_rankings)):
-        if max_output >= 10:
+        if max_output >= 40:
             break
         counters[0][outfit_rankings[i][1][main_clothing_index]["clothes"]] += 1
-        if counters[0][outfit_rankings[i][1][main_clothing_index]["clothes"]] < 5:
+        if counters[0][outfit_rankings[i][1][main_clothing_index]["clothes"]] < 20:
             res.append(outfit_rankings[i][1])
             max_output += 1
 
@@ -316,8 +316,12 @@ def outfit_selector_colour(address:str, formality:str):
         for clothing in item:
             clothing['type'] = data['clothes'][clothing['clothes']]['type']
             clothing['colour'] = data['clothes'][clothing['clothes']]['colour']
-    JSON_CALL(res, "outfit_selector_colour.json")
-    print(res)
+
+    final_res = []
+    for i in range(0, len(res), 5):
+        final_res.append(res[i])
+    JSON_CALL(final_res, "outfit_selector_colour.json")
+    print(final_res)
 
 def categorising_by_category(selected_clothes = False):
     """
