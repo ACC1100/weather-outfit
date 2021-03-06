@@ -1,10 +1,11 @@
-import { Box, VStack, Button, Input, Center, FormLabel, RadioGroup, HStack, Radio, useRadio } from '@chakra-ui/react';
+import { Box, VStack, Button, Input, Center, FormLabel, RadioGroup, HStack, Radio, useRadio, Grid } from '@chakra-ui/react';
 import React, { useState, useEffect } from 'react';
 import ClothingElement2 from '../my-clothes/clothingElement2';
 
 import Slider from "react-slick";
 import "./slick/slick.css"; 
 import "./slick/slick-theme.css";
+
 
 function Gallery() {
   const [location, setLocation] = useState('');
@@ -32,7 +33,7 @@ function Gallery() {
   }, []);
   ///////
 
-  function galleryOutfit({ outfitList, masterList }) {
+  function galleryOutfit(outfitList, masterList) {
     //output: [box, box]
     // outfitList, masterList, clothingJSON
     console.log('outfitlist', outfitList);
@@ -44,18 +45,17 @@ function Gallery() {
       for (var j = 0; j < outfitList[i].length; j++) {
         if (outfitList[i][j].clothes > 0) {
           temp_outfit.push(
-            <div>
-              {/* <ClothingElement2 masterList={masterList} clothingJSON={{type: 'shirt', colour: 'black'}} /> */}
-              bye
-            </div>
+            <ClothingElement2 masterList={masterList} clothingJSON={{type: 'long sleeve shirt', colour: 'black'}} inputType='string' />
           )
         }
       }
-      output.push(
-        <Box>
-          {temp_outfit}
-        </Box>
-      )
+      for (var k = 0; k < 5; k++) {
+        output.push(
+          <Grid templateColumns="repeat(3, 200px)" justifyContent='center'>
+            {temp_outfit}
+          </Grid>
+        )
+      }
     }
     return output
   }
@@ -132,22 +132,27 @@ function Gallery() {
         <Box p="2%">
           {getMenu()}
         </Box>
-        {
-          (outfits) ? <>
+          <>
             <Center>
-              <Box w="60%" borderRadius="20px">
+              <Box w="60%" borderRadius="20px" borderWidth='2px' >
                 <Slider {...settings}>
-                  {/* <Box w="20%" h="500px" borderRadius="20px">asd</Box>
-                  <Box w="20%" h="500px" borderRadius="20px">123</Box> */}
-                  {
-                    galleryOutfit(outfits, masterList)
-                  }
+                {
+                  (!outfits) ? <Box w="20%" h="570px" borderRadius="20px"/> : (
+                    // <Box w="20%" h="500px" borderRadius="20px">asd</Box>
+                    // <Box w="20%" h="500px" borderRadius="20px">123</Box>
+                    galleryOutfit(outfits, masterList).map((outfit) => {
+                      return (
+                        <Box w="20%" h="570px" borderRadius="20px">
+                          {outfit}
+                        </Box>
+                      )
+                    })
+                  )
+                }
                 </Slider>
               </Box>
             </Center>
-          </> :
-            <h1>Hi</h1>
-        }
+          </> 
       </>
     )
 }
