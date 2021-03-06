@@ -227,4 +227,3 @@ def JSON_CALL(input, filename='badname.json'):
         temp = data['clothes']
         temp.append(input)
         write_json(data)
-
