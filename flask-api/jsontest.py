@@ -11,13 +11,6 @@ test = {
     "formality": ["casual"]
 }
 
-
-data = json.dumps(test, indent=4)
-
-with open("sample.json", "w") as file:
-        file.write(data)
-
-
 test2 = {
     "colour": "red",
     "type": "shirt",
@@ -26,8 +19,17 @@ test2 = {
     "formality": ["casual"]
 }
 
-with open("sample.json", 'w') as file:
-    data = json.load(file)
-    data.update(test2)
-    file.seek(0)
-    json.dump(data, file)
+def create_file(data):
+    with open("sample.json", "w") as file:
+        json.dump(data, file)
+
+create_file(test)
+
+def update_file(add):
+    with open("sample.json", "r+") as file:
+        data = json.load(file)
+        data.update(add)
+        file.seek(0)
+        json.dump(data, file)
+
+update_file(test2)
