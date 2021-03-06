@@ -64,9 +64,14 @@ def outfit_selector_colour(address:str, formality:str):
         masterlist = json.load(json_file)
 
     for i in range(len(data)):
+        check_matching_data = False
         for j in range(len(masterlist)):
             if data["clothes"][i]["type"] == masterlist["types"][j]["name"]:
-                data["clothes"][i]["type"]
+                check_matching_data = True
+                data["clothes"][i]["condition"] = masterlist["types"][j]["condition"]
+                data["clothes"][i]["category"] = masterlist["types"][j]["category"]
+        if not check_matching_data:
+            data["clothes"].remove(data["clothes"][i])
 
     all_clothes_separated = categorising_by_category()
 

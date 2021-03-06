@@ -3,52 +3,14 @@
         {
             "clothes": 2,
             "warning": 0,
-            "type": "shirt",
+            "type": "hoodie",
             "colour": "white"
         },
         {
             "clothes": 3,
             "warning": 0,
-            "type": "hoodie",
-            "colour": "white"
-        },
-        {
-            "clothes": -2,
-            "warning": 0,
-            "type": "middlewear",
-            "colour": "darkblue"
-        },
-        {
-            "clothes": -2,
-            "warning": 0,
-            "type": "middlewear",
-            "colour": "darkblue"
-        },
-        {
-            "clothes": 10,
-            "warning": 0,
-            "type": "runners",
-            "colour": "red"
-        },
-        {
-            "clothes": 8,
-            "warning": 0,
-            "type": "cap",
+            "type": "shirt",
             "colour": "black"
-        }
-    ],
-    [
-        {
-            "clothes": 2,
-            "warning": 0,
-            "type": "shirt",
-            "colour": "white"
-        },
-        {
-            "clothes": 3,
-            "warning": 0,
-            "type": "hoodie",
-            "colour": "white"
         },
         {
             "clothes": -2,
@@ -65,34 +27,28 @@
         {
             "clothes": 16,
             "warning": 0,
-            "type": "sneakers",
-            "colour": "white"
+            "type": "short sleeve t-shirt",
+            "colour": "black"
         },
         {
-            "clothes": 8,
+            "clothes": 9,
             "warning": 0,
-            "type": "cap",
-            "colour": "black"
+            "type": "runners",
+            "colour": "red"
         }
     ],
     [
         {
             "clothes": 2,
-            "warning": 0,
-            "type": "shirt",
-            "colour": "white"
-        },
-        {
-            "clothes": 3,
             "warning": 0,
             "type": "hoodie",
             "colour": "white"
         },
         {
-            "clothes": -2,
+            "clothes": 14,
             "warning": 0,
-            "type": "middlewear",
-            "colour": "darkblue"
+            "type": "skirt",
+            "colour": "black"
         },
         {
             "clothes": -2,
@@ -101,36 +57,188 @@
             "colour": "darkblue"
         },
         {
-            "clothes": 20,
+            "clothes": -2,
+            "warning": 0,
+            "type": "middlewear",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 16,
+            "warning": 0,
+            "type": "short sleeve t-shirt",
+            "colour": "black"
+        },
+        {
+            "clothes": 9,
             "warning": 0,
             "type": "runners",
-            "colour": "white"
-        },
-        {
-            "clothes": 8,
-            "warning": 0,
-            "type": "cap",
-            "colour": "black"
+            "colour": "red"
         }
     ],
     [
         {
-            "clothes": 4,
+            "clothes": 5,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "green"
+        },
+        {
+            "clothes": 3,
             "warning": 0,
             "type": "shirt",
             "colour": "black"
         },
         {
+            "clothes": -2,
+            "warning": 0,
+            "type": "middlewear",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": -2,
+            "warning": 0,
+            "type": "middlewear",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 16,
+            "warning": 0,
+            "type": "short sleeve t-shirt",
+            "colour": "black"
+        },
+        {
+            "clothes": 9,
+            "warning": 0,
+            "type": "runners",
+            "colour": "red"
+        }
+    ],
+    [
+        {
+            "clothes": 5,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "green"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "skirt",
+            "colour": "black"
+        },
+        {
+            "clothes": -2,
+            "warning": 0,
+            "type": "middlewear",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": -2,
+            "warning": 0,
+            "type": "middlewear",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 16,
+            "warning": 0,
+            "type": "short sleeve t-shirt",
+            "colour": "black"
+        },
+        {
+            "clothes": 9,
+            "warning": 0,
+            "type": "runners",
+            "colour": "red"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
             "clothes": 3,
+            "warning": 0,
+            "type": "shirt",
+            "colour": "black"
+        },
+        {
+            "clothes": -2,
+            "warning": 0,
+            "type": "middlewear",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": -2,
+            "warning": 0,
+            "type": "middlewear",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 16,
+            "warning": 0,
+            "type": "short sleeve t-shirt",
+            "colour": "black"
+        },
+        {
+            "clothes": 9,
+            "warning": 0,
+            "type": "runners",
+            "colour": "red"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "skirt",
+            "colour": "black"
+        },
+        {
+            "clothes": -2,
+            "warning": 0,
+            "type": "middlewear",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": -2,
+            "warning": 0,
+            "type": "middlewear",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 16,
+            "warning": 0,
+            "type": "short sleeve t-shirt",
+            "colour": "black"
+        },
+        {
+            "clothes": 9,
+            "warning": 0,
+            "type": "runners",
+            "colour": "red"
+        }
+    ],
+    [
+        {
+            "clothes": 2,
             "warning": 0,
             "type": "hoodie",
             "colour": "white"
         },
         {
-            "clothes": -2,
-            "warning": 0,
-            "type": "middlewear",
-            "colour": "darkblue"
+            "clothes": 0,
+            "warning": 1,
+            "type": "shorts",
+            "colour": "yellow"
         },
         {
             "clothes": -2,
@@ -139,68 +247,112 @@
             "colour": "darkblue"
         },
         {
-            "clothes": 10,
+            "clothes": -2,
             "warning": 0,
+            "type": "middlewear",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 16,
+            "warning": 0,
+            "type": "short sleeve t-shirt",
+            "colour": "black"
+        },
+        {
+            "clothes": 9,
+            "warning": 1,
             "type": "runners",
             "colour": "red"
-        },
-        {
-            "clothes": 8,
-            "warning": 0,
-            "type": "cap",
-            "colour": "black"
         }
     ],
     [
         {
-            "clothes": 2,
+            "clothes": 5,
             "warning": 0,
-            "type": "shirt",
-            "colour": "white"
+            "type": "shorts",
+            "colour": "green"
         },
         {
-            "clothes": 14,
+            "clothes": 0,
+            "warning": 1,
+            "type": "shorts",
+            "colour": "yellow"
+        },
+        {
+            "clothes": -2,
+            "warning": 0,
+            "type": "middlewear",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": -2,
+            "warning": 0,
+            "type": "middlewear",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 16,
+            "warning": 0,
+            "type": "short sleeve t-shirt",
+            "colour": "black"
+        },
+        {
+            "clothes": 9,
+            "warning": 1,
+            "type": "runners",
+            "colour": "red"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
             "warning": 1,
             "type": "sweater",
             "colour": "lightblue"
         },
         {
-            "clothes": -2,
+            "clothes": 0,
             "warning": 1,
-            "type": "middlewear",
-            "colour": "darkblue"
+            "type": "shorts",
+            "colour": "yellow"
         },
         {
             "clothes": -2,
-            "warning": 1,
-            "type": "middlewear",
-            "colour": "darkblue"
-        },
-        {
-            "clothes": 10,
             "warning": 0,
+            "type": "middlewear",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": -2,
+            "warning": 0,
+            "type": "middlewear",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 16,
+            "warning": 0,
+            "type": "short sleeve t-shirt",
+            "colour": "black"
+        },
+        {
+            "clothes": 9,
+            "warning": 1,
             "type": "runners",
             "colour": "red"
-        },
-        {
-            "clothes": 8,
-            "warning": 0,
-            "type": "cap",
-            "colour": "black"
         }
     ],
     [
         {
             "clothes": 2,
-            "warning": 0,
-            "type": "shirt",
+            "warning": 1,
+            "type": "hoodie",
             "colour": "white"
         },
         {
-            "clothes": 14,
+            "clothes": 18,
             "warning": 1,
-            "type": "sweater",
-            "colour": "lightblue"
+            "type": "shorts",
+            "colour": "grey"
         },
         {
             "clothes": -2,
@@ -216,91 +368,15 @@
         },
         {
             "clothes": 16,
-            "warning": 0,
-            "type": "sneakers",
-            "colour": "white"
-        },
-        {
-            "clothes": 8,
-            "warning": 0,
-            "type": "cap",
-            "colour": "black"
-        }
-    ],
-    [
-        {
-            "clothes": 2,
-            "warning": 0,
-            "type": "shirt",
-            "colour": "white"
-        },
-        {
-            "clothes": 14,
             "warning": 1,
-            "type": "sweater",
-            "colour": "lightblue"
-        },
-        {
-            "clothes": -2,
-            "warning": 1,
-            "type": "middlewear",
-            "colour": "darkblue"
-        },
-        {
-            "clothes": -2,
-            "warning": 1,
-            "type": "middlewear",
-            "colour": "darkblue"
-        },
-        {
-            "clothes": 20,
-            "warning": 0,
-            "type": "runners",
-            "colour": "white"
-        },
-        {
-            "clothes": 8,
-            "warning": 0,
-            "type": "cap",
-            "colour": "black"
-        }
-    ],
-    [
-        {
-            "clothes": 4,
-            "warning": 0,
-            "type": "shirt",
+            "type": "short sleeve t-shirt",
             "colour": "black"
         },
         {
-            "clothes": 14,
-            "warning": 1,
-            "type": "sweater",
-            "colour": "lightblue"
-        },
-        {
-            "clothes": -2,
-            "warning": 1,
-            "type": "middlewear",
-            "colour": "darkblue"
-        },
-        {
-            "clothes": -2,
-            "warning": 1,
-            "type": "middlewear",
-            "colour": "darkblue"
-        },
-        {
-            "clothes": 10,
+            "clothes": 9,
             "warning": 0,
             "type": "runners",
             "colour": "red"
-        },
-        {
-            "clothes": 8,
-            "warning": 0,
-            "type": "cap",
-            "colour": "black"
         }
     ]
 ]
