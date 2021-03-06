@@ -13,24 +13,23 @@ import pic7 from '../pictures/heels.png';
 import pic8 from '../pictures/hoodie.png';
 import pic9 from '../pictures/jacket.png';
 import pic10 from '../pictures/jeans.png';
-import pic11 from '../pictures/long sleeve shirt.png';    
-import pic12 from '../pictures/long sleeve t-shirt.png';  
+import pic11 from '../pictures/long sleeve shirt.png';
+import pic12 from '../pictures/long sleeve t-shirt.png';
 import pic13 from '../pictures/other hat.png';
 import pic14 from '../pictures/pants.png';
 import pic15 from '../pictures/raincoat.png';
-import pic16 from '../pictures/short sleeve shirt.png';   
-import pic17 from '../pictures/short sleeve t-shirt.png'; 
-import pic18 from '../pictures/shorts.png';
-import pic19 from '../pictures/skirt.png';
-import pic20 from '../pictures/sneaker.png';
-import pic21 from '../pictures/sweater.png';
-import pic22 from '../pictures/tights.png';
-
+import pic16 from '../pictures/runners.png';
+import pic17 from '../pictures/short sleeve shirt.png';import pic18 from '../pictures/short sleeve t-shirt.png';
+import pic19 from '../pictures/shorts.png';
+import pic20 from '../pictures/skirt.png';
+import pic21 from '../pictures/sneaker.png';
+import pic22 from '../pictures/sweater.png';
+import pic23 from '../pictures/tights.png';
 
 const ClothingElement2 = (props) => {
   // const images = importAll(require.context('./pictures', false, '/\.png/'));
-  const images = {'beanie': pic0, 'blouse': pic1, 'boots': pic2, 'cap': pic3, 'chino': pic4, 'coat': pic5, 'crop top': pic6, 'heels': pic7, 'hoodie': pic8, 'jacket': pic9, 'jeans': pic10, 'long sleeve shirt': pic11, 'long sleeve t-shirt': pic12, 'other hat': pic13, 'pants': pic14, 'raincoat': pic15, 'short sleeve shirt': pic16, 'short sleeve t-shirt': pic17, 'shorts': pic18, 'skirt': pic19, 'sneaker': pic20, 'sweater': 
-  pic21, 'tights': pic22, }
+  const images = {'beanie': pic0, 'blouse': pic1, 'boots': pic2, 'cap': pic3, 'chino': pic4, 
+  'coat': pic5, 'crop top': pic6, 'heels': pic7, 'hoodie': pic8, 'jacket': pic9, 'jeans': pic10, 'long sleeve shirt': pic11, 'long sleeve t-shirt': pic12, 'other hat': pic13, 'pants': pic14, 'raincoat': pic15, 'runners': pic16, 'short sleeve shirt': pic17, 'short sleeve t-shirt': pic18, 'shorts': pic19, 'skirt': pic20, 'sneaker': pic21, 'sweater': pic22, 'tights': pic23, }
 
   var type;
   var colour;
