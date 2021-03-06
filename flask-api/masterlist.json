@@ -14,11 +14,11 @@
     "purple",
     "brown"
   ],
-  "type": [{
+  "types": [{
     "name": "short sleeve t-shirt",
     "category": "top",
     "condition": ["warm", "cold"]
-  },
+    },
     {
       "name": "long sleeve t-shirt",
     "category": "top",
