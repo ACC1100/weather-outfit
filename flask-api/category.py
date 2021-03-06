@@ -138,7 +138,7 @@ def outfit_selector_colour():
 
     viable_clothes_plus_extras = deepcopy(viable_clothes)
     for i in range(len(viable_clothes_plus_extras)):
-        if len(viable_clothes_plus_extras[i]) == 0 or viable_clothes_plus_extras[i][0] == -1 or viable_clothes_plus_extras[i][0] == -2:
+        if len(viable_clothes_plus_extras[i]) == 0 or viable_clothes_plus_extras[i][0] == -1:
             j = 0
             viable_clothes_plus_extras[i] = []
             while j < 5:
