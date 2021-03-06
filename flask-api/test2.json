@@ -9,11 +9,11 @@
   },
   {
     "colour": "grey",
-    "type": "pants",
+    "type": "shorts",
     "category": "bottom",
     "condition": [
       "warm",
-      "hot"
+      "cold"
     ],
     "formality": [
       "casual",
