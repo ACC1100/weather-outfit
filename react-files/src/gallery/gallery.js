@@ -49,7 +49,7 @@ function Gallery() {
           )
         }
       }
-      for (var k = 0; k < 5; k++) {
+      for (var k = 0; k < 6; k++) {
         output.push(
           <Grid templateColumns="repeat(3, 200px)" justifyContent='center'>
             {temp_outfit}
