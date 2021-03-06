@@ -190,8 +190,8 @@
     "colour": "orange",
     "type": "Beanie", 
     "category": "headwear",
-    "condition": [ "freezing", "cold", ],
+    "condition": [ "freezing", "cold"],
     "formality": [ "casual" ]
-  },
+  }
 ]
 }
