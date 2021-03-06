@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'; ////
 
-import {ChakraProvider, theme, Button, VStack, StackDivider, Box, Grid} from '@chakra-ui/react';
+import {ChakraProvider, Button, VStack, StackDivider, Box, Grid} from '@chakra-ui/react';
 
 import AddClothes from "./add-clothes/addClothes";
 import MyClothes from "./my-clothes/myClothes";
 import Gallery from "./gallery/gallery";
 import Navbar from "./navbar/navbar";
+
+import theme2 from "./theme";
 
 function getContent(page) {
   if (page === "") {
@@ -49,7 +51,7 @@ function App() {
   // }
 
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme2}>
       <Navbar page={page} testf={setPage}/>
       {getContent(page)}
     </ChakraProvider>

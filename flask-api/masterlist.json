@@ -139,5 +139,13 @@
     "category": "headwear",
     "condition": ["warm","cold", "rain"]
     }
+  ],
+  "categories": [
+    "top",
+    "middlewear",
+    "outerwear",
+    "bottom",
+    "footwear",
+    "headwear"
   ]
 }
