@@ -5,18 +5,7 @@ import Slider from "react-slick";
 import "./slick/slick.css"; 
 import "./slick/slick-theme.css";
 
-function getMenu() {
-    return (
-        <Center>
-            <VStack spacing={8} w="80%">
-                <Input placeholder="location" size="lg" variant="filled"/>
-                <Button colorScheme="teal" size="lg" isFullWidth={true}>
-                    Generate
-                </Button>
-            </VStack>
-        </Center>
-    )
-}
+
 
 function getGalleryItems() {
     var output = [];
@@ -50,6 +39,19 @@ function Gallery() {
         slidesToShow: 1,
         slidesToScroll: 1
     };
+
+    const getMenu = () => {
+        return (
+            <Center>
+                <VStack spacing={8} w="80%">
+                    {/* <Input placeholder="location" size="lg" variant="filled" onChange={handleChange}/> */}
+                    <Button colorScheme="teal" size="lg" isFullWidth={true}>
+                        Generate
+                    </Button>
+                </VStack>
+            </Center>
+        )
+    }
 
     return (
         <>
