@@ -1,0 +1,143 @@
+{
+  "colours": [
+    "black",
+    "white",
+    "grey",
+    "pink",
+    "red",
+    "orange",
+    "beige",
+    "yellow",
+    "green",
+    "lightblue",
+    "darkblue",
+    "purple",
+    "brown"
+  ],
+  "type": [{
+    "name": "short sleeve t-shirt",
+    "category": "top",
+    "condition": ["warm", "cold"]
+  },
+    {
+      "name": "long sleeve t-shirt",
+    "category": "top",
+    "condition": ["cold", "freezing"]
+    },
+    {
+      "name": "short sleeve shirt",
+    "category": "top",
+    "condition": ["warm", "cold", "freezing"]
+    },
+    {
+      "name": "long sleeve shirt",
+    "category": "top",
+    "condition": ["cold", "freezing"]
+    },
+    {
+      "name": "sweater",
+    "category": "middlewear",
+    "condition": ["cold", "freezing"]
+    },
+    {
+    "name": "jacket",
+    "category": "middlewear",
+    "condition": ["cold", "freezing"]
+    },
+    {
+          "name": "coat",
+    "category": "outerwear",
+    "condition": ["cold", "freezing", "rain"]
+    },
+    {
+       "name": "raincoat",
+    "category": "outerwear",
+    "condition": ["cold", "freezing", "rain"]
+    },
+    {
+      "name": "hoodie",
+    "category": "middlewear",
+    "condition": ["cold", "freezing", "rain"]
+    },
+    {
+      "name": "jeans",
+    "category": "bottom",
+    "condition": ["cold", "freezing", "rain"]
+    },
+    {
+      "name": "chino",
+    "category": "bottom",
+    "condition": ["cold", "freezing", "rain"]
+    },
+    {
+      "name": "pants",
+    "category": "bottom",
+    "condition": ["cold", "freezing", "rain"]
+    },
+    {
+      "name": "tights",
+    "category": "bottom",
+    "condition": ["cold", "freezing", "rain"]
+    },
+    {
+      "name": "shorts",
+    "category": "bottom",
+    "condition": ["warm", "rain"]
+    },
+    {
+      "name": "sneakers",
+    "category": "footwear",
+    "condition": ["warm", "cold", "freezing", "rain"]
+    },
+    {
+      "name": "runners",
+    "category": "footwear",
+    "condition": ["warm", "cold", "freezing", "rain"]
+    },
+    {
+      "name": "boots",
+    "category": "footwear",
+    "condition": ["cold", "freezing", "rain"]
+    },
+    {
+     "name": "heels",
+    "category": "footwear",
+    "condition": ["warm"]
+    },
+    {
+     "name": "skirt",
+    "category": "bottom",
+    "condition": ["warm"]
+    },
+    {
+     "name": "blouse",
+    "category": "middlewear",
+    "condition": ["cold"]
+    },
+    {
+     "name": "crop top",
+    "category": "top",
+    "condition": ["warm"]
+    },
+    {
+     "name": "cap",
+    "category": "headwear",
+    "condition": ["warm", "cold", "rain"]
+    },
+    {
+    "name": "sun hat",
+    "category": "headwear",
+    "condition": ["warm", "rain"]
+    },
+    {
+    "name": "beanie",
+    "category": "headwear",
+    "condition": ["cold", "freezing"]
+    },
+    {
+    "name": "other hat",
+    "category": "headwear",
+    "condition": ["warm","cold", "rain"]
+    }
+  ]
+}
