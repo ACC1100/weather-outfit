@@ -1,7 +1,7 @@
 {
 "clothes": [
   {
-    "colour": "light blue",
+    "colour": "lightblue",
     "type": "jacket",
     "category": "middlewear",
     "condition": ["cold"],
@@ -99,7 +99,7 @@
     "formality": ["casual"]
   },
   {
-    "colour": "dark blue",
+    "colour": "darkblue",
     "type": "beanie",
     "category": "headwear",
     "condition": [
@@ -131,28 +131,28 @@
 
   {
     "colour": "white",
-    "type": "Long Sleeve Shirt", 
+    "type": "long sleeve shirt",
     "category": "top",
     "condition": [ "hot", "warm", "cold", "freezing" ],
     "formality": [ "smart-casual", "formal" ]
   },
   {
-    "colour": "light blue",
-    "type": "Sweater",
+    "colour": "lightblue",
+    "type": "sweater",
     "category": "middlewear",
     "condition": [ "warm", "cold", "freezing" ],
     "formality": [ "casual", "smart-casual" ]
   },
   {
     "colour": "black",
-    "type": "Skirt",
+    "type": "skirt",
     "category": "bottom",
     "condition": [ "warm", "hot" ],
     "formality": [ "casual", "smart-casual" ]
   },
   {
     "colour": "white",
-    "type": "Sneakers",
+    "type": "sneakers",
     "category": "footwear",
     "condition": [ "hot", "warm", "cold", "freezing" ],
     "formality": [ "casual", "smart-casual" ]
@@ -160,35 +160,35 @@
 
   {
     "colour": "black",
-    "type": "Short Sleeve T-Shirt", 
+    "type": "short sleeve t-shirt",
     "category": "top",
     "condition": [ "hot", "warm", "cold", "freezing" ],
     "formality": [ "smart-casual", "casual" ]
   },
   {
-    "colour": "light blue",
-    "type": "Jacket", 
+    "colour": "lightblue",
+    "type": "jacket",
     "category": "outerwear",
     "condition": [ "cold", "freezing" ],
     "formality": [ "smart-casual", "casual" ]
   },
   {
     "colour": "grey",
-    "type": "Shorts", 
+    "type": "shorts",
     "category": "top",
     "condition": [ "hot", "warm"],
     "formality": [ "smart-casual", "casual" ]
   },
   {
     "colour": "white",
-    "type": "Runners", 
+    "type": "runners",
     "category": "footwear",
     "condition": [ "hot", "warm", "cold", "freezing" ],
     "formality": [ "smart-casual", "casual" ]
   },
   {
     "colour": "orange",
-    "type": "Beanie", 
+    "type": "beanie",
     "category": "headwear",
     "condition": [ "freezing", "cold"],
     "formality": [ "casual" ]
