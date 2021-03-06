@@ -25,8 +25,9 @@ def create_file(data):
 
 create_file(test)
 
+
 def update_file(add):
-    with open("sample.json", "r+") as file:
+    with open("sample.json", "a+") as file:
         data = json.load(file)
         data.update(add)
         file.seek(0)
