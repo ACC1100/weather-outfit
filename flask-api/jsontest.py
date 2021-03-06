@@ -228,5 +228,3 @@ def JSON_CALL(input, filename='badname.json'):
         temp.append(input)
         write_json(data)
 
-
-JSON_CALL('abc', 'testingwrite.json')
