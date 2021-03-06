@@ -131,8 +131,8 @@ def categorising_by_category(selected_clothes = False):
 def add_clothing():
     req = request.json
     print('req: ', req)
-    write_json(req, "wardrobe")
-    # call the function that adds clothing to json here
+
+    JSON_CALL(req, "wardrobe")
     return {
         'result': 'success'
     }

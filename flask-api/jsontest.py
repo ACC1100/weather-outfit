@@ -223,4 +223,4 @@ def JSON_CALL(input, filename='sample.json'):
         write_json(data)
 
 
-JSON_CALL(test3)
+JSON_CALL('abc', 'testingwrite.json')
