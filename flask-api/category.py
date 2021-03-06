@@ -413,39 +413,19 @@ def categorising_by_category(selected_clothes = False):
 def add_clothing():
     req = request.json
     print('req: ', req)
+    with open("masterlist.json") as json_file:
+        data = json.load(json_file)
     d = req
+    for i in range(len(data["type"])):
+        if data["type"][i]["name"] == d["type"]:
+            d["category"] = data["type"][i]["category"]
+            d["category"] = data["type"][i]["condition"]
+            break
 
-    JSON_CALL(req, "wardrobe")
+    JSON_CALL(d, "wardrobe")
     return {
         'result': 'success'
     }
-
-def derive_condition_category(d):
-    """
-    Calculates the condition and category of a type of clothing and adds that to the clothing dictionary
-    :return: dictionary with condition and category
-    """
-    if d["type"] == "short sleeve t-shirt":
-        d["condition"] = ["warm", "cold"]
-        d["category"] = "top"
-    if d["type"] == "long sleeve t-shirt":
-        d["condition"] = [ "cold", "freezing"]
-        d["category"] = "top"
-    if d["type"] == "short sleeve shirt":
-        d["condition"] = ["warm", "cold", "freezing"]
-        d["category"] = "top"
-    if d["type"] == "long sleeve shirt":
-        d["condition"] = ["cold", "freezing"]
-        d["category"] = "top"
-    if d["type"] == "sweater":
-        d["condition"] = ["cold", "freezing"]
-        d["category"] = "middlewear"
-    if d["type"] == "jacket":
-        d["condition"] = ["cold", "freezing"]
-        d["category"] = "middlewear"
-    if d["type"] == "coat":
-        d["condition"] = ["cold", "freezing", "rain"]
-        d["category"] = "outerwear"
 
 @app.route('/readfile', methods = ['POST'])
 def read_clothing():
