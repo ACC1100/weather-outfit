@@ -4,21 +4,22 @@ import {ChakraProvider, theme, Button, VStack, StackDivider, Box, Grid} from '@c
 
 import AddClothes from "./add-clothes/addClothes";
 import MyClothes from "./my-clothes/myClothes";
+import Gallery from "./gallery/gallery";
 import Navbar from "./navbar/navbar";
 
 function getContent(page) {
   if (page === "") {
     return (
-        <AddClothes/>
+      <AddClothes/>
     )
   } else if (page === "my-clothes") {
     return (
-        <MyClothes/>
+      <MyClothes/>
     )
   } else if (page === "gallery") {
-    // return (
-        // <MyClothes/>
-  // )
+    return (
+      <Gallery/>
+  )
   }
 }
 
