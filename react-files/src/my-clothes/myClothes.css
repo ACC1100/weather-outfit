@@ -1,0 +1,7 @@
+.imageGrow:hover {
+  transform: scale(1.1);
+}
+
+.imageGrow:hover > .deleteButton {
+  display: block;
+}

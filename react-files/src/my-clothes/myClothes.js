@@ -23,17 +23,9 @@ function MyClothes() {
     }).then(response => response.json())
       .then(data => {
         console.log('data: ', data.result);
-        var i;
-        for (i = 0; i < 6; i++) {
-          output.push(data.result[i]);
-          // categories.push(data.result[i]);
-        }
-        setCategories('returning ', data.result);
-        // return data.result
-        // console.log('categories: ', categories);
+        setCategories(data.result);
+        setCategories([[2, 4, 5, 4, 5, 4, 5, 5, 4, 5], [0, 3, 6], [8, 13], [1, 7], [11, 12], [9, 10]])
       })
-    // console.log('op', output)
-    // return output
   }
 
   // const createClothingElement = async () => {
@@ -83,12 +75,17 @@ function MyClothes() {
   // let returnOutput = generateClothing(clothingElementMade);
   // console.log('3', returnOutput);
   // const returnedClothes = 
+
+  function showdata() {
+    console.log('cats: ', categories);
+  }
+
   return (
     <div>
-      {/* <Button onClick={generateClothing}>
+      <Button onClick={() => { showdata() }}>
         Click Me
       </Button>
-      Test */}
+      Test
       <CategoryList categories={categories} />
     </div>
   )

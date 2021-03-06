@@ -142,9 +142,9 @@ function MyClothes() {
   //           }}
   //           boxSize="150px" objectFit="contain" src={shirt} alt='' />
   //       </Center>
-  //       <Image id={index} onMouseEnter={(event) => {
-  //         console.log('testest', event.target.getAttribute('deleteid'));
-  //       }} position='relative' top='-170px' left='-10px' boxSize="35px" objectFit="contain" src={deleteSymbol} alt='' />
+        // <Image id={index} onMouseEnter={(event) => {
+        //   console.log('testest', event.target.getAttribute('deleteid'));
+        // }} position='relative' top='-170px' left='-10px' boxSize="35px" objectFit="contain" src={deleteSymbol} alt='' />
   //     </Box>
   //   )
   // }

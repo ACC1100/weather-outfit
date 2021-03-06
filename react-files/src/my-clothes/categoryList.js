@@ -22,7 +22,7 @@ const CategoryList = ({ categories }) => {
     output.push(
       <div>
         <Text fontSize="3xl">Top</Text>
-        <Grid templateColumns="repeat(7, 180px)" px="50px" pt='20px' justifyContent='center'>
+        <Grid templateColumns="repeat(7, auto)" mx='150px' justifyContent='center' >
           {category}
         </Grid>
       </div>
