@@ -99,6 +99,9 @@ function AddClothes() {
     .then(data => {
       console.log(data.result);
     })
+
+    onClose(); 
+    setFormData({});
   }
 
   
@@ -189,7 +192,7 @@ function AddClothes() {
             </DrawerBody>
 
             <DrawerFooter borderTopWidth="1px">
-              <Button variant="outline" mr={3} onClick={onClose}>
+              <Button variant="outline" mr={3} onClick={() => {onClose(); setFormData({});}}>
                 Cancel
               </Button>
               <Button colorScheme="blue" onClick={() => submitForm()}>
