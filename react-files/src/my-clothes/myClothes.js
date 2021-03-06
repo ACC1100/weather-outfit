@@ -1,142 +1,95 @@
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
 import { Text, ChakraProvider, theme, Button, VStack, Flex, Box, Grid, Image, Center} from '@chakra-ui/react';
 import shirt from './shirt.png';
-import deleteSymbol from './delete.png';
-const datajson = require('./test2.json');
+import CategoryList from './categoryList';
 
 function MyClothes() {
   const [categories, setCategories] = useState([]);
-  const [clothing, setClothing] = useState([]);
 
   useEffect(() => {
+    fetchClothing();
+    // console.log('2nd :', output1);
+    // let output2 = createClothingElement(output1);
+    // let output3 = generateClothing(output2);
+  }, []);
+
+  function fetchClothing() {
+    let output = [];
     fetch('/hello', {
       method: "POST",
       headers: {
         "content_type": "application/json",
       }
-    })
-      .then(response => response.json())
+    }).then(response => response.json())
       .then(data => {
-        setCategories(data.result);
         console.log('data: ', data.result);
-        console.log('categories: ', categories);
+        var i;
+        for (i = 0; i < 6; i++) {
+          output.push(data.result[i]);
+          // categories.push(data.result[i]);
+        }
+        setCategories('returning ', data.result);
+        // return data.result
+        // console.log('categories: ', categories);
       })
-  }, []);
-
-  const returnBoxes = () => {
-    let counter = 0;
-    let output = [];
-    var i;
-    for (i = 0; i < categories.length; i++) {
-      let categoryboxes = [];
-      var j;
-      for (j = 0; j < categories[i].length; j++) {
-        //array of images
-        categoryboxes.push(
-          <Box boxid={counter} w="160px" h="160px" borderWidth='2px' mx='20px' my='10px'>
-            <Center>
-              <Image image_i={i} image_j={j} imageid={counter}
-                onMouseOver={(event) => {
-                  console.log('here', i, j, event.target.getAttribute('image_i'), event.target.getAttribute('image_j'));
-                  // setIndex(event.target.getAttribute('imageid'));
-                  // setDeleteShown([event.target.getAttribute('image_i'), event.target.getAttribute('image_j')]);
-                }}
-                onMouseOut={() => {
-                  console.log('left');
-                  // setDeleteShown(null);
-                }}
-                boxSize="150px" objectFit="contain" src={shirt} alt='' />
-            </Center>
-            <Image id={counter} onMouseEnter={(event) => {
-              console.log('testest', event.target.getAttribute('deleteid'));
-            }} position='relative' top='-170px' left='-10px' boxSize="35px" objectFit="contain" src={deleteSymbol} alt='' />
-          </Box>
-        )
-        counter++
-      }
-      output.push(categoryboxes);
-    }
-    return output
+    // console.log('op', output)
+    // return output
   }
 
-  // const deleteToRender = (index) => {
-  //   console.log(index);
-  //   return (
-  //     <Box boxid={index} w="160px" h="160px" borderWidth='2px' mx='20px' my='10px'>
-  //       <Center>
-  //         <Image imageid={index}
-  //           onMouseOver={(event) => {
-  //             console.log('here', event.target.getAttribute('imageid'));
-  //             setIndex(event.target.getAttribute('imageid'));
-  //             setDeleteShown([event.target.getAttribute('image_i'), event.target.getAttribute('image_j')]);
-  //             renderFunction(index);
-  //           }}
-  //           onMouseOut={() => {
-  //             console.log('left');
-  //             setDeleteShown(null);
-  //           }}
-  //           boxSize="150px" objectFit="contain" src={shirt} alt='' />
-  //       </Center>
-  //       <Image id={index} onMouseEnter={(event) => {
-  //         console.log('testest', event.target.getAttribute('deleteid'));
-  //       }} position='relative' top='-170px' left='-10px' boxSize="35px" objectFit="contain" src={deleteSymbol} alt='' />
-  //     </Box>
-  //   )
-  // }
-
-  // const renderFunction = (index) => {
-  //   if (deleteShown) {
-  //     console.log('detected!')
-  //     clothing[deleteShown[0], deleteShown[1]] = deleteToRender(index);
+  // const createClothingElement = async () => {
+  //   const clothing = await fetchClothing();
+  //   console.log('never here ');
+  //   let output = [];
+  //   var i;
+  //   for (i = 0; i < 6; i++) {
+  //     var j;
+  //     for (j = 0; j < clothing[i].length; j++) {
+  //       output.push(
+          
+  //       )
+  //     }
   //   }
+  //   return output
   // }
 
-  const test = returnBoxes();
+  function clicked() {
+    console.log(categories);
+  }
 
-  return (
-    <div>
-      <VStack
-        spacing={10}
-        align="stretch"
-      >
+  const generateClothing = () => {
+    let clothingElements = createClothingElement();
+    let output = [];
+    var i;
+    for (i = 0; i < 6; i++) {
+      output.push(
         <div>
           <Text fontSize="3xl">Top</Text>
           <Grid templateColumns="repeat(7, 180px)" px="50px" pt='20px' justifyContent='center'>
-              {test[0]}
+            {clothingElements[i]}
           </Grid>
         </div>
-        <div>
-          <Text fontSize="3xl">Middlewear</Text>
-          <Grid templateColumns="repeat(7, 180px)" px="50px" pt='20px' justifyContent='center'>
-              {test[1]}
-          </Grid>
-        </div>
-        <div>
-          <Text fontSize="3xl">Outer</Text>
-          <Grid templateColumns="repeat(7, 180px)" px="50px" pt='20px' justifyContent='center'>
-              {test[2]}
-          </Grid>
-        </div>
-        <div>
-          <Text fontSize="3xl">Bottom</Text>
-          <Grid templateColumns="repeat(7, 180px)" px="50px" pt='20px' justifyContent='center'>
-              {test[3]}
-          </Grid>
-        </div>
-        <div>
-          <Text fontSize="3xl">Footwear</Text>
-          <Grid templateColumns="repeat(7, 180px)" px="50px" pt='20px' justifyContent='center'>
-              {test[4]}
-          </Grid>
-        </div>
-        <div>
-          <Text fontSize="3xl">Headwear</Text>
-          <Grid templateColumns="repeat(7, 180px)" px="50px" pt='20px' justifyContent='center'>
-              {test[5]}
-          </Grid>
-        </div>
-      </VStack>
+      )
+    }
+    return (
+      <div>
+        <VStack spacing={10} align="stretch">
+          {output}
+        </VStack>
+      </div>
+    )
+  }
+  // let clothingElementMade = createClothingElement(fetchedClothing);
+  // console.log('2', clothingElementMade);
+  // let returnOutput = generateClothing(clothingElementMade);
+  // console.log('3', returnOutput);
+  // const returnedClothes = 
+  return (
+    <div>
+      {/* <Button onClick={generateClothing}>
+        Click Me
+      </Button>
+      Test */}
+      <CategoryList categories={categories} />
     </div>
   )
 }
