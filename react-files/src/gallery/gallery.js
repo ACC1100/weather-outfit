@@ -8,8 +8,7 @@ import "./slick/slick-theme.css";
 
 
 function getGalleryItems() {
-  var output = [];
-
+  // var output = [];
   // const submitForm = () => {
   //   var newData = formData;
   //   newData['colour'] = ogColours[newData['colour']];
@@ -39,6 +38,24 @@ function Gallery() {
     slidesToScroll: 1
   };
 
+  function fetchingSuitableOutfits() {
+    fetch('/getoutfit', {
+      method: "POST",
+      headers: {
+        "content_type": "application/json",
+      },
+      body: JSON.stringify({
+        address: location,
+        formality: 'smart'
+      })
+    }).then(response => response.json())
+      .then(data => {
+        console.log('outfits: ', data.result);
+        // setCategories(data.result);
+        // setCategories([[2, 4, 5, 14, 15, 24, 25, 35, 34, 45], [0, 3, 6], [8, 13], [1, 7], [11, 12], [9, 10]])
+      })
+  }
+
   const getMenu = () => {
     return (
       <Center>
@@ -47,7 +64,7 @@ function Gallery() {
             setLocation(event.target.value);
             console.log(event.target.value);
           }} />
-          <Button colorScheme="teal" size="lg" isFullWidth={true}>
+          <Button colorScheme="teal" size="lg" isFullWidth={true} onClick={() => fetchingSuitableOutfits()}>
               Generate
           </Button>
         </VStack>
