@@ -211,7 +211,13 @@ def create_file(data, filename='sample.json'):
 create_file(test2)
 
 
-def JSON_CALL(input, filename='sample.json'):
+def JSON_CALL(input, filename='badname.json'):
+    try:
+        open(filename)
+    except FileNotFoundError:
+        create_file(input, filename)
+        return
+
     def write_json(data):
         with open(filename, 'w') as f:
             json.dump(data, f, indent=4)
