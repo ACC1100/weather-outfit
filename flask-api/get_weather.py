@@ -55,12 +55,12 @@ def GetLatLong(Address, Dest):
     # Making request and resolving
     Data = requests.get(StringOCR)
     if Data.status_code == 200:
-        geometry = Data.json()["results"][0]["geometry"]
-        Dest[0] = geometry["lat"]
-        Dest[1] = geometry["lng"]
-        return ERROR_SUCCESS
-    else:
-        return ERROR_FAIL
+        if len(Data.json()["results"]) != 0:
+            geometry = Data.json()["results"][0]["geometry"]
+            Dest[0] = geometry["lat"]
+            Dest[1] = geometry["lng"]
+            return ERROR_SUCCESS
+    return ERROR_FAIL
 
 
 def GetWeather(Address, Time, Dest):

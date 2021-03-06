@@ -5,6 +5,8 @@ TEST FILE USED TO CONNECT FRONT AND BACK END
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from jsontest import JSON_CALL
+from copy import deepcopy
+
 app = Flask(__name__)
 CORS(app)
 import json, random, time
@@ -54,7 +56,11 @@ def outfit_selector_colour():
     }
     GetWeather(address, time_tomorrow, weather_api_data)
     # @Incomplete(isuru): Check that the dict was actually poopulated!!
-
+    if weather_api_data['Summary'] is None:
+        print('invalid!!')
+        return {
+            'result': "invalid location"
+        }
     # weather = list of strings. First string is weather, second string (or null) will say rain if it is raining
     weather = weather_calculator(weather_api_data)
     # Loads list that contains dictionaries from stored clothing (the wardrobe)

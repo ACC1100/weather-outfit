@@ -48,7 +48,11 @@ def outfit_selector_colour(address:str, formality:str):
     }
     GetWeather(address, time_tomorrow, weather_api_data)
     # @Incomplete(isuru): Check that the dict was actually poopulated!!
-
+    if weather_api_data['Summary'] is None:
+        print('invalid location')
+        return {
+            'result': 'invalid location'
+        }
     # weather = list of strings. First string is weather, second string (or null) will say rain if it is raining
     weather = weather_calculator(weather_api_data)
     # Loads list that contains dictionaries from stored clothing (the wardrobe)
@@ -445,4 +449,4 @@ def colour_matching(colour: str):
 # warm, smart
 
 outfit_selector_colour("***REMOVED***, Victoria", "smart")
-
+# outfit_selector_colour("eqwrqwerqwf", "smart")

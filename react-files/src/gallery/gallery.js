@@ -50,10 +50,12 @@ function Gallery() {
       })
     }).then(response => response.json())
       .then(data => {
-        console.log('outfits: ', data.result[0]);
-        console.log(data.result[0].length);
-        // setCategories(data.result);
-        // setCategories([[2, 4, 5, 14, 15, 24, 25, 35, 34, 45], [0, 3, 6], [8, 13], [1, 7], [11, 12], [9, 10]])
+        if (data.result === "invalid location") {
+          console.log('no outfits');
+        } else {
+          console.log('outfits: ', data.result[0]);
+        }
+        // set state for gallery items
       })
   }
 
@@ -61,7 +63,7 @@ function Gallery() {
     return (
       <Center>
         <VStack spacing={8} w="80%">
-          <Input placeholder="location" size="lg" variant="filled" onChange={(event) => {
+          <Input placeholder="Location" size="lg" variant="filled" onChange={(event) => {
             setLocation(event.target.value);
             // console.log(event.target.value);
           }} />
