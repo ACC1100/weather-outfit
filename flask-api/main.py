@@ -125,11 +125,9 @@ def outfit_selector_colour(address:str, formality:str):
     # Warning 3: Wearing only top on cold/freezing day due to no middlewear
     # Warning 1: Viable clothes but don't match colours
 
-    print("separated clothing")
-    print(separated_clothing)
+
     all_outfits = []
-    print("viable clothes")
-    print(viable_clothes)
+
     viable_clothes_plus_extras = deepcopy(viable_clothes)
     for i in range(len(viable_clothes_plus_extras)):
         if len(viable_clothes_plus_extras[i]) == 0 or viable_clothes_plus_extras[i][0] == -1 or viable_clothes_plus_extras[i][0] == -2:
@@ -141,8 +139,7 @@ def outfit_selector_colour(address:str, formality:str):
                     j += 1
                 except IndexError:
                     break
-    print("viable clothes plus extra")
-    print(viable_clothes_plus_extras)
+
 
     # Gets every outfit
     for headwear in viable_clothes_plus_extras[0]:
@@ -274,8 +271,7 @@ def outfit_selector_colour(address:str, formality:str):
         x = [headwear, top, middlewear, outerwear, bottom, footwear]
         all_outfit_dict.append(x)
 
-    print("main clothing")
-    print(main_clothing)
+
     outfit_rankings = []
     for outfit in all_outfit_dict:
         x = 0
@@ -287,12 +283,19 @@ def outfit_selector_colour(address:str, formality:str):
 
     # creates counters for each main clothing
     max_clothing_no = max(main_clothing)
-    counters = [[0]*max_clothing_no]
+    counters = [[0]*(max_clothing_no+1)]
 
-
+    print("main clothing")
+    print(main_clothing)
     res = []
-    for i in range(min(len(outfit_rankings), 10)):
-        res.append(outfit_rankings[i][1])
+    max_output = 0
+    for i in range(len(outfit_rankings)):
+        if max_output >= 10:
+            break
+        counters[0][outfit_rankings[i][1][main_clothing_index]["clothes"]] += 1
+        if counters[0][outfit_rankings[i][1][main_clothing_index]["clothes"]] < 5:
+            res.append(outfit_rankings[i][1])
+            max_output += 1
 
     JSON_CALL(res, "outfit_selector_colour.json")
     print(res)
