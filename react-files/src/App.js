@@ -54,10 +54,10 @@ function App() {
   return (
     // <ChakraProvider theme={theme2}>
     <ChakraProvider theme={theme}>
+      <Box bgGradient="linear(to-l, #ffffff, #FFFFE0)">
       <Navbar page={page} testf={setPage}/>
-      {/* <Box bgGradient="linear(to-l, #7928CA, #FF0080)"> */}
         {getContent(page)}
-      {/* </Box> */}
+      </Box>
     </ChakraProvider>
   )
 }

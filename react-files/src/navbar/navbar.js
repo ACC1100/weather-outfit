@@ -17,9 +17,9 @@ function Navbar(props) {
 
     return (
         <HStack spacing="24px" padding="10px" bg="black" justify="center" bgGradient="linear(to-r, #a5b7bd, #87ceeb, yellow.400)"
-            borderWidth="2px"
+            // borderWidth="2px"
             borderColor="gray.500"
-            borderRadius="5px"
+            // borderRadius="5px"
         >
             {/* <Text fontSize="3xl">Test title</Text> */}
             {/* <Box bg="white" borderRadius="5px"> */}

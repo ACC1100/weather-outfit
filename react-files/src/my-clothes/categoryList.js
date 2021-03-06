@@ -53,7 +53,7 @@ function CategoryList ({clothingInfo}) {
           // counter++
         }
 
-        var boxBG = (i % 2 == 0) ? "white" : "gray.200";
+        var boxBG = (i % 2 == 0) ? "gray.100" : "gray.200";
         var topBG = ["red.200", "orange.200", "yellow.200", "green.200", "blue.200", "purple.200"]
         var topColour = ["red.900", "orange.900", "yellow.900", "green.900", "blue.900", "purple.900"]
 
