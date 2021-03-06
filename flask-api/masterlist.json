@@ -85,7 +85,7 @@
     "condition": ["warm", "rain"]
     },
     {
-      "name": "sneakers",
+      "name": "sneaker",
     "category": "footwear",
     "condition": ["warm", "cold", "freezing", "rain"]
     },
