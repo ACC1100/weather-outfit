@@ -148,7 +148,7 @@
     "type": "Skirt",
     "category": "bottom",
     "condition": [ "warm", "hot" ],
-    "formality" [ "casual", "smart-casual" ]:
+    "formality" [ "casual", "smart-casual" ]
   },
   {
     "colour": "white",
