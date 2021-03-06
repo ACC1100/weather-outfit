@@ -154,8 +154,8 @@
     "colour": "white",
     "type": "Sneakers",
     "category": "footwear",
-    "condition": { "hot", "warm", "cold", "freezing" ],
-    "formality": { "casual", "smart-casual" ]
+    "condition": [ "hot", "warm", "cold", "freezing" ],
+    "formality": [ "casual", "smart-casual" ]
   },
 
   {
