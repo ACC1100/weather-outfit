@@ -50,7 +50,8 @@ function Gallery() {
       })
     }).then(response => response.json())
       .then(data => {
-        console.log('outfits: ', data.result);
+        console.log('outfits: ', data.result[0]);
+        console.log(data.result[0].length);
         // setCategories(data.result);
         // setCategories([[2, 4, 5, 14, 15, 24, 25, 35, 34, 45], [0, 3, 6], [8, 13], [1, 7], [11, 12], [9, 10]])
       })
