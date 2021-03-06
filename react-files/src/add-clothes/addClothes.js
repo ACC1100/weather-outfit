@@ -113,7 +113,7 @@ function AddClothes() {
 
     for (var i = 0; i < masterList.colours.length; i++) {
       buttons.push(
-        <Button key={i} value={i} bg={masterList.colours[i]} size="lg" ratio={1} onClick={handleChange} isDisabled={formData.colour==i}/>
+        <Button key={i} value={i} borderWidth="2px" borderColor="black" bg={masterList.colours[i]} size="lg" ratio={1} onClick={handleChange} isDisabled={formData.colour==i}/>
       )
     }
 
