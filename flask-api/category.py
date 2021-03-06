@@ -117,7 +117,6 @@ def outfit_selector_colour():
     # Warning 4: Wearing only top on cold/freezing day due to no middlewear
     # Warning 5: Viable clothes but don't match colours
 
-
     all_clothes = categorising_by_category()
 
     # If weather is warm, the top will define the main colour. Else Middlewear will define the main colour
@@ -126,25 +125,28 @@ def outfit_selector_colour():
     possible_main_clothing = []
     if weather[0] == "warm":
         # No top so return empty list to tell front end to return an error
-        if len(viable_clothes[1]) == 0:
-            return []
+        if viable_clothes[1] == -1:
+            JSON_CALL([], "outfit_selector_colour.json")
+            return
         # Put all viable main clothing in a list
         for i in range(len(viable_clothes[1])):
-            possible_main_clothing.append((viable_clothes[1][i], data["clothes"][viable_clothes[1][i]]["colour"], "top", 0))
+            possible_main_clothing.append(
+                (viable_clothes[1][i], data["clothes"][viable_clothes[1][i]]["colour"], "top", 0))
 
     # If weather is cold/freezing, main_clothing will be middlewear if it exists, otherwise top
 
     else:
         # If there is middlewear
-        if len(viable_clothes[2]) > 0:
+        if viable_clothes[2] != -2 and viable_clothes[2] != -1:
             for i in range(len(viable_clothes[2])):
                 possible_main_clothing.append(
-                    (viable_clothes[2][i], data["clothes"][viable_clothes[2][i]]["colour"], "top", 0))
+                    (viable_clothes[2][i], data["clothes"][viable_clothes[2][i]]["colour"], "middlewear", 0))
         # if no middlewear, pick top
         else:
             # No top as well, return error
-            if len(viable_clothes[1]) == 0:
-                return []
+            if viable_clothes[1] == -1:
+                JSON_CALL([], "outfit_selector_colour.json")
+                return
             else:
                 for i in range(len(viable_clothes[1])):
                     possible_main_clothing.append(
@@ -156,7 +158,7 @@ def outfit_selector_colour():
         main_colour = main_clothing[1]
 
         # Removes any clothes that don't match colours
-        colour_matching_viable = viable_clothes.copy()
+        colour_matching_viable = deepcopy(viable_clothes)
         matching_colours = colour_matching(main_colour)
 
         main_outfit_index = 'abcd'
@@ -165,15 +167,17 @@ def outfit_selector_colour():
         elif main_clothing[2] == "middlewear":
             main_outfit_index = 2
 
-        print(colour_matching_viable)
         for i in range(len(colour_matching_viable)):
             if i == main_outfit_index:
                 colour_matching_viable[i] = [main_clothing[0]]
                 continue
             for clothing_num in colour_matching_viable[i]:
-                if data["clothes"][clothing_num]["colour"] not in matching_colours:
+                if clothing_num < 0:
                     colour_matching_viable[i].remove(clothing_num)
-
+                elif data["clothes"][clothing_num]["colour"] not in matching_colours:
+                    colour_matching_viable[i].remove(clothing_num)
+        print(colour_matching_viable)
+        print(viable_clothes)
         # If viable clothing
         if len(colour_matching_viable[0]) > 0:
             index = random.randrange(0, len(colour_matching_viable[0]))
@@ -183,7 +187,7 @@ def outfit_selector_colour():
             }
         else:
             # If no colour_matching viable clothing was picked, pick one that is viable
-            if len(viable_clothes[0]) > 0:
+            if viable_clothes[0] != -1:
                 index = random.randrange(0, len(viable_clothes[0]))
                 headwear = {
                     "clothes": viable_clothes[0][index],
@@ -212,7 +216,7 @@ def outfit_selector_colour():
             }
         else:
             # If no colour_matching viable clothing was picked, pick one that is viable
-            if len(viable_clothes[1]) > 0:
+            if viable_clothes[1] != -1:
                 index = random.randrange(0, len(viable_clothes[1]))
                 top = {
                     "clothes": viable_clothes[1][index],
@@ -241,11 +245,17 @@ def outfit_selector_colour():
             }
         else:
             # If no colour_matching viable clothing was picked, pick one that is viable
-            if len(viable_clothes[2]) > 0:
+            if viable_clothes[2] != -1 and viable_clothes[2] != -2:
                 index = random.randrange(0, len(viable_clothes[2]))
                 middlewear = {
                     "clothes": viable_clothes[2][index],
                     "warning": 5
+                }
+            # don't pick middlewear due to weather
+            elif viable_clothes[2] == -2:
+                middlewear = {
+                    "clothes": -1,
+                    "warning": 3
                 }
             # If no viable clothes, pick a random one
             elif len(all_clothes[2]) > 0:
@@ -270,11 +280,17 @@ def outfit_selector_colour():
             }
         else:
             # If no colour_matching viable clothing was picked, pick one that is viable
-            if len(viable_clothes[3]) > 0:
+            if viable_clothes[3] != -1 and viable_clothes[3] != -2:
                 index = random.randrange(0, len(viable_clothes[3]))
                 outerwear = {
                     "clothes": viable_clothes[3][index],
                     "warning": 5
+                }
+            # don't pick outerwear due to weather
+            elif viable_clothes[3] == -2:
+                outerwear = {
+                    "clothes": -1,
+                    "warning": 3
                 }
             # If no viable clothes, pick a random one
             elif len(all_clothes[3]) > 0:
@@ -299,7 +315,7 @@ def outfit_selector_colour():
             }
         else:
             # If no colour_matching viable clothing was picked, pick one that is viable
-            if len(viable_clothes[4]) > 0:
+            if viable_clothes[4] != -1:
                 index = random.randrange(0, len(viable_clothes[4]))
                 bottom = {
                     "clothes": viable_clothes[4][index],
@@ -328,7 +344,7 @@ def outfit_selector_colour():
             }
         else:
             # If no colour_matching viable clothing was picked, pick one that is viable
-            if len(viable_clothes[5]) > 0:
+            if viable_clothes[5] != -1:
                 index = random.randrange(0, len(viable_clothes[5]))
                 footwear = {
                     "clothes": viable_clothes[5][index],
