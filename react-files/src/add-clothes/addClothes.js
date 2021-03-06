@@ -23,8 +23,6 @@ import { useDisclosure } from "@chakra-ui/react"
 function AddClothes() {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
-  const firstField = React.useRef() // automatically selects first field
-
   const [formData, setFormData] = useState({});
 
   const handleChange = (e) => {
@@ -37,7 +35,7 @@ function AddClothes() {
     } else if (e.target.type == "button") {
       field = "colour";
       value = e.target.value;
-      value = colours[value];
+      // value = colours[value];
     } else {
       field = e.target.id;
       value = e.target.value;
@@ -52,12 +50,16 @@ function AddClothes() {
     console.log('button clicked');
     console.log(formData);
 
+    var newData = formData;
+    newData['colour'] = colours[newData['colour']];
+    newData['type'] = types[newData['type']];
+
     fetch('/add', {
       method: "POST",
       headers: {
         "content_type": "application/json",
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(newData)
     })
     .then(response => response.json())
     .then(data => {
@@ -78,6 +80,18 @@ function AddClothes() {
     return buttons
   }
 
+  var types = ["Short Sleeve T-Shirt", "Long Sleeve T-Shirt", "Short Sleeve Shirt", "Long Sleeve Shirt", "Sweater", "Jacket", "Coat", "Raincoat", "Hoodie", "Jeans", "Chino", "Pants", "Tights/Leggings", "Shorts", "Sneakers", "Runners", "Boots", "Heels", "Raincoat", "Skirt", "Dress", "Blouse", "Crop Top", "Cap", "Sun Hat", "Beanie", "Other Hat",]
+  const getClothingOptions = () => {
+    var options = [];
+    for (var i = 0; i < types.length; i++) {
+      options.push(
+        <option key={i} value={i}>{types[i]}</option>
+      )
+    }
+    return options
+  }
+  var rainTypes = ["Jacket", "Coat", "Hoodie", "Sneakers", "Sneakers", "Runners", "Boots"]
+
   return (
     <>
       <Button onClick={() => onOpen()} m={4}>
@@ -95,9 +109,7 @@ function AddClothes() {
                 <Box w="100%"> 
                   <FormLabel htmlFor="type">Type</FormLabel>
                   <Select id="type" onChange={handleChange} placeholder="Select option">
-                    <option value="tshirt">T-shirt</option>
-                    <option value="shirt">Shirt</option>
-                    <option value="Test">Test</option>
+                    {getClothingOptions()}
                   </Select>
                 </Box>
 
@@ -109,7 +121,7 @@ function AddClothes() {
                 </Box>
 
                 <Box w="100%">
-                  <FormLabel htmlFor="desc">Formality</FormLabel>
+                  <FormLabel htmlFor="formality">Formality</FormLabel>
                   <CheckboxGroup id="formality" colorScheme="green" onChange={handleChange}>
                     <HStack justify="space-evenly">
                       <Checkbox value="casual">Casual</Checkbox>
