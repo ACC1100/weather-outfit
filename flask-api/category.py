@@ -131,10 +131,18 @@ def categorising_by_category(selected_clothes = False):
 def add_clothing():
     req = request.json
     print('req: ', req)
-    write_json(req, "wardrobe")
-    # call the function that adds clothing to json here
+
+    JSON_CALL(req, "wardrobe")
     return {
         'result': 'success'
+    }
+
+@app.route('/readfile', methods = ['POST'])
+def read_clothing():
+    with open("test2.json") as json_file:
+        data = json.load(json_file)
+    return {
+        'result': data
     }
 
 if __name__ == '__main__':

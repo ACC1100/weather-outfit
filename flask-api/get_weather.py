@@ -93,6 +93,3 @@ def GetWeatherExampleCall():
     GetWeather(Address, Time, WeatherData)
     print(WeatherData)
 
-
-GetWeatherExampleCall()
-
