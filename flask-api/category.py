@@ -293,8 +293,7 @@ def outfit_selector_colour():
     max_clothing_no = max(main_clothing)
     counters = [[0]*(max_clothing_no+1)]
 
-    print("main clothing")
-    print(main_clothing)
+    print("main clothing", main_clothing)
     res = []
     max_output = 0
     for i in range(len(outfit_rankings)):
@@ -305,8 +304,12 @@ def outfit_selector_colour():
             res.append(outfit_rankings[i][1])
             max_output += 1
 
+    for item in res:
+        for clothing in item:
+            clothing['type'] = data['clothes'][clothing['clothes']]['type']
+            clothing['colour'] = data['clothes'][clothing['clothes']]['colour']
     JSON_CALL(res, "outfit_selector_colour.json")
-    print(res)
+    # print(res)
     return {
         'result': res
     }
