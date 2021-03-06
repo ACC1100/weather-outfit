@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import CategoryList from './categoryList';
 
 function MyClothes() {
-  const [categories, setCategories] = useState([[],[],[],[],[],[]]);
+  const [categories, setCategories] = useState([[], [], [], [], [], []]);
+  const [clothingInfo, setClothingInfo] = useState([]);
 
   useEffect(() => {
     fetchClothing();
-    console.log('never run again');
+    // console.log('never run again');
   }, []);
 
   function fetchClothing() {
@@ -21,6 +22,16 @@ function MyClothes() {
         console.log('data: ', data.result);
         setCategories(data.result);
         // setCategories([[2, 4, 5, 14, 15, 24, 25, 35, 34, 45], [0, 3, 6], [8, 13], [1, 7], [11, 12], [9, 10]])
+      })
+    fetch('/readfile', {
+      method: "POST",
+      headers: {
+        "content_type": "application/json",
+      }
+    }).then(response => response.json())
+      .then(data => {
+        console.log('read data: ', data.result.clothes);
+        setClothingInfo(data.result.clothes);
       })
   }
 
@@ -38,7 +49,7 @@ function MyClothes() {
       }}>
         Click Me
       </Button> */}
-      <CategoryList categories={categories} />
+        <CategoryList categories={categories} clothingInfo={clothingInfo} />
     </div>
   ) 
 }
