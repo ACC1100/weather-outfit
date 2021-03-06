@@ -82,6 +82,9 @@ def outfit_selector(formality:str) -> list:
         else:
             output.append(-1)
 
+    print("output")
+    print(output)
+    print("\n")
     # Warning 0: No issue
     # Warning 1: No viable clothes for weather and formality. Picked a random one
     # Warning 2: No clothes in this category
