@@ -69,6 +69,7 @@ def outfit_selector_colour(address:str, formality:str):
         if weather[0] in data["clothes"][i]["condition"] and formality in data["clothes"][i]["formality"]:
             selected_clothes.append(i)
 
+    print(weather)
 
     separated_clothing = categorising_by_category(selected_clothes)
 
@@ -370,5 +371,5 @@ def colour_matching(colour: str):
 # warm, smart
 
 #outfit_selector_colour("***REMOVED***, Victoria", "smart")
-outfit_selector_colour("***REMOVED***, Victoria", "casual")
+outfit_selector_colour("Doncaster, Victoria", "casual")
 # outfit_selector_colour("eqwrqwerqwf", "smart")
