@@ -32,7 +32,7 @@ def outfit_selector(formality:str) -> list:
     Randomly picks outfits that match the weather and formality
 
     :input:
-        formality = string that says formality type (e.g. casual, smart-casual)
+        formality = string that says formality type (e.g. casual, smart)
         rain = boolean to tell if going to rain or not
     :return: list of numbers that refer to specific clothes in the json file. Each index in the list refers to a
             category of clothing in order: headwear, top, middlewear, outerwear, bottom, footwear
