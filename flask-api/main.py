@@ -48,10 +48,8 @@ def outfit_selector(formality:str) -> list:
             selected_clothes.append(i)
 
 
-    print(selected_clothes)
     separated_clothing = categorising_by_category(selected_clothes)
 
-    print(separated_clothing)
     # output will have 5 numbers. Each number represents an article of clothing. Each index is a category of clothing.
     # if the number is -1, then there is no viable clothing option
     output = []
@@ -90,6 +88,9 @@ def outfit_selector(formality:str) -> list:
     # Warning 3: Don't return any clothes for this category (e.g. Outerwear on warm day)
 
     all_clothes = categorising_by_category()
+    print("all_clothes")
+    print(all_clothes)
+
     # If viable clothing was selected
     if output[0] != -1:
         headwear = {
@@ -133,24 +134,45 @@ def outfit_selector(formality:str) -> list:
             }
 
     # If viable clothing was selected
-    if output[2] != -1 and output[2] != -2:
-        outerwear = {
+    if output[2] != -1:
+        middlewear = {
             "clothing": output[2],
             "warning": 0
         }
     else:
+        # If no viable clothing was picked, pick a random one with warning
+        if len(all_clothes[2]) > 0:
+            index = random.randrange(0, len(all_clothes[2]))
+            middlewear = {
+                "clothing": all_clothes[2][index],
+                "warning": 1
+            }
+        # If no clothing for this category
+        else:
+            middlewear = {
+                "clothing": -1,
+                "warning": 2
+            }
+
+    # If viable clothing was selected
+    if output[3] != -1 and output[3] != -2:
+        outerwear = {
+            "clothing": output[3],
+            "warning": 0
+        }
+    else:
         # If not picking outerwear
-        if output[2] == -2:
+        if output[3] == -2:
             outerwear = {
                 "clothing": -1,
                 "warning": 3
             }
 
         # If no viable clothing was picked, pick a random one with warning
-        elif len(all_clothes[2]) > 0:
-            index = random.randrange(0, len(all_clothes[2]))
+        elif len(all_clothes[3]) > 0:
+            index = random.randrange(0, len(all_clothes[3]))
             outerwear = {
-                "clothing": all_clothes[2][index],
+                "clothing": all_clothes[3][index],
                 "warning": 1
             }
         # If no clothing for this category
@@ -160,7 +182,50 @@ def outfit_selector(formality:str) -> list:
                 "warning": 2
             }
 
-    return output
+    # If viable clothing was selected
+    if output[4] != -1:
+        bottom = {
+            "clothing": output[4],
+            "warning": 0
+        }
+    else:
+        # If no viable clothing was picked, pick a random one with warning
+        if len(all_clothes[4]) > 0:
+            index = random.randrange(0, len(all_clothes[4]))
+            bottom = {
+                "clothing": all_clothes[4][index],
+                "warning": 1
+            }
+        # If no clothing for this category
+        else:
+            bottom = {
+                "clothing": -1,
+                "warning": 2
+            }
+
+    # If viable clothing was selected
+    if output[5] != -1:
+        footwear = {
+            "clothing": output[5],
+            "warning": 0
+        }
+    else:
+        # If no viable clothing was picked, pick a random one with warning
+        if len(all_clothes[5]) > 0:
+            index = random.randrange(0, len(all_clothes[5]))
+            footwear = {
+                "clothing": all_clothes[5][index],
+                "warning": 1
+            }
+        # If no clothing for this category
+        else:
+            footwear = {
+                "clothing": -1,
+                "warning": 2
+            }
+
+    res = [headwear, top, middlewear, outerwear, bottom, footwear]
+    return res
 
 
 def categorising_by_category(selected_clothes = False):
@@ -173,7 +238,6 @@ def categorising_by_category(selected_clothes = False):
         data = json.load(json_file)
     if not selected_clothes:
         selected_clothes = [y for y in range(len(data["clothes"]))]
-    print(selected_clothes)
 
     headwear = []
     top = []
