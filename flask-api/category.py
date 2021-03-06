@@ -125,4 +125,7 @@ def categorising_by_category(selected_clothes = False):
         'result': [top, middlewear, outerwear, bottom, footwear, headwear]
     }
 
-print(categorising_by_category())
+# print(categorising_by_category())
+
+if __name__ == '__main__':
+    app.run(debug = True)
