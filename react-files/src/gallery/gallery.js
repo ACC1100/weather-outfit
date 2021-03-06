@@ -1,11 +1,9 @@
-import { Box, VStack, Button, Input, Center } from '@chakra-ui/react';
+import { Box, VStack, Button, Input, Center, FormLabel, RadioGroup, HStack, Radio } from '@chakra-ui/react';
 import React, { useState, useEffect } from 'react'; ////
 
 import Slider from "react-slick";
 import "./slick/slick.css"; 
 import "./slick/slick-theme.css";
-
-
 
 function getGalleryItems() {
   // var output = [];
@@ -30,6 +28,8 @@ function getGalleryItems() {
 
 function Gallery() {
   const [location, setLocation] = useState('');
+  const [formalityInput, setFormalityInput] = useState('');
+
   const settings = {
     dots: true,
     infinite: true,
@@ -46,7 +46,7 @@ function Gallery() {
       },
       body: JSON.stringify({
         address: location,
-        formality: 'smart'
+        formality: formalityInput
       })
     }).then(response => response.json())
       .then(data => {
@@ -63,11 +63,31 @@ function Gallery() {
         <VStack spacing={8} w="80%">
           <Input placeholder="location" size="lg" variant="filled" onChange={(event) => {
             setLocation(event.target.value);
-            console.log(event.target.value);
+            // console.log(event.target.value);
           }} />
-          <Button colorScheme="teal" size="lg" isFullWidth={true} onClick={() => fetchingSuitableOutfits()}>
-              Generate
+          <Button colorScheme="teal" size="lg" isFullWidth={true} onClick={() => {
+            console.log(location, formalityInput);
+            if (location && formalityInput) {
+              fetchingSuitableOutfits();
+            } else {
+              console.log('INPUT STUFF');
+            }
+          }}>
+            Generate
           </Button>
+          <Box w="100%">
+            <FormLabel htmlFor="formality">Formality</FormLabel>
+            <RadioGroup id="formality" colorScheme="green" onChange={(event) => {
+              // console.log('e', event);
+              setFormalityInput(event);
+            }}>
+              <HStack justify="space-evenly">
+                <Radio value="casual">Casual</Radio>
+                <Radio value="smart">Smart-Casual</Radio>
+                <Radio value="formal">Formal</Radio>
+              </HStack>
+            </RadioGroup>
+          </Box>
         </VStack>
       </Center>
     )
