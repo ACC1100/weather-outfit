@@ -111,7 +111,7 @@ function AddClothes() {
                 <Box w="100%">
                   <FormLabel htmlFor="desc">Formality</FormLabel>
                   <CheckboxGroup id="formality" colorScheme="green" onChange={handleChange}>
-                    <HStack>
+                    <HStack justify="space-evenly">
                       <Checkbox value="casual">Casual</Checkbox>
                       <Checkbox value="smart">Smart-Casual</Checkbox>
                       <Checkbox value="formal">Formal</Checkbox>
