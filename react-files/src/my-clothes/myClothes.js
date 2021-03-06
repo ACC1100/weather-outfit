@@ -105,9 +105,17 @@ function MyClothes() {
         Click Me
       </Button>
       Test
-      <CategoryList categories={categories} deleteid={deleteElement}/>
+      <CategoryList key={sum(categories)} categories={categories} deleteid={deleteElement}/>
     </div>
   ) 
+}
+
+function sum(categories) {
+  let counter = 0;
+  for (var i = 0; i < categories.length; i++) {
+    counter = counter + categories[i].length;
+  }
+  return counter;
 }
 
 export default MyClothes;

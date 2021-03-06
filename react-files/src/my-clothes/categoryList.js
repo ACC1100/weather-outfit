@@ -13,6 +13,7 @@ const CategoryList = ({ categories, deleteid }) => {
       for (j = 0; j < categories[i].length; j++) {
         category.push(
           <ClothingElement
+            key={categories[i][j]}
             id={categories[i][j]}
             index_i={i}
             index_j={j}
