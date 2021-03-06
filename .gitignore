@@ -61,6 +61,3 @@ flask-api/ehthumbs.db
 flask-api/Thumbs.db
 
 #### ZJ: Test data for the JSON
-flask-api/sample.json
-flask-api/test.json
-flask-api/test2.json
