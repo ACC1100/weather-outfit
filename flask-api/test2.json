@@ -276,6 +276,76 @@
     "category": "short sleeve t-shirt",
     "condition": [ "hot"],
     "formality": [ "formal" ]
+  },
+  {
+    "colour": "black",
+    "type": "middlewear",
+    "category": "sweater",
+    "condition": [ "cold"],
+    "formality": [ "smart", "formal" ]
+  },
+  {
+    "colour": "white",
+    "type": "middlewear",
+    "category": "hoodie",
+    "condition": [ "hot"],
+    "formality": [ "casual" ]
+  },
+  {
+    "colour": "grey",
+    "type": "middlewear",
+    "category": "jacket",
+    "condition": [ "warm"],
+    "formality": [ "smart" ]
+  },
+  {
+    "colour": "red",
+    "type": "middlewear",
+    "category": "jacket",
+    "condition": [ "cold"],
+    "formality": [ "smart" ]
+  },
+  {
+    "colour": "green",
+    "type": "middlewear",
+    "category": "jacket",
+    "condition": [ "warm"],
+    "formality": [ "casual" ]
+  },
+  {
+    "colour": "purple",
+    "type": "middlewear",
+    "category": "hoodie",
+    "condition": [ "warm","hot"],
+    "formality": [ "casual" ]
+  },
+  {
+    "colour": "brown",
+    "type": "middlewear",
+    "category": "jacket",
+    "condition": [ "freezing", "cold"],
+    "formality": [ "smart" ]
+  },
+  {
+    "colour": "beige",
+    "type": "middlewear",
+    "category": "jacket",
+    "condition": [ "freezing"],
+    "formality": [ "formal" ]
+  },
+  {
+    "colour": "darkblue",
+    "type": "middlewear",
+    "category": "hoodie",
+    "condition": [ "cold", "warm"],
+    "formality": [ "casual" ]
+  },
+  {
+    "colour": "pink",
+    "type": "middlewear",
+    "category": "hoodie",
+    "condition": [ "warm", "hot"],
+    "formality": [ "casual" ]
   }
 ]
 }
