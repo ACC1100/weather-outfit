@@ -22,42 +22,12 @@
   },
   {
     "colour": "white",
-    "type": "shirt",
-    "condition": [
-      "warm",
-      "hot"
-    ],
-    "category": "top",
-    "formality": ["casual"]
-  },
-  {
-    "colour": "white",
     "type": "hoodie",
     "condition": [
       "cold",
       "warm"
     ],
     "category": "middlewear",
-    "formality": ["casual"]
-  },
-  {
-    "colour": "black",
-    "type": "shirt",
-    "condition": [
-      "cold",
-      "warm"
-    ],
-    "category": "top",
-    "formality": [
-      "casual",
-      "smart"
-    ]
-  },
-  {
-    "colour": "red",
-    "type": "shirt",
-    "condition": ["hot"],
-    "category": "top",
     "formality": ["casual"]
   },
   {
@@ -142,7 +112,7 @@
   },
   {
     "colour": "white",
-    "type": "sneakers",
+    "type": "sneaker",
     "category": "footwear",
     "condition": [ "hot", "warm", "cold", "freezing" ],
     "formality": [ "casual", "smart" ]
