@@ -3,5 +3,5 @@
 }
 
 .imageGrow:hover > .deleteButton {
-  display: block;
+  display: flex;
 }
