@@ -1,5 +1,7 @@
 import json
 
+# ZJ USE "a" to open the file (to amend) rather than "w" to write. This will stop the file overwriting it every time
+
 # Example data to write
 test = {
     "colour": "blue",
