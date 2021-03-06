@@ -66,7 +66,7 @@ def outfit_selector(formality:str) -> list:
                         separated_clothing[i].remove(num)
             # don't pick outerwear if not freezing and no rain
             if weather[0] != "freezing" and len(weather) == 1:
-                output.append(-1)
+                output.append(-2)
                 continue
 
         # If raining, pick rain appropriate footwear
@@ -83,6 +83,83 @@ def outfit_selector(formality:str) -> list:
         # No viable clothing in this category for this weather
         else:
             output.append(-1)
+
+    # Warning 0: No issue
+    # Warning 1: No viable clothes for weather and formality. Picked a random one
+    # Warning 2: No clothes in this category
+    # Warning 3: Don't return any clothes for this category (e.g. Outerwear on warm day)
+
+    all_clothes = categorising_by_category()
+    # If viable clothing was selected
+    if output[0] != -1:
+        headwear = {
+            "clothing": output[0],
+            "warning": 0
+        }
+    else:
+        # If no viable clothing was picked, pick a random one with warning
+        if len(all_clothes[0]) > 0:
+            index = random.randrange(0, len(all_clothes[0]))
+            headwear = {
+                "clothing": all_clothes[0][index],
+                "warning": 1
+            }
+        # If no clothing for this category
+        else:
+            headwear = {
+                "clothing": -1,
+                "warning": 2
+            }
+
+    # If viable clothing was selected
+    if output[1] != -1:
+        top = {
+            "clothing": output[1],
+            "warning": 0
+        }
+    else:
+        # If no viable clothing was picked, pick a random one with warning
+        if len(all_clothes[1]) > 0:
+            index = random.randrange(0, len(all_clothes[1]))
+            top = {
+                "clothing": all_clothes[1][index],
+                "warning": 1
+            }
+        # If no clothing for this category
+        else:
+            top = {
+                "clothing": -1,
+                "warning": 2
+            }
+
+    # If viable clothing was selected
+    if output[2] != -1 and output[2] != -2:
+        outerwear = {
+            "clothing": output[2],
+            "warning": 0
+        }
+    else:
+        # If not picking outerwear
+        if output[2] == -2:
+            outerwear = {
+                "clothing": -1,
+                "warning": 3
+            }
+
+        # If no viable clothing was picked, pick a random one with warning
+        elif len(all_clothes[2]) > 0:
+            index = random.randrange(0, len(all_clothes[2]))
+            outerwear = {
+                "clothing": all_clothes[2][index],
+                "warning": 1
+            }
+        # If no clothing for this category
+        else:
+            outerwear = {
+                "clothing": -1,
+                "warning": 2
+            }
+
     return output
 
 
