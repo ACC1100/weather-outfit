@@ -22,9 +22,9 @@ const CategoryList = ({ categories, clothingInfo }) => {
         counter++
       }
       output.push(
-        <div>
+        <div key={i}>
           <Text fontSize="3xl">{categoryName[i]}</Text>
-          <Grid key={category.length} templateColumns="repeat(auto-fill, 200px)" mx='300px' justifyContent='center'>
+          <Grid key={i} templateColumns="repeat(auto-fill, 200px)" mx='300px' justifyContent='center'>
             {category}
           </Grid>
         </div>
