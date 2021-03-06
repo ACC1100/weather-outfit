@@ -29,7 +29,7 @@ function Gallery() {
   }
   useEffect(() => {
     getMasterList();
-    console.log('got master list')
+    // console.log('got master list')
   }, []);
   ///////
 
@@ -44,12 +44,13 @@ function Gallery() {
       // for each clothing 
       for (var j = 0; j < outfitList[i].length; j++) {
         if (outfitList[i][j].clothes > 0) {
+          // console.log(outfitList[i][j])
           temp_outfit.push(
-            <ClothingElement2 masterList={masterList} clothingJSON={{type: 'long sleeve shirt', colour: 'black'}} inputType='string' />
+            <ClothingElement2 masterList={masterList} clothingJSON={{type: outfitList[i][j].type, colour: outfitList[i][j].colour}} inputType='string' />
           )
         }
       }
-      for (var k = 0; k < 6; k++) {
+      for (var k = 0; k < 1; k++) {
         output.push(
           <Grid templateColumns="repeat(3, 200px)" justifyContent='center'>
             {temp_outfit}
@@ -152,7 +153,7 @@ function Gallery() {
                 </Slider>
               </Box>
             </Center>
-          </> 
+          </>
       </>
     )
 }

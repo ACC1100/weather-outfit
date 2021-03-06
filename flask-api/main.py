@@ -69,6 +69,7 @@ def outfit_selector_colour(address:str, formality:str):
         if weather[0] in data["clothes"][i]["condition"] and formality in data["clothes"][i]["formality"]:
             selected_clothes.append(i)
 
+    print(weather)
 
     separated_clothing = categorising_by_category(selected_clothes)
 
@@ -128,9 +129,11 @@ def outfit_selector_colour(address:str, formality:str):
 
     all_outfits = []
 
+    print("viables clothes")
+    print(viable_clothes)
     viable_clothes_plus_extras = deepcopy(viable_clothes)
     for i in range(len(viable_clothes_plus_extras)):
-        if len(viable_clothes_plus_extras[i]) == 0 or viable_clothes_plus_extras[i][0] == -1 or viable_clothes_plus_extras[i][0] == -2:
+        if len(viable_clothes_plus_extras[i]) == 0 or viable_clothes_plus_extras[i][0] == -1:
             j = 0
             viable_clothes_plus_extras[i] = []
             while j < 5:
@@ -285,8 +288,7 @@ def outfit_selector_colour(address:str, formality:str):
     max_clothing_no = max(main_clothing)
     counters = [[0]*(max_clothing_no+1)]
 
-    print("main clothing")
-    print(main_clothing)
+    print("main clothing", main_clothing)
     res = []
     max_output = 0
     for i in range(len(outfit_rankings)):
@@ -297,6 +299,10 @@ def outfit_selector_colour(address:str, formality:str):
             res.append(outfit_rankings[i][1])
             max_output += 1
 
+    for item in res:
+        for clothing in item:
+            clothing['type'] = data['clothes'][clothing['clothes']]['type']
+            clothing['colour'] = data['clothes'][clothing['clothes']]['colour']
     JSON_CALL(res, "outfit_selector_colour.json")
     print(res)
 
@@ -367,5 +373,5 @@ def colour_matching(colour: str):
 # warm, smart
 
 #outfit_selector_colour("***REMOVED***, Victoria", "smart")
-outfit_selector_colour("***REMOVED***, Victoria", "casual")
+outfit_selector_colour("Doncaster, Victoria", "casual")
 # outfit_selector_colour("eqwrqwerqwf", "smart")

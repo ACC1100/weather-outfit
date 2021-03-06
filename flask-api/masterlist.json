@@ -52,7 +52,7 @@
     {
        "name": "raincoat",
     "category": "outerwear",
-    "condition": ["cold", "freezing", "rain"]
+    "condition": ["rain"]
     },
     {
       "name": "hoodie",
