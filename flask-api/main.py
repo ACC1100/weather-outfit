@@ -329,6 +329,7 @@ def outfit_selector_colour(formality:str) -> list:
     colour_matching_viable = viable_clothes.copy()
     matching_colours = colour_matching(main_colour)
 
+
     if main_clothing[2] == "top":
         main_outfit_index = 1
     elif main_clothing[2] == "middlewear":
@@ -337,6 +338,7 @@ def outfit_selector_colour(formality:str) -> list:
     for i in range(len(colour_matching_viable)):
         if i == main_outfit_index:
             colour_matching_viable[i] = [main_clothing[0]]
+            continue
         for clothing_num in colour_matching_viable[i]:
             if data["clothes"][clothing_num]["colour"] not in matching_colours:
                 colour_matching_viable[i].remove(clothing_num)

@@ -1,7 +1,7 @@
 {
 "clothes": [
   {
-    "colour": "blue",
+    "colour": "light blue",
     "type": "jacket",
     "category": "middlewear",
     "condition": ["cold"],
@@ -99,7 +99,7 @@
     "formality": ["casual"]
   },
   {
-    "colour": "blue",
+    "colour": "dark blue",
     "type": "beanie",
     "category": "headwear",
     "condition": [
@@ -148,7 +148,7 @@
     "type": "Skirt",
     "category": "bottom",
     "condition": [ "warm", "hot" ],
-    "formality" [ "casual", "smart-casual" ]
+    "formality": [ "casual", "smart-casual" ]
   },
   {
     "colour": "white",
@@ -166,7 +166,7 @@
     "formality": [ "smart-casual", "casual" ]
   },
   {
-    "colour": "blue",
+    "colour": "light blue",
     "type": "Jacket", 
     "category": "outerwear",
     "condition": [ "cold", "freezing" ],
@@ -176,7 +176,7 @@
     "colour": "grey",
     "type": "Shorts", 
     "category": "top",
-    "condition": [ "hot", "warm", ],
+    "condition": [ "hot", "warm"],
     "formality": [ "smart-casual", "casual" ]
   },
   {
