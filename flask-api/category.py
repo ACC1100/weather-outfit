@@ -137,5 +137,13 @@ def add_clothing():
         'result': 'success'
     }
 
+@app.route('/readfile', methods = ['POST'])
+def read_clothing():
+    with open("test2.json") as json_file:
+        data = json.load(json_file)
+    return {
+        'result': data
+    }
+
 if __name__ == '__main__':
     app.run(debug = True)
