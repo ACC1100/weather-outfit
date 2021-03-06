@@ -167,7 +167,7 @@ def outfit_selector_colour(address:str, formality:str):
         if len(colour_matching_viable[0]) > 0:
             index = random.randrange(0, len(colour_matching_viable[0]))
             headwear = {
-                "clothing": colour_matching_viable[0][index],
+                "clothes": colour_matching_viable[0][index],
                 "warning": 0
             }
         else:
@@ -175,20 +175,20 @@ def outfit_selector_colour(address:str, formality:str):
             if len(viable_clothes[0]) > 0:
                 index = random.randrange(0, len(viable_clothes[0]))
                 headwear = {
-                    "clothing": viable_clothes[0][index],
+                    "clothes": viable_clothes[0][index],
                     "warning": 5
                 }
             # If no viable clothes, pick a random one
             elif len(all_clothes[0]) > 0:
                 index = random.randrange(0, len(all_clothes[0]))
                 headwear = {
-                    "clothing": all_clothes[0][index],
+                    "clothes": all_clothes[0][index],
                     "warning": 1
                 }
             # If no clothing for this category
             else:
                 headwear = {
-                    "clothing": -1,
+                    "clothes": -1,
                     "warning": 2
                 }
 

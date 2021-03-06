@@ -222,8 +222,11 @@ def JSON_CALL(input, filename='badname.json'):
         with open(filename, 'w') as f:
             json.dump(data, f, indent=4)
 
-    with open(filename) as json_file:
-        data = json.load(json_file)
-        temp = data['clothes']
-        temp.append(input)
-        write_json(data)
+    if filename != "outfit_selector_colour.json":
+      with open(filename) as json_file:
+          data = json.load(json_file)
+          temp = data['clothes']
+          temp.append(input)
+          write_json(data)
+    else:
+      write_json(input)
