@@ -9,7 +9,7 @@
   },
   {
     "colour": "grey",
-    "type": "shorts",
+    "type": "yellow",
     "category": "bottom",
     "condition": [
       "warm",
@@ -61,18 +61,8 @@
     "formality": ["casual"]
   },
   {
-    "colour": "white",
-    "type": "suit jacket",
-    "category": "middlewear",
-    "condition": [
-      "cold",
-      "warm"
-    ],
-    "formality": ["formal"]
-  },
-  {
     "colour": "grey",
-    "type": "shorts",
+    "type": "green",
     "category": "bottom",
     "condition": [
       "warm",
