@@ -212,15 +212,16 @@ create_file(test2)
 
 
 def JSON_CALL(input):
-    def write_json(data, filename='sample.json'):
-        with open(filename, 'w') as f:
-            json.dump(data, f, indent=4)
+  def write_json(data, filename='sample.json'):
+    with open(filename, 'w') as f:
+      json.dump(data, f, indent=4)
 
-    with open('sample.json') as json_file:
-        data = json.load(json_file)
-        temp = data['clothes']
-        temp.append(input)
-        write_json(data)
+
+  with open('sample.json') as json_file:
+    data = json.load(json_file)
+    temp = data['clothes']
+    temp.append(input)
+    write_json(data)
 
 
 JSON_CALL(test3)

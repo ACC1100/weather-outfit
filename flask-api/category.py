@@ -4,6 +4,7 @@ TEST FILE USED TO CONNECT FRONT AND BACK END
 """
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from .jsontest import write_json
 app = Flask(__name__)
 CORS(app)
 import json, random
@@ -130,6 +131,7 @@ def categorising_by_category(selected_clothes = False):
 def add_clothing():
     req = request.json
     print('req: ', req)
+    write_json(req, "wardrobe")
     # call the function that adds clothing to json here
     return {
         'result': 'success'
