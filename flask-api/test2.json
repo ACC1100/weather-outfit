@@ -8,8 +8,8 @@
     "formality": ["casual"]
   },
   {
-    "colour": "grey",
-    "type": "yellow",
+    "colour": "yellow",
+    "type": "shorts",
     "category": "bottom",
     "condition": [
       "warm",
@@ -61,8 +61,8 @@
     "formality": ["casual"]
   },
   {
-    "colour": "grey",
-    "type": "green",
+    "colour": "green",
+    "type": "shorts",
     "category": "bottom",
     "condition": [
       "warm",

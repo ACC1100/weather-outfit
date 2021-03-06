@@ -60,6 +60,14 @@ def outfit_selector_colour(address:str, formality:str):
     with open("test2.json") as json_file:
         data = json.load(json_file)
 
+    with open("masterlist.json") as json_file:
+        masterlist = json.load(json_file)
+
+    for i in range(len(data)):
+        for j in range(len(masterlist)):
+            if data["clothes"][i]["type"] == masterlist["types"][j]["name"]:
+                data["clothes"][i]["type"]
+
     all_clothes_separated = categorising_by_category()
 
     # List that contains all the clothes that match weather and formality. List of numbers
