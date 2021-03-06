@@ -71,6 +71,10 @@ def outfit_selector_colour(address:str, formality:str):
     # If appends -1, then it means no viable clothes
     # IF appends -2, then it means don't need outerwear (only used in outerwear column)
     for i in range(len(separated_clothing)):
+        if i == 2:
+            if weather[0] != "freezing" and weather[0] != "cold":
+                viable_clothes.append([-2])
+                continue
         if i == 3:
             # If raining, pick a rain appropriate outerwear
             if len(weather) > 1:
