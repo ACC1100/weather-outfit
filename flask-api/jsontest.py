@@ -229,4 +229,4 @@ def JSON_CALL(input, filename='badname.json'):
         write_json(data)
 
 
-JSON_CALL('abc', 'testingwrite.json')
+# JSON_CALL('abc', 'testingwrite.json')
