@@ -20,7 +20,7 @@ function MyClothes() {
       .then(data => {
         console.log('data: ', data.result);
         setCategories(data.result);
-        setCategories([[2, 4, 5, 14, 15, 24, 25, 35, 34, 45], [0, 3, 6], [8, 13], [1, 7], [11, 12], [9, 10]])
+        // setCategories([[2, 4, 5, 14, 15, 24, 25, 35, 34, 45], [0, 3, 6], [8, 13], [1, 7], [11, 12], [9, 10]])
       })
   }
 

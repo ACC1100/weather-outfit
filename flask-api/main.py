@@ -3,7 +3,7 @@ Main file that will contain all the python functions to be called by the front e
 
 """
 import json, random
-from .jsontest import JSON_CALL
+from jsontest import JSON_CALL
 
 def weather_calculator():
     """
@@ -24,7 +24,7 @@ def weather_calculator():
     return output
 
 
-# arguments: formality. location (suburb, victoria)
+# arguments: formality. location (suburb, state)
 def outfit_selector_colour(formality:str):
     """
     Randomly picks outfits that match the weather and formality. THIS ONE PICKS CLOTHES BASED ON COLOURS

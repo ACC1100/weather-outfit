@@ -12,7 +12,7 @@ import './myClothes.css';
 const ClothingElement = ({ id, index_i, index_j }) => {
   const pictures = [top, middlewear, outerwear, bottom, footwear, headwear];
   return (
-    <Box className='imageGrow' id={id} borderWidth='1px' height='auto' borderRadius='20px' m='20px' textAlign='center'>
+    <Box className='imageGrow' id={id} borderWidth='1px' height='auto' borderRadius='20px' m='20px' textAlign='center' bgColor='red'>
       <Center>
         <Image className='imagex' index_i={index_i} index_j={index_j} borderRadius='20px'  pt='10px'
           objectFit='contain' boxSize='150px' src={pictures[index_i]} alt='' />
