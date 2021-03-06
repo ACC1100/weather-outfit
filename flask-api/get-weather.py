@@ -44,6 +44,9 @@ def GetLatLong(Address, Dest):
     # in
     # Address   Some reasonable string
 
+    # out
+    # Dest      Lat/long dict to be filled out
+
     # Building URL
     StringOCR = "https://api.opencagedata.com/geocode/v1/json"
     StringOCR += "?q=" + urllib.parse.quote(Address)
@@ -58,6 +61,7 @@ def GetLatLong(Address, Dest):
         return ERROR_SUCCESS
     else:
         return ERROR_FAIL
+
 
 def GetWeather(Address, Time, Dest):
 
@@ -88,6 +92,7 @@ def GetWeatherExampleCall():
 
     GetWeather(Address, Time, WeatherData)
     print(WeatherData)
+
 
 GetWeatherExampleCall()
 
