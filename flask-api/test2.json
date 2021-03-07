@@ -353,6 +353,63 @@
     "type": "hoodie",
     "condition": [ "warm", "hot"],
     "formality": [ "casual" ]
+  },
+  
+  {
+    "colour": "purple",
+    "category": "middlewear",
+    "type": "sweater",
+    "condition": [ "hot"],
+    "formality": [ "formal" ]
+  },
+  {
+    "colour": "black",
+    "category": "bottom",
+    "type": "tights",
+    "condition": [ "hot", "warm", cold"],
+    "formality": [ "casual" ]
+  },
+  {
+    "colour": "darkblue",
+    "category": "bottom",
+    "type": "skirt",
+    "condition": [ "hot", "warm" ],
+    "formality": [ "casual", "smart" ]
+  },
+  {
+    "colour": "green",
+    "category": "middlewear",
+    "type": "hoodie",
+    "condition": [ "cold", "freezing"],
+    "formality": [ "smart" ]
+  },
+  {
+    "colour": "brown",
+    "category": "outwear",
+    "type": "coat",
+    "condition": [ "cold", "freezing" ],
+    "formality": [ "smart", "formal" ]
+  },
+  {
+    "colour": "purple",
+    "type": "short sleeve t-shirt",
+    "category": "top",
+    "condition": [ "warm","hot"],
+    "formality": [ "casual" ]
+  },
+  {
+    "colour": "darkblue",
+    "category": "middlewear",
+    "type": "sweater",
+    "condition": [ "cold", freezing ],
+    "formality": [ "smart" ]
+  },
+  {
+    "colour": "lightblue",
+    "category": "top",
+    "type": "blouse",
+    "condition": [ "warm", "hot"],
+    "formality": [ "smart", "formal" ]
   }
 ]
 }
