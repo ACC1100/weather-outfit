@@ -313,21 +313,55 @@ def outfit_selector_colour():
     res = []
     max_output = 0
     for i in range(len(outfit_rankings)):
-        if max_output >= 40:
+        if max_output >= 50:
             break
         counters[0][outfit_rankings[i][1][main_clothing_index]["clothes"]] += 1
         if counters[0][outfit_rankings[i][1][main_clothing_index]["clothes"]] < 20:
             res.append(outfit_rankings[i][1])
             max_output += 1
 
-    for item in res:
+    print('res: ', res)
+
+    outfits_for_union = []
+    outfits_for_union_index = []
+    counter_union = 0
+    for outfit in res:
+        outfit_index = set()
+        for clothing in outfit:
+            if clothing['clothes'] > -1:
+                outfit_index.add(clothing['clothes'])
+        # print('outfit index: ', outfit_index)
+        if len(outfits_for_union) == 0:
+            outfits_for_union.append(outfit_index)
+            outfits_for_union_index.append(0)
+        else:
+            varies_enough = True
+            for outfit_compare in outfits_for_union:
+                # print('Diff: ', outfit_index, ' and ', outfit_compare, ' is ', str(len(outfit_index.difference(outfit_compare))))
+                if len(outfit_index.difference(outfit_compare)) < 2:
+                    varies_enough = False
+                    break
+            if varies_enough:
+                outfits_for_union.append(outfit_index)
+                outfits_for_union_index.append(counter_union)
+        counter_union += 1
+    print('OFU', outfits_for_union)
+    print('OFU_i', outfits_for_union_index)
+
+    updated_res = []
+    for index in outfits_for_union_index:
+        updated_res.append(res[index])
+        # print('appended: ', res[index])
+
+    for item in updated_res:
         for clothing in item:
             clothing['type'] = data['clothes'][clothing['clothes']]['type']
             clothing['colour'] = data['clothes'][clothing['clothes']]['colour']
-    JSON_CALL(res, "outfit_selector_colour.json")
-    # print(res)
+
+    # JSON_CALL(updated_res, "outfit_selector_colour.json")
+    # print(updated_res)
     return {
-        'result': res
+        'result': updated_res
     }
 
 @app.route('/hello', methods = ['POST'])

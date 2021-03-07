@@ -118,7 +118,7 @@
     "colour": "grey",
     "type": "runners",
     "category": "footwear",
-    "condition": [ "hot", "warm", "cold", "freezing" ],
+    "condition": [ "hot", "cold", "freezing" ],
     "formality": [ "smart", "casual" ]
   },
   {
@@ -161,7 +161,7 @@
     "colour": "black",
     "type": "short sleeve t-shirt",
     "category": "top",
-    "condition": [ "hot", "warm", "cold" ],
+    "condition": [ "hot", "cold" ],
     "formality": [ "smart", "casual" ]
   },
   {
@@ -182,7 +182,7 @@
     "colour": "black",
     "type": "runners",
     "category": "footwear",
-    "condition": [ "hot", "warm", "cold", "freezing" ],
+    "condition": [ "hot", "cold", "freezing" ],
     "formality": [ "smart", "casual" ]
   },
   {
@@ -287,7 +287,7 @@
     "colour": "lightblue",
     "type": "short sleeve t-shirt",
     "category": "top",
-    "condition": [ "hot", "warm", "cold" ],
+    "condition": [ "hot", "cold" ],
     "formality": [ "smart", "casual" ]
   },
   {
@@ -319,13 +319,6 @@
     "formality": [ "casual" ]
   },
   {
-    "colour": "grey",
-    "type": "middlewear",
-    "category": "jacket",
-    "condition": [ "warm"],
-    "formality": [ "smart" ]
-  },
-  {
     "colour": "red",
     "type": "middlewear",
     "category": "jacket",
@@ -336,7 +329,7 @@
     "colour": "green",
     "type": "middlewear",
     "category": "jacket",
-    "condition": [ "warm"],
+    "condition": [ "cold"],
     "formality": [ "casual" ]
   },
   {
@@ -347,24 +340,10 @@
     "formality": [ "casual" ]
   },
   {
-    "colour": "brown",
-    "type": "middlewear",
-    "category": "jacket",
-    "condition": [ "freezing", "cold"],
-    "formality": [ "smart" ]
-  },
-  {
-    "colour": "beige",
-    "type": "middlewear",
-    "category": "jacket",
-    "condition": [ "freezing"],
-    "formality": [ "formal" ]
-  },
-  {
     "colour": "darkblue",
     "type": "middlewear",
     "category": "hoodie",
-    "condition": [ "cold", "warm"],
+    "condition": [ "cold" ],
     "formality": [ "casual" ]
   },
   {

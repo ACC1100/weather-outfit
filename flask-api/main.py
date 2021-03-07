@@ -351,7 +351,7 @@ def outfit_selector_colour(address:str, formality:str):
             clothing['type'] = data['clothes'][clothing['clothes']]['type']
             clothing['colour'] = data['clothes'][clothing['clothes']]['colour']
 
-    JSON_CALL(updated_res, "outfit_selector_colour.json")
+    # JSON_CALL(updated_res, "outfit_selector_colour.json")
     print(updated_res)
 
 def categorising_by_category(selected_clothes = False):
