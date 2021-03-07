@@ -338,7 +338,7 @@ def outfit_selector_colour():
             varies_enough = True
             for outfit_compare in outfits_for_union:
                 # print('Diff: ', outfit_index, ' and ', outfit_compare, ' is ', str(len(outfit_index.difference(outfit_compare))))
-                if len(outfit_index.difference(outfit_compare)) < 2:
+                if len(outfit_index.difference(outfit_compare)) < 3:
                     varies_enough = False
                     break
             if varies_enough:
