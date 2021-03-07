@@ -203,12 +203,11 @@ function AddClothes() {
                   <FormLabel htmlFor="formality">Weather type</FormLabel>
                   <CheckboxGroup colorScheme="green">
                     <HStack justify="space-evenly">
-                      <Checkbox >rain</Checkbox>
-
-                      <Checkbox >freezing</Checkbox>
-                      <Checkbox >cold</Checkbox>
-                      <Checkbox >warm</Checkbox>
-                      <Checkbox >hot</Checkbox>
+                      <Checkbox >Rain</Checkbox>
+                      <Checkbox >Freezing</Checkbox>
+                      <Checkbox >Cold</Checkbox>
+                      <Checkbox >Warm</Checkbox>
+                      <Checkbox >Hot</Checkbox>
                     </HStack>
                   </CheckboxGroup>
                 </Box>
