@@ -43,8 +43,8 @@ function Gallery() {
       let temp_outfit = []
       // for each clothing 
       for (var j = 0; j < outfitList[i].length; j++) {
-        if (outfitList[i][j].clothes > 0) {
-          // console.log(outfitList[i][j])
+        if (outfitList[i][j].clothes > -1) {
+          console.log(outfitList[i][j])
           temp_outfit.push(
             <ClothingElement2 masterList={masterList} clothingJSON={{type: outfitList[i][j].type, colour: outfitList[i][j].colour}} inputType='string' />
           )
