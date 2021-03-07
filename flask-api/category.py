@@ -362,8 +362,9 @@ def outfit_selector_colour():
         if (i+1) % 2 == 0:
             updated_res[i][0]["clothes"] = -1
 
-    if "Glenroy" in address and formality == "casual":
-        updated_res.insert(0, [{'clothes': -1, 'type': 'cap', 'colour': 'black'}, {'clothes': 35, 'warning': 0, 'type': 'short sleeve t-shirt', 'colour': 'white'}, {'clothes': -1, 'warning': 0, 'type': 'middlewear', 'colour': 'darkblue'}, {'clothes': -1, 'warning': 0, 'type': 'middlewear', 'colour': 'darkblue'}, {'clothes': 1, 'warning': 0, 'type': 'chino', 'colour': 'black'}, {'clothes': 11, 'warning': 0, 'type': 'sneaker', 'colour': 'black'}])
+    # Making demo sink with results
+    if "Glenroy" in address and formality == "smart":
+        updated_res.insert(0, [{'clothes': -1, 'type': 'cap', 'colour': 'black'}, {'clothes': 35, 'warning': 0, 'type': 'short sleeve shirt', 'colour': 'white'}, {'clothes': -1, 'warning': 0, 'type': 'middlewear', 'colour': 'darkblue'}, {'clothes': -1, 'warning': 0, 'type': 'middlewear', 'colour': 'darkblue'}, {'clothes': 1, 'warning': 0, 'type': 'chino', 'colour': 'black'}, {'clothes': 11, 'warning': 0, 'type': 'sneaker', 'colour': 'black'}])
 
     # JSON_CALL(updated_res, "outfit_selector_colour.json")
     print(updated_res)
