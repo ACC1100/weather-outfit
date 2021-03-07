@@ -407,21 +407,21 @@
     "category": "bottom",
     "type": "pants",
     "condition": ["warm", "cold", "freezing"],
-    "formality": ["casual", "smart"]
+    "formality": ["casual", "smart", "formal"]
   },
   {
     "colour": "brown",
     "category": "bottom",
     "type": "pants",
     "condition": ["warm", "cold", "freezing"],
-    "formality": ["casual", "smart"]
+    "formality": ["casual", "smart", "formal"]
   },
   {
     "colour": "beige",
     "category": "bottom",
     "type": "chino",
     "condition": ["warm", "cold", "freezing"],
-    "formality": ["casual", "smart"]
+    "formality": ["casual", "smart", "formal"]
   },
 
   {
