@@ -1,4 +1,9 @@
-# About 
+# Sweater Weather by DLCT
+An app to take the guesswork and stress out of dressing for the weather!
+
+DLCT: Aaron Chao, Allan Chan, Damien Ambegoda, Isuru Peiris, Zhijie Cao
+
+## About 
 Picking out an outfit for the day can be a very involved process, often more than we would like it to be. Sweater Weather can make the process as simple as possible. The app picks out a small collection of outfits for you to choose from, taking into account the forecast weather for the day for your given location and the formality of the event you are attending. The combination of clothing is aimed to be as stylish as possible based on fundamental principles in fashion.
 
 We were tired of trying to decide on an outfit every morning, taking care that it ticks all the necessary boxes and our project began as a simple idea to bring more time and peace of mind to everyone's mornings and nights before. Our team is a meeting of the fashion-hyperconscious and the fashion-insensitive, so we are confident that our project can be helpful to anyone along that spectrum.
