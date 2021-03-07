@@ -4,8 +4,17 @@
     "colour": "purple",
     "type": "long sleeve t-shirt",
     "category": "top",
+    "condition": ["cold", "freezing"],
     "formality": ["casual", "smart"]
   },
+  {
+    "colour": "black",
+    "type": "long sleeve t-shirt",
+    "category": "top",
+    "condition": ["cold", "freezing"],
+    "formality": ["casual", "smart"]
+  },
+
   {
     "colour": "lightblue",
     "type": "jacket",
@@ -88,17 +97,43 @@
   },
   {
     "colour": "black",
-    "type": "coat",
-    "category": "outerwear",
-    "condition": [ "cold" ],
-    "formality": ["formal", "smart"]
-  },
-  {
-    "colour": "black",
     "type": "cap",
     "category": "headwear",
     "condition": [
       "rain",  
+      "cold",
+      "warm"
+    ],
+    "formality": ["casual"]
+  },
+  {
+    "colour": "brown",
+    "type": "cap",
+    "category": "headwear",
+    "condition": [
+      "rain",
+      "cold",
+      "warm"
+    ],
+    "formality": ["casual"]
+  },
+  {
+    "colour": "white",
+    "type": "cap",
+    "category": "headwear",
+    "condition": [
+      "rain",
+      "cold",
+      "warm"
+    ],
+    "formality": ["casual"]
+  },
+  {
+    "colour": "pink",
+    "type": "cap",
+    "category": "headwear",
+    "condition": [
+      "rain",
       "cold",
       "warm"
     ],
@@ -153,14 +188,21 @@
     "colour": "white",
     "type": "sneaker",
     "category": "footwear",
-    "condition": [ "hot", "warm", "cold", "freezing" ],
+    "condition": [ "hot", "warm", "cold"],
     "formality": [ "casual", "smart" ]
   },
   {
     "colour": "blue",
     "type": "sneaker",
     "category": "footwear",
-    "condition": [ "hot", "warm", "cold", "freezing" ],
+    "condition": [ "hot", "warm", "cold"],
+    "formality": [ "casual", "smart" ]
+  },
+  {
+    "colour": "green",
+    "type": "sneaker",
+    "category": "footwear",
+    "condition": [ "hot", "warm", "cold"],
     "formality": [ "casual", "smart" ]
   },
   {
@@ -195,8 +237,22 @@
     "colour": "black",
     "type": "boots",
     "category": "footwear",
-    "condition": [ "rain", "cold" ],
-    "formality": ["smart", "formal"]
+    "condition": [ "rain", "cold", "freezing" ],
+    "formality": ["casual","smart", "formal"]
+  },
+  {
+    "colour": "brown",
+    "type": "boots",
+    "category": "footwear",
+    "condition": [ "rain", "cold", "freezing" ],
+    "formality": ["casual","smart", "formal"]
+  },
+  {
+    "colour": "darkblue",
+    "type": "boots",
+    "category": "footwear",
+    "condition": [ "rain", "cold", "freezing" ],
+    "formality": ["casual","smart", "formal"]
   },
   {
     "colour": "orange",
@@ -272,14 +328,14 @@
     "colour": "black",
     "type": "long sleeve shirt",
     "category": "top",
-    "condition": [ "warm"],
+    "condition": [ "cold", "freezing ","warm"],
     "formality": [ "formal" ]
   },
   {
     "colour": "green",
     "type": "long sleeve shirt",
     "category": "top",
-    "condition": [ "warm"],
+    "condition": [ "cold", "freezing ","warm"],
     "formality": [ "casual" ]
   },
   {
@@ -333,13 +389,6 @@
     "formality": [ "smart" ]
   },
   {
-    "colour": "green",
-    "category": "middlewear",
-    "type": "jacket",
-    "condition": [ "cold"],
-    "formality": [ "casual" ]
-  },
-  {
     "colour": "purple",
     "category": "middlewear",
     "type": "hoodie",
@@ -351,13 +400,6 @@
     "category": "middlewear",
     "type": "hoodie",
     "condition": [ "cold" ],
-    "formality": [ "casual" ]
-  },
-  {
-    "colour": "pink",
-    "category": "middlewear",
-    "type": "hoodie",
-    "condition": [ "warm", "hot"],
     "formality": [ "casual" ]
   },
   {
