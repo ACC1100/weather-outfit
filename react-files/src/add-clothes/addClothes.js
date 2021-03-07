@@ -194,6 +194,20 @@ function AddClothes() {
                   </CheckboxGroup>
                 </Box>
 
+                <Box w="100%">
+                  <FormLabel htmlFor="formality">Weather type</FormLabel>
+                  <CheckboxGroup colorScheme="green" onChange={handleChange}>
+                    <HStack justify="space-evenly">
+                      <Checkbox >rain</Checkbox>
+
+                      <Checkbox >freezing</Checkbox>
+                      <Checkbox >cold</Checkbox>
+                      <Checkbox >warm</Checkbox>
+                      <Checkbox >hot</Checkbox>
+                    </HStack>
+                  </CheckboxGroup>
+                </Box>
+
                 {getPreview(formData, masterList)}
 
               </VStack>
