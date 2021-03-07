@@ -21,8 +21,8 @@
     ]
   },
   {
-    "colour": "brown",
-    "type": "shorts",
+    "colour": "darkblue",
+    "type": "jeans",
     "category": "bottom",
     "condition": [
       "warm",
@@ -54,7 +54,14 @@
     "formality": ["casual"]
   },
   {
-    "colour": "black",
+    "colour": "grey",
+    "type": "shorts",
+    "category": "bottom",
+    "condition": [ "hot", "warm"],
+    "formality": [ "formal", "casual" ]
+  },
+  {
+    "colour": "beige",
     "type": "chino",
     "category": "bottom",
     "condition": [
@@ -64,7 +71,7 @@
     "formality": ["casual"]
   },
   {
-    "colour": "beige",
+    "colour": "black",
     "type": "chino",
     "category": "bottom",
     "condition": [
@@ -108,11 +115,11 @@
     "formality": ["casual"]
   },
   {
-    "colour": "black",
-    "type": "boots",
+    "colour": "grey",
+    "type": "runners",
     "category": "footwear",
-    "condition": [ "rain", "cold" ],
-    "formality": ["smart", "formal"]
+    "condition": [ "hot", "warm", "cold", "freezing" ],
+    "formality": [ "smart", "casual" ]
   },
   {
     "colour": "black",
@@ -165,13 +172,6 @@
     "formality": [ "smart", "casual" ]
   },
   {
-    "colour": "grey",
-    "type": "shorts",
-    "category": "bottom",
-    "condition": [ "hot", "warm"],
-    "formality": [ "formal", "casual" ]
-  },
-  {
     "colour": "white",
     "type": "runners",
     "category": "footwear",
@@ -186,11 +186,11 @@
     "formality": [ "smart", "casual" ]
   },
   {
-    "colour": "grey",
-    "type": "runners",
+    "colour": "black",
+    "type": "boots",
     "category": "footwear",
-    "condition": [ "hot", "warm", "cold", "freezing" ],
-    "formality": [ "smart", "casual" ]
+    "condition": [ "rain", "cold" ],
+    "formality": ["smart", "formal"]
   },
   {
     "colour": "orange",
@@ -219,13 +219,6 @@
     "category": "top",
     "condition": [ "warm"],
     "formality": [ "formal" ]
-  },
-  {
-    "colour": "white",
-    "type": "sweater",
-    "category": "middlewear",
-    "condition": [ "freezing", "cold"],
-    "formality": [ "smart", "casual" ]
   },
   {
     "colour": "pink",
@@ -284,18 +277,25 @@
     "formality": [ "casual" ]
   },
   {
+    "colour": "white",
+    "type": "short sleeve t-shirt",
+    "category": "top",
+    "condition": [ "hot", "warm", "cold" ],
+    "formality": [ "smart", "casual" ]
+  },
+  {
+    "colour": "lightblue",
+    "type": "short sleeve t-shirt",
+    "category": "top",
+    "condition": [ "hot", "warm", "cold" ],
+    "formality": [ "smart", "casual" ]
+  },
+  {
     "colour": "brown",
     "type": "sweater",
     "category": "middlewear",
     "condition": [ "freezing", "cold"],
     "formality": [ "smart", "casual" ]
-  },
-  {
-    "colour": "lightblue",
-    "type": "blouse",
-    "category": "middlewear",
-    "condition": [ "hot"],
-    "formality": [ "casual" ]
   },
   {
     "colour": "beige",
