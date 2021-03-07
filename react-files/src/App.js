@@ -51,15 +51,41 @@ function App() {
   //     })
   // }
 
-  return (
+  // return (
     // <ChakraProvider theme={theme2}>
-    <ChakraProvider theme={theme}>
-      <Box bgGradient="linear(to-l, #ffffff, #FFFFE0)" minh="100vh" h="100vh">
-        <Navbar page={page} testf={setPage}/>
-        {getContent(page)}
-      </Box>
-    </ChakraProvider>
+    // <ChakraProvider theme={theme}>
+    //   <Box bgGradient="linear(to-l, #ffffff, #FFFFE0)" minh="100vh" h="100vh">
+    //     <Navbar page={page} testf={setPage}/>
+    //     {getContent(page)}
+    //   
+    // </ChakraProvider>
+  // )
+
+  if (page === "") {
+    // return (
+    //   <AddClothes/>
+    // )
+  } else if (page === "my-clothes") {
+    return (
+      <>
+      <ChakraProvider theme={theme}>
+        <Box bgGradient="linear(to-l, #ffffff, #FFFFE0)" minh="100vh" h="100%">
+          <Navbar page={page} testf={setPage}/>
+          <MyClothes/>
+        </Box>
+      </ChakraProvider>
+      </> 
+    )
+  } else if (page === "gallery") {
+    return (
+      <ChakraProvider theme={theme}>
+        <Box bgGradient="linear(to-l, #ffffff, #FFFFE0)" minh="100vh" h="100vh">
+          <Navbar page={page} testf={setPage}/>
+          <Gallery/>
+        </Box>
+      </ChakraProvider>
   )
+  }
 }
 
 export default App;
