@@ -86,9 +86,14 @@ function AddClothes() {
     console.log('button clicked');
     console.log(formData);
 
+    
+
     var newData = formData;
     newData['colour'] = masterList.colours[newData['colour']];
-    newData['type'] = masterList.types[newData['type']];
+    newData['type'] = masterList.types[newData['type']].name;
+
+    // console.log(newData['colour']);
+    // console.log(newData['type']);
 
     fetch('/add', {
       method: "POST",

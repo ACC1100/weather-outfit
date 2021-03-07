@@ -436,15 +436,15 @@ def add_clothing():
     req = request.json
     print('req: ', req)
     with open("masterlist.json") as json_file:
-        data = json.load(json_file)
+        masterList = json.load(json_file)
     d = req
-    for i in range(len(data["type"])):
-        if data["type"][i]["name"] == d["type"]:
-            d["category"] = data["type"][i]["category"]
-            d["category"] = data["type"][i]["condition"]
+    for i in range(len(masterList["types"])):
+        if masterList["types"][i]["name"] == d["type"]:
+            d["category"] = masterList["types"][i]["category"]
+            d["condition"] = masterList["types"][i]["condition"]
             break
 
-    JSON_CALL(d, "wardrobe")
+    JSON_CALL(d, "test2.json")
     return {
         'result': 'success'
     }
