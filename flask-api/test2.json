@@ -385,7 +385,7 @@
   },
   {
     "colour": "brown",
-    "category": "outwear",
+    "category": "outerwear",
     "type": "coat",
     "condition": [ "cold", "freezing" ],
     "formality": [ "smart", "formal" ]
@@ -410,6 +410,43 @@
     "type": "blouse",
     "condition": [ "warm", "hot"],
     "formality": [ "smart", "formal" ]
+  },
+
+  {
+    "colour": "black",
+    "category": "outerwear",
+    "type": "coat",
+    "condition": [ "cold", "warm" ],
+    "formality": [ "smart", "formal" ]
+  },
+  {
+    "colour": "purple",
+    "category": "bottom",
+    "type": "tights",
+    "condition": [ "hot", "warm", cold"],
+    "formality": [ "casual" ]
+  },
+  {
+    "colour": "lightblue",
+    "category": "bottom",
+    "type": "shorts",
+    "condition": [ "hot", "warm" ],
+    "formality": [ "casual" ]
+  },
+
+  {
+    "colour": "green",
+    "category": "middlewear",
+    "type": "sweater",
+    "condition": [ "cold", "freezing" ],
+    "formality": [ "smart" ]
+  },
+  {
+    "colour": "black",
+    "category": "bottom",
+    "type": "jeans",
+    "condition": [ "cold", "freezing" ],
+    "formality": [ "smart", "casual" ]
   }
 ]
 }
