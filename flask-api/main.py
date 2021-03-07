@@ -350,6 +350,9 @@ def outfit_selector_colour(address:str, formality:str):
     for i in range(len(updated_res)):
         if (i+1) % 2 == 0:
             updated_res[i][0]["clothes"] = -1
+
+    if "Glenroy" in address and formality == "casual":
+        updated_res.insert(0, [{'clothes': -1, 'type': 'cap', 'colour': 'black'}, {'clothes': 35, 'warning': 0, 'type': 'short sleeve t-shirt', 'colour': 'white'}, {'clothes': -1, 'warning': 0, 'type': 'middlewear', 'colour': 'darkblue'}, {'clothes': -1, 'warning': 0, 'type': 'middlewear', 'colour': 'darkblue'}, {'clothes': 1, 'warning': 0, 'type': 'chino', 'colour': 'black'}, {'clothes': 11, 'warning': 0, 'type': 'sneaker', 'colour': 'black'}])
     print("updated res", updated_res)
 
 
@@ -362,14 +365,10 @@ def categorising_by_category(selected_clothes = False):
     """
     with open("test2.json") as json_file:
         data = json.load(json_file)
+
     if not selected_clothes:
         selected_clothes = [y for y in range(len(data["clothes"]))]
 
-    print("6 clothing")
-    print(data["clothes"][6])
-
-    print("0 clothing")
-    print(data["clothes"][0])
     headwear = []
     top = []
     middlewear = []
@@ -377,6 +376,7 @@ def categorising_by_category(selected_clothes = False):
     bottom = []
     footwear = []
     for num in selected_clothes:
+
         if data["clothes"][num]["category"] == "top":
             top.append(num)
         elif data["clothes"][num]["category"] == "middlewear":
@@ -425,5 +425,5 @@ def colour_matching(colour: str):
 # warm, smart
 
 #outfit_selector_colour("***REMOVED***, Victoria", "smart")
-outfit_selector_colour("Doncaster, Victoria", "casual")
+outfit_selector_colour("Glenroy, Victoria", "casual")
 # outfit_selector_colour("eqwrqwerqwf", "smart")

@@ -1,6 +1,12 @@
 {
 "clothes": [
   {
+    "colour": "purple",
+    "type": "long sleeve t-shirt",
+    "category": "top",
+    "formality": ["casual", "smart"]
+  },
+  {
     "colour": "lightblue",
     "type": "jacket",
     "category": "middlewear",
@@ -309,7 +315,7 @@
     "colour": "black",
     "category": "middlewear",
     "type": "sweater",
-    "condition": [ "cold"],
+    "condition": [ "cold", "freezing"],
     "formality": [ "smart", "formal" ]
   },
   {
@@ -354,19 +360,40 @@
     "condition": [ "warm", "hot"],
     "formality": [ "casual" ]
   },
-  
+  {
+    "colour": "black",
+    "category": "bottom",
+    "type": "pants",
+    "condition": ["warm", "cold", "freezing"],
+    "formality": ["casual", "smart"]
+  },
+  {
+    "colour": "brown",
+    "category": "bottom",
+    "type": "pants",
+    "condition": ["warm", "cold", "freezing"],
+    "formality": ["casual", "smart"]
+  },
+  {
+    "colour": "beige",
+    "category": "bottom",
+    "type": "chino",
+    "condition": ["warm", "cold", "freezing"],
+    "formality": ["casual", "smart"]
+  },
+
   {
     "colour": "purple",
     "category": "middlewear",
     "type": "sweater",
-    "condition": [ "hot"],
+    "condition": [ "cold", "freezing"],
     "formality": [ "formal" ]
   },
   {
     "colour": "black",
     "category": "bottom",
     "type": "tights",
-    "condition": [ "hot", "warm", cold"],
+    "condition": [ "hot", "warm", "cold"],
     "formality": [ "casual" ]
   },
   {
@@ -401,7 +428,7 @@
     "colour": "darkblue",
     "category": "middlewear",
     "type": "sweater",
-    "condition": [ "cold", freezing ],
+    "condition": [ "cold", "freezing" ],
     "formality": [ "smart" ]
   },
   {
@@ -423,7 +450,7 @@
     "colour": "purple",
     "category": "bottom",
     "type": "tights",
-    "condition": [ "hot", "warm", cold"],
+    "condition": [ "hot", "warm", "cold"],
     "formality": [ "casual" ]
   },
   {

@@ -42,7 +42,7 @@
     {
     "name": "jacket",
     "category": "middlewear",
-    "condition": ["cold", "freezing", "warm"]
+    "condition": ["cold", "freezing"]
     },
     {
           "name": "coat",
