@@ -129,6 +129,28 @@
     "formality": ["casual"]
   },
   {
+    "colour": "red",
+    "type": "other hat",
+    "category": "headwear",
+    "condition": [
+      "rain",
+      "cold",
+      "warm"
+    ],
+    "formality": ["casual", "smart"]
+  },
+  {
+    "colour": "black",
+    "type": "other hat",
+    "category": "headwear",
+    "condition": [
+      "rain",
+      "cold",
+      "warm"
+    ],
+    "formality": ["casual", "smart"]
+  },
+  {
     "colour": "pink",
     "type": "cap",
     "category": "headwear",
