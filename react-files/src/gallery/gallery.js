@@ -61,13 +61,7 @@ function Gallery() {
     return output
   }
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
+  
 
   function fetchingSuitableOutfits() {
     fetch('/getoutfit', {
@@ -144,6 +138,14 @@ function Gallery() {
     )
   }
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
   return (!masterList) ?
     <h1>Loading!!</h1> :
     (
@@ -153,15 +155,15 @@ function Gallery() {
         </Box>
           <>
             <Center>
-              <Box w="60%" borderRadius="20px" borderWidth='2px' >
+              <Box w="60%" borderRadius="20px" borderWidth='2px' bgColor="gray.200" pb="5%" px="5%">
                 <Slider {...settings}>
                 {
-                  (!outfits) ? <Box w="20%" h="570px" borderRadius="20px"/> : (
+                  (!outfits) ? <Box w="20%" h="50%" borderRadius="20px" /> : (
                     // <Box w="20%" h="500px" borderRadius="20px">asd</Box>
                     // <Box w="20%" h="500px" borderRadius="20px">123</Box>
                     galleryOutfit(outfits, masterList).map((outfit) => {
                       return (
-                        <Box w="20%" h="570px" borderRadius="20px">
+                        <Box w="20%" h="50" borderRadius="20px" pb="5%">
                           {outfit}
                         </Box>
                       )
