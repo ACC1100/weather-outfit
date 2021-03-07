@@ -1,78 +1,1446 @@
 [
     [
         {
-            "clothes": 5,
-            "warning": 0,
-            "type": "cap",
-            "colour": "black"
-        },
-        {
             "clothes": 13,
             "warning": 0,
-            "type": "short sleeve t-shirt",
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
             "colour": "black"
-        },
-        {
-            "clothes": -2,
-            "warning": 0,
-            "type": "middlewear",
-            "colour": "darkblue"
-        },
-        {
-            "clothes": -2,
-            "warning": 0,
-            "type": "middlewear",
-            "colour": "darkblue"
         },
         {
             "clothes": 1,
             "warning": 0,
             "type": "shorts",
-            "colour": "yellow"
+            "colour": "darkblue"
         },
         {
-            "clothes": 7,
+            "clothes": 15,
             "warning": 0,
-            "type": "runners",
-            "colour": "red"
+            "type": "sneaker",
+            "colour": "white"
+        },
+        {
+            "clothes": 8,
+            "warning": 0,
+            "type": "cap",
+            "colour": "black"
         }
     ],
     [
         {
-            "clothes": 5,
+            "clothes": 13,
             "warning": 0,
-            "type": "cap",
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
             "colour": "black"
         },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 15,
+            "warning": 0,
+            "type": "sneaker",
+            "colour": "white"
+        },
+        {
+            "clothes": 9,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "darkblue"
+        }
+    ],
+    [
         {
             "clothes": 13,
             "warning": 0,
-            "type": "short sleeve t-shirt",
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
             "colour": "black"
         },
         {
-            "clothes": -2,
-            "warning": 0,
-            "type": "middlewear",
-            "colour": "darkblue"
-        },
-        {
-            "clothes": -2,
-            "warning": 0,
-            "type": "middlewear",
-            "colour": "darkblue"
-        },
-        {
-            "clothes": 3,
+            "clothes": 1,
             "warning": 0,
             "type": "shorts",
-            "colour": "green"
+            "colour": "darkblue"
         },
         {
-            "clothes": 16,
+            "clothes": 15,
+            "warning": 0,
+            "type": "sneaker",
+            "colour": "white"
+        },
+        {
+            "clothes": 23,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "orange"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 20,
             "warning": 0,
             "type": "runners",
             "colour": "white"
+        },
+        {
+            "clothes": 8,
+            "warning": 0,
+            "type": "cap",
+            "colour": "black"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 20,
+            "warning": 0,
+            "type": "runners",
+            "colour": "white"
+        },
+        {
+            "clothes": 9,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "darkblue"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 20,
+            "warning": 0,
+            "type": "runners",
+            "colour": "white"
+        },
+        {
+            "clothes": 23,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "orange"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 21,
+            "warning": 0,
+            "type": "runners",
+            "colour": "black"
+        },
+        {
+            "clothes": 8,
+            "warning": 0,
+            "type": "cap",
+            "colour": "black"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 21,
+            "warning": 0,
+            "type": "runners",
+            "colour": "black"
+        },
+        {
+            "clothes": 9,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "darkblue"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 21,
+            "warning": 0,
+            "type": "runners",
+            "colour": "black"
+        },
+        {
+            "clothes": 23,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "orange"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 22,
+            "warning": 0,
+            "type": "runners",
+            "colour": "grey"
+        },
+        {
+            "clothes": 8,
+            "warning": 0,
+            "type": "cap",
+            "colour": "black"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 22,
+            "warning": 0,
+            "type": "runners",
+            "colour": "grey"
+        },
+        {
+            "clothes": 9,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "darkblue"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 22,
+            "warning": 0,
+            "type": "runners",
+            "colour": "grey"
+        },
+        {
+            "clothes": 23,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "orange"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
+            "colour": "black"
+        },
+        {
+            "clothes": 2,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "brown"
+        },
+        {
+            "clothes": 15,
+            "warning": 0,
+            "type": "sneaker",
+            "colour": "white"
+        },
+        {
+            "clothes": 8,
+            "warning": 0,
+            "type": "cap",
+            "colour": "black"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
+            "colour": "black"
+        },
+        {
+            "clothes": 2,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "brown"
+        },
+        {
+            "clothes": 15,
+            "warning": 0,
+            "type": "sneaker",
+            "colour": "white"
+        },
+        {
+            "clothes": 9,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "darkblue"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
+            "colour": "black"
+        },
+        {
+            "clothes": 2,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "brown"
+        },
+        {
+            "clothes": 15,
+            "warning": 0,
+            "type": "sneaker",
+            "colour": "white"
+        },
+        {
+            "clothes": 23,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "orange"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
+            "colour": "black"
+        },
+        {
+            "clothes": 2,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "brown"
+        },
+        {
+            "clothes": 20,
+            "warning": 0,
+            "type": "runners",
+            "colour": "white"
+        },
+        {
+            "clothes": 8,
+            "warning": 0,
+            "type": "cap",
+            "colour": "black"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
+            "colour": "black"
+        },
+        {
+            "clothes": 2,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "brown"
+        },
+        {
+            "clothes": 20,
+            "warning": 0,
+            "type": "runners",
+            "colour": "white"
+        },
+        {
+            "clothes": 9,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "darkblue"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
+            "colour": "black"
+        },
+        {
+            "clothes": 2,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "brown"
+        },
+        {
+            "clothes": 20,
+            "warning": 0,
+            "type": "runners",
+            "colour": "white"
+        },
+        {
+            "clothes": 23,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "orange"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 7,
+            "warning": 0,
+            "type": "coat",
+            "colour": "black"
+        },
+        {
+            "clothes": 2,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "brown"
+        },
+        {
+            "clothes": 21,
+            "warning": 0,
+            "type": "runners",
+            "colour": "black"
+        },
+        {
+            "clothes": 8,
+            "warning": 0,
+            "type": "cap",
+            "colour": "black"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 15,
+            "warning": 0,
+            "type": "sneaker",
+            "colour": "white"
+        },
+        {
+            "clothes": 8,
+            "warning": 0,
+            "type": "cap",
+            "colour": "black"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 15,
+            "warning": 0,
+            "type": "sneaker",
+            "colour": "white"
+        },
+        {
+            "clothes": 9,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "darkblue"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 15,
+            "warning": 0,
+            "type": "sneaker",
+            "colour": "white"
+        },
+        {
+            "clothes": 23,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "orange"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 20,
+            "warning": 0,
+            "type": "runners",
+            "colour": "white"
+        },
+        {
+            "clothes": 8,
+            "warning": 0,
+            "type": "cap",
+            "colour": "black"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 20,
+            "warning": 0,
+            "type": "runners",
+            "colour": "white"
+        },
+        {
+            "clothes": 9,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "darkblue"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 20,
+            "warning": 0,
+            "type": "runners",
+            "colour": "white"
+        },
+        {
+            "clothes": 23,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "orange"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 21,
+            "warning": 0,
+            "type": "runners",
+            "colour": "black"
+        },
+        {
+            "clothes": 8,
+            "warning": 0,
+            "type": "cap",
+            "colour": "black"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 21,
+            "warning": 0,
+            "type": "runners",
+            "colour": "black"
+        },
+        {
+            "clothes": 9,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "darkblue"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 21,
+            "warning": 0,
+            "type": "runners",
+            "colour": "black"
+        },
+        {
+            "clothes": 23,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "orange"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 22,
+            "warning": 0,
+            "type": "runners",
+            "colour": "grey"
+        },
+        {
+            "clothes": 8,
+            "warning": 0,
+            "type": "cap",
+            "colour": "black"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 22,
+            "warning": 0,
+            "type": "runners",
+            "colour": "grey"
+        },
+        {
+            "clothes": 9,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "darkblue"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 1,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "darkblue"
+        },
+        {
+            "clothes": 22,
+            "warning": 0,
+            "type": "runners",
+            "colour": "grey"
+        },
+        {
+            "clothes": 23,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "orange"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 2,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "brown"
+        },
+        {
+            "clothes": 15,
+            "warning": 0,
+            "type": "sneaker",
+            "colour": "white"
+        },
+        {
+            "clothes": 8,
+            "warning": 0,
+            "type": "cap",
+            "colour": "black"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 2,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "brown"
+        },
+        {
+            "clothes": 15,
+            "warning": 0,
+            "type": "sneaker",
+            "colour": "white"
+        },
+        {
+            "clothes": 9,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "darkblue"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 2,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "brown"
+        },
+        {
+            "clothes": 15,
+            "warning": 0,
+            "type": "sneaker",
+            "colour": "white"
+        },
+        {
+            "clothes": 23,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "orange"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 2,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "brown"
+        },
+        {
+            "clothes": 20,
+            "warning": 0,
+            "type": "runners",
+            "colour": "white"
+        },
+        {
+            "clothes": 8,
+            "warning": 0,
+            "type": "cap",
+            "colour": "black"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 2,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "brown"
+        },
+        {
+            "clothes": 20,
+            "warning": 0,
+            "type": "runners",
+            "colour": "white"
+        },
+        {
+            "clothes": 9,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "darkblue"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 2,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "brown"
+        },
+        {
+            "clothes": 20,
+            "warning": 0,
+            "type": "runners",
+            "colour": "white"
+        },
+        {
+            "clothes": 23,
+            "warning": 0,
+            "type": "beanie",
+            "colour": "orange"
+        }
+    ],
+    [
+        {
+            "clothes": 13,
+            "warning": 0,
+            "type": "long sleeve shirt",
+            "colour": "white"
+        },
+        {
+            "clothes": 14,
+            "warning": 0,
+            "type": "sweater",
+            "colour": "lightblue"
+        },
+        {
+            "clothes": 12,
+            "warning": 0,
+            "type": "raincoat",
+            "colour": "black"
+        },
+        {
+            "clothes": 2,
+            "warning": 0,
+            "type": "shorts",
+            "colour": "brown"
+        },
+        {
+            "clothes": 21,
+            "warning": 0,
+            "type": "runners",
+            "colour": "black"
+        },
+        {
+            "clothes": 8,
+            "warning": 0,
+            "type": "cap",
+            "colour": "black"
         }
     ]
 ]
