@@ -358,6 +358,10 @@ def outfit_selector_colour():
             clothing['type'] = data['clothes'][clothing['clothes']]['type']
             clothing['colour'] = data['clothes'][clothing['clothes']]['colour']
 
+    for i in range(len(updated_res)):
+        if (i+1) % 2 == 0:
+            updated_res[i][0]["clothes"] = -1
+
     # JSON_CALL(updated_res, "outfit_selector_colour.json")
     print(updated_res)
     return {
