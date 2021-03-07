@@ -7,6 +7,13 @@
     "condition": ["cold", "freezing"],
     "formality": ["casual", "smart"]
   },
+  {
+    "colour": "black",
+    "type": "long sleeve t-shirt",
+    "category": "top",
+    "condition": ["cold", "freezing"],
+    "formality": ["casual", "smart"]
+  },
 
   {
     "colour": "lightblue",
@@ -321,14 +328,14 @@
     "colour": "black",
     "type": "long sleeve shirt",
     "category": "top",
-    "condition": [ "warm"],
+    "condition": [ "cold", "freezing ","warm"],
     "formality": [ "formal" ]
   },
   {
     "colour": "green",
     "type": "long sleeve shirt",
     "category": "top",
-    "condition": [ "warm"],
+    "condition": [ "cold", "freezing ","warm"],
     "formality": [ "casual" ]
   },
   {
