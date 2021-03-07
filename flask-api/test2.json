@@ -86,16 +86,6 @@
     "formality": ["casual"]
   },
   {
-    "colour": "brown",
-    "type": "chino",
-    "category": "bottom",
-    "condition": [
-      "warm",
-      "hot"
-    ],
-    "formality": ["casual"]
-  },
-  {
     "colour": "black",
     "type": "cap",
     "category": "headwear",
@@ -127,17 +117,6 @@
       "warm"
     ],
     "formality": ["casual"]
-  },
-  {
-    "colour": "red",
-    "type": "other hat",
-    "category": "headwear",
-    "condition": [
-      "rain",
-      "cold",
-      "warm"
-    ],
-    "formality": ["casual", "smart"]
   },
   {
     "colour": "black",
@@ -374,27 +353,6 @@
     "type": "short sleeve t-shirt",
     "condition": [ "hot"],
     "formality": [ "formal" ]
-  },
-  {
-    "colour": "black",
-    "category": "middlewear",
-    "type": "sweater",
-    "condition": [ "cold", "freezing"],
-    "formality": [ "smart", "formal" ]
-  },
-  {
-    "colour": "white",
-    "category": "middlewear",
-    "type": "hoodie",
-    "condition": [ "hot"],
-    "formality": [ "casual" ]
-  },
-  {
-    "colour": "red",
-    "category": "middlewear",
-    "type": "jacket",
-    "condition": [ "cold"],
-    "formality": [ "smart" ]
   },
   {
     "colour": "purple",
