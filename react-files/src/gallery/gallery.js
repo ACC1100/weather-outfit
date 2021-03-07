@@ -94,33 +94,51 @@ function Gallery() {
     return (
       <Center>
         <VStack spacing={8} w="80%">
-          <Input placeholder="Location" size="lg" variant="filled" onChange={(event) => {
-            setLocation(event.target.value);
-            // console.log(event.target.value);
-          }} />
+          <HStack spacing={8} w="80%" h="100%">
+            <Box bg="purple.400" borderRadius="5px" w="100%">
+              <Input placeholder="Location" size="lg" variant="filled" 
+              bg="purple.200"
+              color="black"
+              focusBorderColor="purple.800"
+              onChange={(event) => {
+                setLocation(event.target.value);
+                // console.log(event.target.value);
+              }}/>
+            </Box>
+              
+            <Box w="100%" bg="pink.200" borderRadius="5px">
+              <Center><FormLabel htmlFor="formality" color="gray.800"
+                fontSize="2xl"
+              >Formality</FormLabel></Center>
+
+              <RadioGroup id="formality" colorScheme="gray" onChange={(event) => {
+                // console.log('e', event);
+                setFormalityInput(event);
+              }}
+              textColor="gray.800"
+              >
+                <HStack justify="space-evenly">
+                  <Radio size="lg" value="casual">Casual</Radio>
+                  <Radio size="lg" value="smart">Smart-Casual</Radio>
+                  <Radio size="lg" value="formal">Formal</Radio>
+                </HStack>
+              </RadioGroup>
+
+            </Box>
+
+          </HStack>
+          
           <Button colorScheme="teal" size="lg" isFullWidth={true} onClick={() => {
-            console.log(location, formalityInput);
-            if (location && formalityInput) {
-              fetchingSuitableOutfits();
-            } else {
-              console.log('INPUT STUFF');
-            }
-          }}>
-            Generate
-          </Button>
-          <Box w="100%">
-            <FormLabel htmlFor="formality">Formality</FormLabel>
-            <RadioGroup id="formality" colorScheme="green" onChange={(event) => {
-              // console.log('e', event);
-              setFormalityInput(event);
+              console.log(location, formalityInput);
+              if (location && formalityInput) {
+                fetchingSuitableOutfits();
+              } else {
+                console.log('INPUT STUFF');
+              }
             }}>
-              <HStack justify="space-evenly">
-                <Radio value="casual">Casual</Radio>
-                <Radio value="smart">Smart-Casual</Radio>
-                <Radio value="formal">Formal</Radio>
-              </HStack>
-            </RadioGroup>
-          </Box>
+              Generate
+            </Button>
+
         </VStack>
       </Center>
     )
