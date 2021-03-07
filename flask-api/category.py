@@ -361,7 +361,7 @@ def categorising_by_category(selected_clothes = False):
         elif data["clothes"][num]["category"] == "headwear":
             headwear.append(num)
     return {
-        'result': [top, middlewear, outerwear, bottom, footwear, headwear]
+        'result': [headwear, top, middlewear, outerwear, bottom, footwear]
     }
 
 def categorising_by_category(selected_clothes = False):

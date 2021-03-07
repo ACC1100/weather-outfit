@@ -70,8 +70,6 @@ def outfit_selector_colour(address:str, formality:str):
                 check_matching_data = True
                 data["clothes"][i]["condition"] = masterlist["types"][j]["condition"]
                 data["clothes"][i]["category"] = masterlist["types"][j]["category"]
-        if not check_matching_data:
-            data["clothes"].remove(data["clothes"][i])
 
     all_clothes_separated = categorising_by_category()
 
@@ -86,6 +84,8 @@ def outfit_selector_colour(address:str, formality:str):
 
     separated_clothing = categorising_by_category(selected_clothes)
 
+    print("clothing 6")
+    print(data["clothes"][6])
     # viable clothes is a list of lists. Each internal list refers to one category of clothes and contains all viable clothes
     # if the number is -1, then there is no viable clothing option
     viable_clothes = []
@@ -335,6 +335,11 @@ def categorising_by_category(selected_clothes = False):
     if not selected_clothes:
         selected_clothes = [y for y in range(len(data["clothes"]))]
 
+    print("6 clothing")
+    print(data["clothes"][6])
+
+    print("0 clothing")
+    print(data["clothes"][0])
     headwear = []
     top = []
     middlewear = []
@@ -354,7 +359,7 @@ def categorising_by_category(selected_clothes = False):
             footwear.append(num)
         elif data["clothes"][num]["category"] == "headwear":
             headwear.append(num)
-    return [top, middlewear, outerwear, bottom, footwear, headwear]
+    return [headwear, top, middlewear, outerwear, bottom, footwear]
 
 def colour_matching(colour: str):
     """
