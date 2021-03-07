@@ -319,20 +319,6 @@
     "formality": [ "casual" ]
   },
   {
-    "colour": "brown",
-    "type": "headwear",
-    "category": "sun hat",
-    "condition": [ "hot", "warm"],
-    "formality": [ "casual" ]
-  },
-  {
-    "colour": "white",
-    "type": "headwear",
-    "category": "sun hat",
-    "condition": [ "hot", "warm"],
-    "formality": [ "casual" ]
-  },
-  {
     "colour": "red",
     "type": "jacket",
     "category": "middlewear",
