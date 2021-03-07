@@ -359,13 +359,13 @@ def outfit_selector_colour():
             clothing['colour'] = data['clothes'][clothing['clothes']]['colour']
 
     # JSON_CALL(updated_res, "outfit_selector_colour.json")
-    # print(updated_res)
+    print(updated_res)
     return {
         'result': updated_res
     }
 
 @app.route('/hello', methods = ['POST'])
-def categorising_by_category(selected_clothes = False):
+def cat_by_cat(selected_clothes = False):
     """
     Splits clothes based on their category
     :param selected_clothes: list in numbers that represents indexes of the clothes in the json
@@ -412,6 +412,11 @@ def categorising_by_category(selected_clothes = False):
     if not selected_clothes:
         selected_clothes = [y for y in range(len(data["clothes"]))]
 
+    print("6 clothing")
+    print(data["clothes"][6])
+
+    print("0 clothing")
+    print(data["clothes"][0])
     headwear = []
     top = []
     middlewear = []
@@ -431,7 +436,7 @@ def categorising_by_category(selected_clothes = False):
             footwear.append(num)
         elif data["clothes"][num]["category"] == "headwear":
             headwear.append(num)
-    return [top, middlewear, outerwear, bottom, footwear, headwear]
+    return [headwear, top, middlewear, outerwear, bottom, footwear]
 
 def colour_matching(colour: str):
     """
