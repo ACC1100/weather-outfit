@@ -155,21 +155,21 @@ function Gallery() {
         </Box>
           <>
             <Center>
-              <Box w="60%" borderRadius="20px" borderWidth='2px' bgColor="gray.200" pb="5%" px="5%">
+              <Box w="60%" borderRadius="20px" borderWidth='2px' bgColor="gray.200" pb="3%" px="5%">
                 <Slider {...settings}>
-                {
-                  (!outfits) ? <Box w="20%" h="50%" borderRadius="20px" /> : (
-                    // <Box w="20%" h="500px" borderRadius="20px">asd</Box>
-                    // <Box w="20%" h="500px" borderRadius="20px">123</Box>
-                    galleryOutfit(outfits, masterList).map((outfit) => {
-                      return (
-                        <Box w="20%" h="50" borderRadius="20px" pb="5%">
-                          {outfit}
-                        </Box>
-                      )
-                    })
-                  )
-                }
+                  {
+                    (!outfits) ? <Box w="20%" h="50vh" borderRadius="20px" /> : (
+                      // <Box w="20%" h="500px" borderRadius="20px">asd</Box>
+                      // <Box w="20%" h="500px" borderRadius="20px">123</Box>
+                      galleryOutfit(outfits, masterList).map((outfit) => {
+                        return (
+                          <Box w="20%" h="50vh" borderRadius="20px" pb="5%">
+                            {outfit}
+                          </Box>
+                        )
+                      })
+                    )
+                  }
                 </Slider>
               </Box>
             </Center>
