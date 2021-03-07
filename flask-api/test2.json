@@ -8,7 +8,20 @@
     "formality": ["casual"]
   },
   {
-    "colour": "yellow",
+    "colour": "darkblue",
+    "type": "shorts",
+    "category": "bottom",
+    "condition": [
+      "warm",
+      "cold"
+    ],
+    "formality": [
+      "casual",
+      "smart"
+    ]
+  },
+  {
+    "colour": "brown",
     "type": "shorts",
     "category": "bottom",
     "condition": [
@@ -31,8 +44,28 @@
     "formality": ["casual"]
   },
   {
-    "colour": "green",
+    "colour": "white",
     "type": "shorts",
+    "category": "bottom",
+    "condition": [
+      "warm",
+      "hot"
+    ],
+    "formality": ["casual"]
+  },
+  {
+    "colour": "black",
+    "type": "chino",
+    "category": "bottom",
+    "condition": [
+      "warm",
+      "hot"
+    ],
+    "formality": ["casual"]
+  },
+  {
+    "colour": "beige",
+    "type": "chino",
     "category": "bottom",
     "condition": [
       "warm",
@@ -110,16 +143,22 @@
     "condition": [ "hot", "warm", "cold", "freezing" ],
     "formality": [ "casual", "smart" ]
   },
-
+  {
+    "colour": "blue",
+    "type": "sneaker",
+    "category": "footwear",
+    "condition": [ "hot", "warm", "cold", "freezing" ],
+    "formality": [ "casual", "smart" ]
+  },
   {
     "colour": "black",
     "type": "short sleeve t-shirt",
     "category": "top",
-    "condition": [ "hot", "warm", "cold", "freezing" ],
+    "condition": [ "hot", "warm", "cold" ],
     "formality": [ "smart", "casual" ]
   },
   {
-    "colour": "lightblue",
+    "colour": "green",
     "type": "jacket",
     "category": "middlewear",
     "condition": [ "cold", "freezing" ],
@@ -134,6 +173,20 @@
   },
   {
     "colour": "white",
+    "type": "runners",
+    "category": "footwear",
+    "condition": [ "hot", "warm", "cold", "freezing" ],
+    "formality": [ "smart", "casual" ]
+  },
+  {
+    "colour": "black",
+    "type": "runners",
+    "category": "footwear",
+    "condition": [ "hot", "warm", "cold", "freezing" ],
+    "formality": [ "smart", "casual" ]
+  },
+  {
+    "colour": "grey",
     "type": "runners",
     "category": "footwear",
     "condition": [ "hot", "warm", "cold", "freezing" ],
@@ -189,6 +242,20 @@
     "formality": [ "casual" ]
   },
   {
+    "colour": "brown",
+    "type": "headwear",
+    "category": "sun hat",
+    "condition": [ "hot", "warm"],
+    "formality": [ "casual" ]
+  },
+  {
+    "colour": "white",
+    "type": "headwear",
+    "category": "sun hat",
+    "condition": [ "hot", "warm"],
+    "formality": [ "casual" ]
+  },
+  {
     "colour": "red",
     "type": "jacket",
     "category": "middlewear",
@@ -208,6 +275,13 @@
     "category": "top",
     "condition": [ "warm"],
     "formality": [ "formal" ]
+  },
+  {
+    "colour": "green",
+    "type": "long sleeve shirt",
+    "category": "top",
+    "condition": [ "warm"],
+    "formality": [ "casual" ]
   },
   {
     "colour": "brown",

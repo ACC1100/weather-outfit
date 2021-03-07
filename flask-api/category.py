@@ -78,9 +78,6 @@ def outfit_selector_colour():
                 check_matching_data = True
                 data["clothes"][i]["condition"] = masterlist["types"][j]["condition"]
                 data["clothes"][i]["category"] = masterlist["types"][j]["category"]
-        if not check_matching_data:
-            data["clothes"].remove(data["clothes"][i])
-
 
     all_clothes_separated = categorising_by_category()
 
@@ -91,9 +88,12 @@ def outfit_selector_colour():
         if weather[0] in data["clothes"][i]["condition"] and formality in data["clothes"][i]["formality"]:
             selected_clothes.append(i)
 
+    print(weather)
 
     separated_clothing = categorising_by_category(selected_clothes)
 
+    print("clothing 6")
+    print(data["clothes"][6])
     # viable clothes is a list of lists. Each internal list refers to one category of clothes and contains all viable clothes
     # if the number is -1, then there is no viable clothing option
     viable_clothes = []
@@ -150,6 +150,8 @@ def outfit_selector_colour():
 
     all_outfits = []
 
+    print("viables clothes")
+    print(viable_clothes)
     viable_clothes_plus_extras = deepcopy(viable_clothes)
     for i in range(len(viable_clothes_plus_extras)):
         if len(viable_clothes_plus_extras[i]) == 0 or viable_clothes_plus_extras[i][0] == -1:
@@ -311,10 +313,10 @@ def outfit_selector_colour():
     res = []
     max_output = 0
     for i in range(len(outfit_rankings)):
-        if max_output >= 10:
+        if max_output >= 40:
             break
         counters[0][outfit_rankings[i][1][main_clothing_index]["clothes"]] += 1
-        if counters[0][outfit_rankings[i][1][main_clothing_index]["clothes"]] < 5:
+        if counters[0][outfit_rankings[i][1][main_clothing_index]["clothes"]] < 20:
             res.append(outfit_rankings[i][1])
             max_output += 1
 

@@ -17,7 +17,7 @@
   "types": [{
     "name": "short sleeve t-shirt",
     "category": "top",
-    "condition": ["warm", "cold"]
+    "condition": ["warm", "cold", "hot"]
     },
     {
       "name": "long sleeve t-shirt",
