@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sweater Weather by DLCT
+Aaron Chao, Allan Chan, Damien Ambegoda, Isuru Peiris, Zhijie Cao
 
 ## Available Scripts
 
