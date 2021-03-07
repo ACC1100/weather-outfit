@@ -196,7 +196,7 @@ function AddClothes() {
 
                 <Box w="100%">
                   <FormLabel htmlFor="formality">Weather type</FormLabel>
-                  <CheckboxGroup colorScheme="green" onChange={handleChange}>
+                  <CheckboxGroup colorScheme="green">
                     <HStack justify="space-evenly">
                       <Checkbox >rain</Checkbox>
 
