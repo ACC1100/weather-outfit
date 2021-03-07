@@ -22,7 +22,7 @@
     {
       "name": "long sleeve t-shirt",
     "category": "top",
-    "condition": ["cold", "freezing"]
+    "condition": ["cold", "freezing", "warm"]
     },
     {
       "name": "short sleeve shirt",
@@ -32,7 +32,7 @@
     {
       "name": "long sleeve shirt",
     "category": "top",
-    "condition": ["cold", "freezing"]
+    "condition": ["cold", "freezing", "warm"]
     },
     {
       "name": "sweater",
@@ -42,7 +42,7 @@
     {
     "name": "jacket",
     "category": "middlewear",
-    "condition": ["cold", "freezing"]
+    "condition": ["cold", "freezing", "warm"]
     },
     {
           "name": "coat",
@@ -56,23 +56,23 @@
     },
     {
       "name": "hoodie",
-    "category": "outerwear",
-    "condition": ["cold", "freezing", "rain"]
+    "category": "middlewear",
+    "condition": ["cold", "freezing", "rain", "warm"]
     },
     {
       "name": "jeans",
     "category": "bottom",
-    "condition": ["cold", "freezing", "rain"]
+    "condition": ["cold", "freezing", "rain", "warm"]
     },
     {
       "name": "chino",
     "category": "bottom",
-    "condition": ["cold", "freezing", "rain"]
+    "condition": ["cold", "freezing", "rain", "warm"]
     },
     {
       "name": "pants",
     "category": "bottom",
-    "condition": ["cold", "freezing", "rain"]
+    "condition": ["cold", "freezing", "rain", "warm"]
     },
     {
       "name": "tights",
