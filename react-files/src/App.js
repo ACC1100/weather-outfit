@@ -54,7 +54,7 @@ function App() {
   return (
     // <ChakraProvider theme={theme2}>
     <ChakraProvider theme={theme}>
-      <Box bgGradient="linear(to-l, #ffffff, #FFFFE0)">
+      <Box bgGradient="linear(to-l, #ffffff, #FFFFE0)" h="100vh">
       <Navbar page={page} testf={setPage}/>
         {getContent(page)}
       </Box>
