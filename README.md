@@ -11,7 +11,7 @@ The React front end was built using "Create React App" for its simplicity and th
 
 The Flask back end is where we handled the storage of clothes and generation of outfits. Our storage in the demo was done through local JSON files, but ideally this would be converted into a proper database in the future. Our weather data is provided by the Dark Sky API, allowing us to accurately determine the weather on a given day in a given location. The complicated outfit selector algorithm was also written in Python which took many, many hours to perfect especially considering how much was considered in picking the best outfit but we are very proud of the end result.
 
-##C hallenges
+## Challenges
 
 We all tried to go beyond our comfort zones in, tooling and process, to make the project the best we could. We probably spent half the weekend in the weeds of the Chakra UI docs and on Stack Overflow, but by the end, we had fully acclimatised.
 
