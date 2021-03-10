@@ -74,7 +74,7 @@ def GetWeather(Address, Time, Dest):
 
 def GetWeatherExampleCall():
 
-    Address     = "***REMOVED***, Victoria"
+    Address     = "Victoria"
     Time        =  1614990682
     WeatherData = {
         "Summary":           None,

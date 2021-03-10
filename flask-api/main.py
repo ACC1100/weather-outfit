@@ -425,6 +425,5 @@ def colour_matching(colour: str):
 
 # warm, smart
 
-#outfit_selector_colour("***REMOVED***, ***REMOVED***, Victoria", "smart")
 outfit_selector_colour("Glenroy, Victoria", "casual")
 # outfit_selector_colour("eqwrqwerqwf", "smart")
